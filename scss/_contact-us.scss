@@ -1,0 +1,309 @@
+.contactForm{
+    padding-block: 100px;
+    @include breakpoint(mx1199){
+        padding-block: 90px;
+    }
+    @include breakpoint(mx991){
+       padding-block: 80px 80px;
+    }
+    @include breakpoint(mx800){
+       padding-block: 80px 80px;
+    }
+    @include breakpoint(mx680){
+       padding-block: 60px 60px;
+    }
+    .titleHead{
+        margin-bottom: 62px;
+        @include breakpoint(mx991){
+            margin: 0 auto 40px;
+        }
+        @include breakpoint(mx680){
+            margin: 0 auto 20px;
+            gap: 10px;
+        }
+        h2 {
+            font-size: 57px;
+            line-height: 64px;
+            margin-bottom: 18px;
+            color: var(--c13);
+            text-align: center;
+            @include breakpoint(mx1366){
+                font-size: 48px;
+                line-height: 58px;
+            }
+            @include breakpoint(mx991){
+                font-size: 40px;
+                line-height: 45px;
+                margin-bottom: 10px;
+            }
+            @include breakpoint(mx800){
+                font-size: 40px;
+                line-height: 45px;
+                margin-bottom: 10px;
+            }
+            @include breakpoint(mx767){
+                font-size: 35px;
+                line-height: 40px;
+            }
+            @include breakpoint(mx680){
+                font-size: 30px;
+                line-height: 40px;
+            }
+        }
+        p{
+            text-align: center;
+        }
+    }
+    .formGroup{
+        .divSplit{
+            grid-template-columns: 1fr 1fr;
+            @include breakpoint(mx767){
+               gap: 20px;
+            }
+            @include breakpoint(mx680){
+               grid-template-columns: 1fr;
+            }
+            .validateText {
+                top: 46px;
+            }
+        }
+        .formRow{
+            grid-template-columns: 1fr 1fr;
+            @include breakpoint(mx767){
+               gap: 20px;
+            }
+            @include breakpoint(mx680){
+               grid-template-columns: 1fr;
+               gap: 0px;
+            }
+        }
+        .cmnBtn{
+            margin-top: 40px;
+        }
+    }
+}
+.contactFaq{
+    margin-bottom: 100px;
+    @include breakpoint(mx1199){
+        margin-bottom: 90px;
+    }
+    @include breakpoint(mx991){
+        margin-bottom: 80px;
+    }
+    @include breakpoint(mx800){
+        margin-bottom: 80px;
+    }
+    @include breakpoint(mx680){
+        margin-bottom: 60px;
+    }
+    .titleHead{
+        margin-bottom: 62px;
+        @include breakpoint(mx991){
+            margin: 0 auto 40px;
+        }
+        @include breakpoint(mx800){
+            margin: 0 auto 40px;
+        }
+        @include breakpoint(mx680){
+            margin: 0 auto 20px;
+            gap: 10px;
+        }
+        h2 {
+            font-size: 57px;
+            line-height: 64px;
+            margin-bottom: 18px;
+            color: var(--c13);
+            text-align: center;
+            @include breakpoint(mx1366){
+                font-size: 48px;
+                line-height: 58px;
+            }
+            @include breakpoint(mx991){
+                font-size: 40px;
+                line-height: 45px;
+                margin-bottom: 10px;
+            }
+            @include breakpoint(mx800){
+                font-size: 40px;
+                line-height: 45px;
+                margin-bottom: 10px;
+            }
+            @include breakpoint(mx767){
+                font-size: 35px;
+                line-height: 40px;
+            }
+            @include breakpoint(mx680){
+                font-size: 30px;
+                line-height: 40px;
+            }
+        }
+        p{
+            font-size: var(--fluidFont-16);
+            line-height: 24px;
+            color: var(--c6a);
+            text-align: center;
+        }
+    }
+    .accordion-container{
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        @include breakpoint(mx1366){
+            gap: 28px;
+        }
+        @include breakpoint(mx991){
+            gap: 25px;
+        }
+        @include breakpoint(mx800){
+            gap: 25px;
+        }
+        @include breakpoint(mx680){
+           gap: 10px;
+        }
+        .accordion-item {
+            background: var(--white);
+            border-radius: 20px;
+            border: 1px solid #D6D6D6;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            padding: 32px 30px;
+            @include breakpoint(mx1366){
+                padding: 28px 22px;
+                border-radius: 18px;
+            }
+            @include breakpoint(mx991){
+                padding: 25px 20px;
+                border-radius: 15px;
+            }
+            @include breakpoint(mx800){
+                padding: 25px 20px;
+                border-radius: 15px;
+            }
+            @include breakpoint(mx680){
+                padding: 20px 15px;
+                border-radius: 8px;
+            }
+        }
+
+        .accordion-header {
+            display: grid;
+            grid-template-columns: 1fr 16px;
+            align-items: center;
+            cursor: pointer;
+            border: none;
+            width: 100%;
+            text-align: left;
+            transition: background-color 0.2s ease;
+        }
+        .accordion-title {
+            font-size: var(--fluidFont-22);
+            line-height: 28px;
+            color: #0D0D0D;
+            margin: 0;
+        }
+        .accordion-icon {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            color: #6c757d;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .accordion-content-inner {
+            padding: 20px 0 0;
+            color: var(--c80);
+            font-size: var(--fluidFont-16);
+            line-height: 24px;
+            font-weight: 400;
+        }
+        .accordion-item.active .accordion-content {
+            max-height: 500px;
+        }
+        /* Smooth animation for content */
+        .accordion-item.active {
+            background-color: #F9F9FB;
+        }
+        .accordion-item.active {
+            .min{
+                display: block;
+            }
+            .pls{
+                display: none;
+            }
+        }
+        .accordion-item {
+            .min{
+                display: none;
+                transition: ease-in-out 0.4s;
+            }
+            .pls{
+                display: block;
+                transition: ease-in-out 0.4s;
+            }
+        }
+    }
+}
+.contactLocation{
+    .titleHead{
+        margin-bottom: 32px;
+        @include breakpoint(mx680){
+            margin: 0 auto 20px;
+            gap: 10px;
+        }
+        h2 {
+            font-size: 57px;
+            line-height: 64px;
+            margin-bottom: 18px;
+            color: var(--c13);
+            text-align: center;
+            @include breakpoint(mx1366){
+                font-size: 48px;
+                line-height: 58px;
+            }
+            @include breakpoint(mx991){
+                font-size: 40px;
+                line-height: 45px;
+                margin-bottom: 10px;
+            }
+            @include breakpoint(mx800){
+                font-size: 40px;
+                line-height: 45px;
+                margin-bottom: 10px;
+            }
+            @include breakpoint(mx767){
+                font-size: 35px;
+                line-height: 40px;
+            }
+            @include breakpoint(mx680){
+                font-size: 30px;
+                line-height: 40px;
+            }
+        }
+        p{
+            font-size: var(--fluidFont-16);
+            line-height: 24px;
+            color: var(--c6a);
+            text-align: center;
+        }
+    }
+    ul{
+        margin-inline: auto;
+        margin-bottom: 19px;
+        @include breakpoint(mx991){
+           flex-direction: column;
+           gap: 5px;
+        }
+        li{
+            font-size: var(--fluidFont-16);
+            line-height: 24px;
+            color: #0D0D0D;
+            grid-template-columns: 40px 1fr;
+        }
+    }
+}

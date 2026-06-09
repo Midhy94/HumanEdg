@@ -1,0 +1,16 @@
+@keyframes fillProgress {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+@keyframes slideInfinite {
+    0% { 
+        transform: translateX(0); 
+    }
+    100% { 
+        transform: translateX(-1250px); 
+    }
+}

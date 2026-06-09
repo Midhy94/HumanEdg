@@ -1,0 +1,897 @@
+html{
+    scroll-behavior: smooth;
+}
+html, body{
+    margin: 0;
+    padding: 0;
+}
+*,*::before, *::after{
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+body{
+    font-family: "Roboto", sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    transition: ease-in-out .4s;
+    height: inherit;
+    color: inherit;
+    cursor: pointer;
+}
+ul, ol{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.cmnDesc-16{
+    @include font-family(var(--fluidFont-16),400,24px);
+}
+.cmnDesc-18{
+    @include font-family(var(--fluidFont-18),400,26px);
+    @include breakpoint(mx680){
+        line-height: 24px;
+    }
+}
+.cmnDesc-20{
+    @include font-family(20px,400,30px);
+    @include breakpoint(mx1680){
+        font-size:18px;
+        line-height: 28px;
+    }
+}
+.ovrflowHdn {
+    overflow: hidden;
+}
+.ovrflowHdn-x {
+    overflow-x: hidden;
+}
+.ovrflowHdn-x {
+    overflow-x: hidden;
+}
+.d-none {
+    display: none !important;
+}
+button{
+    cursor: pointer;
+}
+.cmnBtn{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: var(--white);
+    border-radius: 40px;
+    border: none;
+    min-height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 5px 12px;
+    background-color: var(--primaryClr);
+    text-transform: capitalize;
+    width: fit-content;
+    transition: ease-in-out 0.4s;
+    white-space: nowrap;
+    &:hover{
+        background-color: var(--black);
+    }
+}
+.template-containerMaxWth{
+    max-width: var(--container-wide-width);
+    width: 100%;
+    margin: 0 auto;
+    @include breakpoint(mx1850){
+        padding-inline: 50px !important;
+    }
+    @include breakpoint(mx1199){
+        padding-inline: 30px !important;
+    }
+    @include breakpoint(mx991){
+        padding-inline: 25px !important;
+    }
+    @include breakpoint(mx767){
+        padding-inline: 20px !important;
+    }
+}
+.mainHeader{
+   .mainNavSec{
+       display: grid;
+       align-items: center;
+       gap:14px;
+       background-color:var(--white);
+       height: auto;
+       width: 100%;
+       position: fixed;
+       z-index: 9;
+       @include breakpoint(mx1850){
+           padding-inline: 50px !important;
+       }
+       @include breakpoint(mx1366){
+           padding-inline: 30px !important;
+       }
+       @include breakpoint(mx1199){
+           padding-inline: 20px !important;
+       }
+       @include breakpoint(mx991){
+           padding-inline: 15px !important;
+       }
+       @include breakpoint(mx680){
+           padding-inline: 20px !important;
+       }
+       .mainNav{
+           max-width: 1116px;
+           width: 100%;
+           margin: 0 auto;
+           position: relative;
+           padding-block: 16px;
+           z-index: 1;
+        //    @include breakpoint(mx1680){
+        //        padding-block: 24px 10px;
+        //    }
+        //    @include breakpoint(mx1450){
+        //        padding-block: 18px 10px;
+        //    }
+        //    @include breakpoint(mx1366){
+        //        padding-block: 20px;
+        //    }
+        //    @include breakpoint(mx991){
+        //        padding:14px 0px 0px 0px;
+        //    }
+           //Nav Sec
+           .mainNavWrap{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 10px;
+                &.mainNavWrapTop{
+                    @include breakpoint(mx991){
+                        .navRight{
+                            .linksAfter{
+                                @include breakpoint(mx680){
+                                    li{
+                                        &:not(:last-child) {
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+               .navLogoDiv{
+                    max-width: 278px;
+                    width: 100%;
+                    height: fit-content;
+                    display: flex;
+                    align-items: center;
+                    @include breakpoint(mx680){
+                        max-width: 170px;
+                    }
+                }
+                .navRight{
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    .nav{
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        right: auto;
+                        width: 100dvw;
+                        height: 100dvh;
+                        background-color: var(--c13);
+                        overflow: hidden;
+                        // transition: transform .5s cubic-bezier(.65,.05,0,1);;
+                        z-index:2;
+                        padding: 0px;
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        // transform: translateY(-200svh);
+                        transform: translateY(-100%);
+                        transition: transform 0.6s cubic-bezier(0.65, 0.05, 0.36, 1);
+                        @include breakpoint(mx767){
+                           justify-content: space-between;
+                        }
+                        &.nav-open {
+                            // transform: translateY(0svh);
+                            transform: translateY(0);
+                        }
+                        .navMenuHead{
+                            border-bottom: 1px solid #2d2d2d;
+                            padding-block: 16px;
+                        }
+                        .navMenuBody{
+                            padding-block: 20px;
+                            max-height: calc((100vh) - 200px);
+                            height: 100dvh;
+                            overflow: auto;
+                            min-height: calc((100vh) - 160px);
+                            @include breakpoint(mx767){
+                                padding: 0;
+                            }
+                            &::-webkit-scrollbar {
+                                width: 8px;
+                                margin-left: 5px;
+                                left: 5px;
+                            }
+                            &::-webkit-scrollbar-track {
+                                background: #1f1f1f;
+                            }
+                            &::-webkit-scrollbar-thumb {
+                                background:#0a0a0a;
+                            }
+                            .template-containerMaxWth{
+
+                            }
+                            .menuTwSec{
+                                grid-template-columns: 1fr 546px;
+                                padding-bottom: 20px;
+                                border-bottom: 1px solid #2d2d2d;
+                                min-height: calc((100vh) - 475px);
+                                align-items: center;
+                                @include breakpoint(mx991){
+                                    grid-template-columns: 1fr 400px;
+                                }
+                                @include breakpoint(mx767){
+                                    grid-template-columns: 1fr;
+                                    height: fit-content;
+                                }
+                            }
+                            .splide__slide {
+                                position: relative;
+                                margin-left: -23px;
+                            }
+                            
+                            .slide-image {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                            .pic{
+                                display: flex;
+                                border-radius: 4px;
+                                margin-bottom: 20px;
+                                @include breakpoint(mx991){
+                                    height: auto;
+                                }
+                                img{
+                                    width: 100%;
+                                    border-radius: 4px;
+                                }
+                            }
+                            .top-icon {
+                                position: absolute;
+                                right: 0;
+                                top: 0;
+                                background-color: var(--primaryClr);
+                                border-radius: 0 4px 0 4px;
+                                z-index: 10;
+                            }
+                            .caption {
+                                color: var(--white);
+                                font-size: var(--fluidFont-22 );
+                                line-height: 28px;
+                                z-index: 1;
+                            }
+                            .nav-buttons {
+                                position: absolute;
+                                top: 312px;
+                                right: 0;
+                                display: flex;
+                                gap: 16px;
+                                z-index: 100;
+                                background-color: var(--c13);
+                                @include breakpoint(mx991){
+                                    top: 237px;
+                                }
+                            }
+
+                            .nav-buttons button {
+                                background: none;
+                                border: 3px solid white;
+                                color: white;
+                                font-size: 22px;
+                                width: 53px;
+                                height: 53px;
+                                border-radius: 50%;
+                                cursor: pointer;
+                                @include breakpoint(mx991){
+                                    border: 2px solid white;
+                                    width: 40px;
+                                    height: 40px;
+                                }
+                                svg{
+                                    @include breakpoint(mx991){
+                                        height: 16px;
+                                    }
+                                }
+                            }
+
+                            .splide__pagination {
+                                display: none;
+                            }
+                            .menuTwBtm{
+                                padding-block: 49px 20px;
+                                position: relative;
+                                min-height: 233px;
+                                .icn{
+                                    position: absolute;
+                                    right: 0;
+                                    bottom: 0;
+                                    @include breakpoint(mx767){
+                                        width: 160px;
+                                        height: 160px;
+                                        display: none;
+                                    }
+                                    img{
+                                        @include breakpoint(mx767){
+                                            object-fit: contain;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .navMenuFooter{
+                            background-color: #0C0C0C;
+                            border-top: 1px solid #1d1d1d;
+                            padding-block: 20px;
+                        }
+                    }
+                    ul{
+                        margin: 0;
+                        padding: 0;
+                        display: flex;
+                        align-items: center;
+                        list-style: none;
+                        gap: 22px;
+                        // @include breakpoint(mx1680){
+                        //     gap: 30px;
+                        // }
+                        // @include breakpoint(mx1599){
+                        //     gap: 20px;
+                        // }
+                        // @include breakpoint(mx1366){
+                        //     gap: 10px;
+                        // }
+                        // @include breakpoint(mx1279){
+                        //     padding-block: 6px;
+                        //     gap: 14px;
+                        // }
+                    }
+                    .rightCarosal {
+                        @include breakpoint(mx767){
+                            display: none;
+                        }
+                    }
+                   .linksAfterMob{
+                        display: flex;
+                        flex-direction: column;
+                        &.linksAfterMob2{
+                            li{
+                                font-size: 32px;
+                                line-height: 40px;
+                                @include breakpoint(mx767){
+                                    font-size: 25px;
+                                    line-height: 35px;
+                                }
+                                @include breakpoint(mx680){
+                                    font-size: 20px;
+                                    line-height: 30px;
+                                }
+                            }
+                        }
+                        li{
+                            display: flex;
+                            padding-inline: 0;
+                            font-size: 45px;
+                            line-height: 52px;
+                            transition: .4s ease-in-out;
+                            width: 100%;
+                            @include breakpoint(mx1199){
+                                font-size: 40px;
+                                line-height: 45px;
+                            }
+                            @include breakpoint(mx991){
+                                font-size: 35px;
+                                line-height: 40px;
+                            }
+                            @include breakpoint(mx767){
+                                font-size: 30px;
+                                line-height: 40px;
+                            }
+                            @include breakpoint(mx680){
+                                font-size: 25px;
+                                line-height: 35px;
+                            }
+                            &:hover{
+                                a{
+                                    color: var(--white);
+                                }
+                            }
+                            a{
+                                color: var(--white);
+                                width: 100%;
+                            }
+                            &.menuDrop{
+                                cursor: pointer;
+                                position: relative;
+                                &.open{
+                                    .dropList{
+                                        display: block;
+                                    }
+                                }
+                                .drop{
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 20px;
+                                    color: var(--white);
+                                    span{
+                                        width: 23px;
+                                        svg{
+                                            width: 100%;
+                                            height: 12px;
+                                        }
+                                    }
+                                }
+                                .dropList{
+                                    background-color: var(--white);
+                                    border-top: 1px solid var(--primaryClr);
+                                    box-shadow: 0 1px 19px 1px rgba(0, 0, 0, 0.15);
+                                    min-width: 249px;
+                                    border-radius: 0 0 6px 6px;
+                                    position: absolute;
+                                    left: 0;
+                                    top: 46px;
+                                    display: none;
+                                    a{
+                                        @include font-family(var(--fluidFont-16), 500, 24px);
+                                        color: var(--c6a);
+                                        padding: 10px 16px;
+                                        min-height: 44px;
+                                        display: flex;
+                                        align-items: center;
+                                        border-bottom: 1px solid #F7F7F7;
+                                        &:last-child{
+                                            border-bottom: none;
+                                            border-radius: 0 0 6px 6px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .linksAfter{
+                        @include breakpoint(mx1199){
+                            display: none;
+                        }
+                        li{
+                            display: flex;
+                            @include font-family(var(--fluidFont-16), 500, 24px);
+                            transition: ease-in-out 0.4s;
+                            color: var(--c6a);
+                            &:hover{
+                                a{
+                                    color: var(--primaryClr);
+                                }
+                            }
+                            &.active{
+                                a{
+                                    color: var(--primaryClr);
+                                }
+                            }
+                            a{
+                                color: var(--c6a);
+                            }
+                            &.menuDrop{
+                                cursor: pointer;
+                                position: relative;
+                                &.open{
+                                    .dropList{
+                                        display: block;
+                                    }
+                                }
+                                .drop{
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 2px;
+                                }
+                                .dropList{
+                                    background-color: var(--white);
+                                    border-top: 1px solid var(--primaryClr);
+                                    box-shadow: 0 1px 19px 1px rgba(0, 0, 0, 0.15);
+                                    min-width: 249px;
+                                    border-radius: 0 0 6px 6px;
+                                    position: absolute;
+                                    left: 0;
+                                    top: 46px;
+                                    display: none;
+                                    a{
+                                        @include font-family(var(--fluidFont-16), 500, 24px);
+                                        color: var(--c6a);
+                                        padding: 10px 16px;
+                                        min-height: 44px;
+                                        display: flex;
+                                        align-items: center;
+                                        border-bottom: 1px solid #F7F7F7;
+                                        &:last-child{
+                                            border-bottom: none;
+                                            border-radius: 0 0 6px 6px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .morebtn{
+                        width:35px;
+                        height: 26px;
+                        cursor: pointer;
+                        background: transparent;
+                        border: none;
+                        svg{
+                            path{
+                                fill: var(--white);
+                            }
+                            width: 35px;
+                            height: 26px;
+                            @include breakpoint(mx1680){
+                                width: 20px !important;
+                                height: 20px !important;
+                                padding-top: 4px;
+                            }
+                        }
+                        &.menuMorebtnCls{
+                            display: none;
+                            &.show{
+                                display: flex;
+                            }
+                        }
+                        &.menuMorebtn{
+                            &.hide{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+                .secRight{
+                    .loginBtn{
+                        border-right: 1px solid var(--c6a);
+                        padding-right: 16px;
+                    }
+                    .hamburger{
+                        .mobile-menu-toggle {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            width: 24px;
+                            height: 18px;
+                            background: transparent;
+                            border: none;
+                            cursor: pointer;
+                            padding: 0;
+                            z-index: 2;
+                            position: relative;
+                            span {
+                                display: block;
+                                width: 100%;
+                                height: 2px;
+                                background-color: #131313;
+                                transition: transform var(--transition-medium), opacity var(--transition-medium);
+                            }
+                            &.is-active {
+                                span {
+                                    background-color: var(--white);
+                                }
+                                span:nth-child(1) {
+                                    transform: translateY(8px) rotate(45deg);
+                                }
+                                span:nth-child(2) {
+                                    opacity: 0;
+                                }
+                                span:nth-child(3) {
+                                    transform: translateY(-8px) rotate(-45deg);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+       }
+    }
+   .headerMenuSec{
+       position: absolute;
+       transition:top .4s ease-in-out;
+       left: 0;
+        border-bottom:1px solid #F0F0F0;
+   }
+   img{
+       height: auto;
+       width: 100%;
+   }
+}
+footer{
+    padding-top: 85px;
+    background: #141414;
+    @include breakpoint(mx1199){
+       padding-top: 60px;
+    }
+    .footerTopContainer{
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap:30px;
+        padding-block-start: 60px;
+        border-top: 1px solid #ffffff30;
+    }
+
+    .footerMenu{
+        @include breakpoint(mx991){
+            gap: 20px;
+            row-gap: 30px;
+            flex-direction: column;
+        }
+        @include breakpoint(mx767){
+            row-gap: 24px;
+            padding-top: 24px;
+        }
+    }
+    .logoSec{
+        @include breakpoint(mx1199){
+            max-width: 292px;
+        }
+        @include breakpoint(mx991){
+            max-width: 452px;
+            margin-bottom: 40px;
+        }
+        .logo{
+            img{
+                max-width: 343px;
+                width: 100%;
+                height: auto;
+            }
+        }
+        p{
+            font-size: 14px;
+            line-height: 20px;
+            color: #DDE3EB;
+        }
+    }
+    .footerWidget{
+        @include breakpoint(mx991){
+            max-width: 100%;
+        }
+        @include breakpoint(mx680){
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    .menuCol{
+        max-width: 120px;
+        width: 100%;
+        &:last-child{
+            @include breakpoint(mx575){
+                border-bottom: none;
+                padding-bottom: 0;
+            }
+        }
+    }
+
+    .menuCol h4 {
+        color: #DDE3EB;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        margin-bottom: 16px;
+        @include breakpoint(mx767){
+            margin-bottom: 12px;
+        }
+    }
+    .menuCol ul {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+    }
+    .menuCol ul li a{
+        color: #CFCFCF;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+    }
+    .footer-copyright {
+        color: #DDE3EB;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+        text-align: center;
+        margin-top: 103px;
+        padding-bottom: 65px;
+        @include breakpoint(mx1199){
+            margin-top: 70px;
+        }
+    }
+    .eve{
+        display: none;
+        width: 100%;
+        border-radius: 6px;
+        margin-bottom: 24px;
+         @include breakpoint(mx767){
+           display: flex;
+        }
+    }
+}
+.header {
+    position: fixed;
+    width: 100%;
+    top: -100px;
+    left: 0;
+    z-index: 5;
+    transition: top 0.4s ease-in-out;
+    &.header-visible {
+        transform: translateY(0);
+    }
+    &.nav-opened {
+        transform: translateY(0);
+    }
+    &.fixHeader {
+        top: 0; 
+        z-index: 1500;
+    }
+    &.fixHeaderNormal {
+        top: 0; 
+        z-index: 1500;
+    }
+}
+.inputRow {
+    position: relative;
+    margin-bottom: 24px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .inputLabel {
+        @include font-family(14px, 400, 20px);
+        color: #0D0D0D; 
+    }
+    .inputCtrl {
+        width: 100%;
+        height: 48px;
+        padding: 5px 12px;
+        @include font-family(14px, 400, 20px);
+        border: 1px solid #D6D6D6;
+        border-radius: 10px;
+        outline: none;
+        color: var(--c80); 
+        @include breakpoint(mx800) {
+            height: 45px;
+            border-radius: 8px;
+        } 
+        @include breakpoint(mx680) {
+            height: 45px;
+            border-radius: 8px;
+        }
+        &::placeholder {
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            color: var(--c6a);
+        }
+        &::-webkit-input-placeholder {
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+        }
+        &::-moz-placeholder {
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+        }
+        &::-moz-placeholder {
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+        }
+        &::-ms-input-placeholder {
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+        }  
+    }
+    .textCtrl {
+        display: block;
+        min-height: 120px;
+        border-radius: 10px;
+        padding: 14px 18px;
+        width: 100%;
+        @include font-family(14px, 400, 20px);
+        border: 1px solid #D6D6D6;
+        color: var(--c80); 
+        outline: none;
+        resize: none;
+        @include breakpoint(mx800) {
+            min-height: 100px;
+            border-radius: 8px;
+        } 
+        @include breakpoint(mx680) {
+            border-radius: 8px;
+            min-height: 100px;
+        }  
+    }
+    .validateText {
+        position: absolute;
+        top: 67px;
+        right: 5px;
+        @include font-family(10px, 400, 16px);
+        color: #ff0000;
+    }
+    .select2-container{
+        width: 100% !important;
+    }
+    .select2-container--default .select2-selection--single .select2-selection__arrow {
+        top: 13px;
+        right: 13px;
+        background-image: url(../images/dwnArrow2.svg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 24px;
+        height: 24px;
+    }
+    .select2-container--open .select2-selection__arrow {
+        transform: rotate(-180deg);
+    }
+    .select2-container--default .select2-selection--single .select2-selection__arrow b{
+        display: none;
+    }
+    .select2-container--default .select2-selection--single .select2-selection__rendered {
+        color: var(--c13);
+        @include font-family(14px, 400, 20px);
+        @include breakpoint(mx800) {
+            font-size: 14px;
+            line-height: 22px;
+        } 
+        @include breakpoint(mx680) {
+            font-size: 14px;
+            line-height: 22px;
+        }  
+    }
+    .select2-container--default .select2-selection--single {
+        border: 1px solid #D6D6D6;
+        border-radius: 8px;
+    }
+    .select2-container .select2-selection--single .select2-selection__rendered{
+        padding: 5px 16px;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        white-space: normal;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        @include breakpoint(mx1366) {
+            padding: 5px 18px;
+        }
+    }
+    .select2-container .select2-selection--single {
+        height: 48px;
+        display: flex;
+        align-items: center;
+        @include breakpoint(mx800) {
+            height: 45px;
+            border-radius: 8px;
+        } 
+        @include breakpoint(mx680) {
+            height: 45px;
+            border-radius: 8px;
+        }  
+    }
+}   
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+    background-color: var(--primaryClr);
+}
+.select2-results__option {
+    @include font-family(14px, 400, 20px);
+}

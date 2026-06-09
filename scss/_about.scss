@@ -1,0 +1,945 @@
+.fullWidthPic{
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 493px;
+    @include breakpoint(mx680){
+        min-height: 270px;
+    }
+    &::after{
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.5);
+    }
+    &.fullWidthPicInd{
+        min-height: 533px;
+        @include breakpoint(mx680){
+            min-height: 270px;
+        }
+        a{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+    }
+    &.fullWidthSmPic{
+        min-height: 258px;
+        @include breakpoint(mx680){
+            min-height: 258px;
+        }
+    }
+}
+.aboutWelc{
+    padding-block: 150px;
+    @include breakpoint(mx1199){
+        padding-block: 110px;
+    }
+    @include breakpoint(mx991){
+       padding-block: 80px 60px;
+    }
+    @include breakpoint(mx800){
+       padding-block: 80px 60px;
+    }
+    @include breakpoint(mx680){
+       padding-block: 60px 40px;
+    }
+    &.aboutWelcprojDtl{
+        padding-block: 96px;
+        @include breakpoint(mx1199){
+            padding-block: 90px;
+        }
+        @include breakpoint(mx991){
+            padding-block: 80px 60px;
+        }
+        @include breakpoint(mx800){
+            padding-block: 80px 60px;
+        }
+        @include breakpoint(mx680){
+            padding-block: 60px 40px;
+        }
+    }
+    .aboutWelcArea{
+        grid-template-columns: 552px 1fr;
+        @include breakpoint(mx1199){
+            grid-template-columns: 450px 1fr;
+        }
+        @include breakpoint(mx991){
+            grid-template-columns: 340px 1fr;
+            gap: 35px;
+        }
+        @include breakpoint(mx767){
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+        @include breakpoint(mx680){
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+    }
+    h2{
+        font-size: 57px;
+        line-height: 64px;
+        margin-bottom: 18px;
+        color: var(--c13);
+        @include breakpoint(mx1366){
+            font-size: 48px;
+            line-height: 58px;
+        }
+        @include breakpoint(mx991){
+            font-size: 40px;
+            line-height: 45px;
+            margin-bottom: 10px;
+        }
+        @include breakpoint(mx800){
+            font-size: 40px;
+            line-height: 45px;
+            margin-bottom: 10px;
+        }
+        @include breakpoint(mx767){
+            font-size: 35px;
+            line-height: 40px;
+        }
+        @include breakpoint(mx680){
+            font-size: 30px;
+            line-height: 40px;
+        }
+    }
+    p{
+        color: var(--c6a);
+    }
+    .pic{
+        @include breakpoint(mx767){
+           order: 1;
+        }
+    }
+}
+.aboutOurStory{
+    margin-bottom: 150px;
+    @include breakpoint(mx1199){
+        margin-block: 0 110px;
+    }
+    @include breakpoint(mx991){
+       margin-block: 0 80px;
+    }
+    @include breakpoint(mx800){
+       margin-block: 0 80px;
+    }
+    @include breakpoint(mx680){
+       margin-block: 0 60px;
+    }
+    &.aboutOurStoryprojDtl{
+        margin-bottom: 96px;
+        @include breakpoint(mx1199){
+            margin-block: 0 90px;
+        }
+        @include breakpoint(mx991){
+            margin-block: 0 80px;
+        }
+         @include breakpoint(mx800){
+            margin-block: 0 80px;
+        }
+        @include breakpoint(mx680){
+            margin-block: 0 60px;
+        }
+    }
+    &.aboutOurStoryExcel{
+        margin-block: 150px;
+        @include breakpoint(mx1199){
+            margin-block: 110px;
+        }
+        @include breakpoint(mx991){
+            margin-block: 80px;
+        }
+        @include breakpoint(mx800){
+            margin-block: 80px;
+        }
+        @include breakpoint(mx680){
+            margin-block:  60px;
+        }
+    }
+    .titleHead{
+        margin: 0 auto 50px;
+        @include breakpoint(mx991){
+            margin: 0 auto 40px;
+        }
+        @include breakpoint(mx800){
+            margin: 0 auto 40px;
+        }
+        @include breakpoint(mx680){
+            margin: 0 auto 20px;
+            gap: 10px;
+        }
+        p{
+            color: var(--c6a);
+            text-align: center;
+        }
+    }
+    h2{
+        font-size: 57px;
+        line-height: 64px;
+        color: var(--c13);
+        text-align: center;
+        @include breakpoint(mx1199){
+            font-size: 50px;
+            line-height: 60px;
+        }
+        @include breakpoint(mx991){
+            font-size: 45px;
+            line-height: 50px;
+            margin-bottom: 0px;
+        }
+         @include breakpoint(mx800){
+            font-size: 45px;
+            line-height: 50px;
+            margin-bottom: 0px;
+        }
+        @include breakpoint(mx767){
+            font-size: 40px;
+            line-height: 45px;
+        }
+        @include breakpoint(mx680){
+            font-size: 30px;
+            line-height: 40px;
+        }
+    }
+    .timeline-line {
+        position: absolute;
+        top: 40px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: var(--primaryClr);;
+        z-index: 0;
+    }
+    .splide__slide {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        background: transparent;
+        width: 349px !important;
+    }
+    .timeline-card {
+        background-color: #F7F9FC;
+        padding: 32px;
+        border-radius: 4px;
+        text-align: left;
+        position: relative;
+        z-index: 2;
+    }
+    .timeline-year {
+        font-size: var(--fluidFont-45);
+        line-height: 52px;
+        color: var(--c6a);
+    }
+    .timeline-title {
+        font-size: var(--fluidFont-22);
+        line-height: 28px;
+        color: var(--c13);
+    }
+    .timeline-desc {
+        font-size: var(--fluidFont-16);
+        line-height: 24px;
+        color: var(--c6a);
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+    .timeline-card a {
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--c13);
+        padding: 5px 15px;
+        border: 2px solid var(--c13);
+        border-radius: 50px;
+        text-decoration: none;
+        transition: ease-in-out 0.4s;
+        width: fit-content;
+        &:hover{
+            color: var(--white);
+            background-color: var(--c13);
+            svg {
+                transform: translateX(3px);
+                path{
+                    fill: var(--white);
+                }
+            }
+        }
+        svg {
+            transition: ease-in-out 0.4s;
+        }
+    }
+    .timeline-marker {
+        position: absolute;
+        top: -33px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 25px;
+        height: 25px;
+        border: 2px solid var(--primaryClr);
+        border-radius: 50%;
+        background: white;
+        z-index: 3;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 17px;
+            height: 17px;
+            background: var(--primaryClr);
+            border-radius: 50%;
+        }
+    }
+    .splide__arrow {
+        background: #845EF7;
+        border-radius: 50%;
+        width: 48px;
+        height: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .splide__arrow svg {
+        fill: #fff;
+        width: 20px;
+        height: 20px;
+    }
+    .splide__pagination {
+        margin-top: 15px;
+    }
+    .splide__list {
+        padding-top: 61px !important;
+    }
+    .splide__track {
+        overflow: visible;
+    }
+    .splide-controls {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 40px;
+        @include breakpoint(mx991){
+            margin-top: 30px;
+        }
+        @include breakpoint(mx800){
+            margin-top: 30px;
+        }
+    }
+    .splide__pagination {
+        display: flex;
+        justify-content: flex-start;
+        gap: 6px;
+        position: relative;
+        padding: 0;
+        top: auto;
+        bottom: auto;
+    }
+    .splide__pagination .splide__pagination__page {
+        width: 10px;
+        height: 10px;
+        background: #DDE3EB;
+        border-radius: 8px;
+        position: relative;
+        overflow: hidden;
+        margin: 0;
+        opacity: 1;
+    }
+    .splide__pagination li {
+        display: flex;
+    }
+    .splide__pagination__page.is-active {
+        transform: scale(1);
+        width: 86px;
+    }
+    .splide__pagination  .splide__pagination__page.is-active::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 0%;
+        background: var(--primaryClr);
+        animation: fillProgress 3s linear forwards;
+    }
+    .splide__arrows {
+        @include breakpoint(mx767){
+            gap: 10px;
+        }
+    }
+    .splide__arrows .splide__arrow {
+        background: transparent;
+        border: none;
+        padding: 0;
+        border-radius: 50%;
+        cursor: pointer;
+        position: relative;
+        left: auto;
+        right: auto;
+        transform: translateY(0%);
+        opacity: 1;
+        border-radius: 50%;
+    }
+    .splide__arrow--prev svg {
+        transform: scaleX(1);
+        width: auto;
+        height: auto;
+    }
+    .splide__arrows svg {
+        height: auto;
+        width: auto;
+    }
+}
+.aboutMissionVission{
+    background-color: var(--c13);
+    padding-block: 105px 117px;
+    @include breakpoint(mx1199){
+        padding-block: 100px;
+    }
+    @include breakpoint(mx991){
+       padding-block: 80px;
+    }
+     @include breakpoint(mx800){
+       padding-block: 80px;
+    }
+    @include breakpoint(mx680){
+       padding-block: 60px;
+    }
+    &.pbcBtm{
+        margin-bottom: 96px;
+        @include breakpoint(mx1199){
+            margin-bottom: 90px;
+        }
+        @include breakpoint(mx991){
+            margin-bottom: 80px;
+        }
+        @include breakpoint(mx800){
+            margin-bottom: 80px;
+        }
+        @include breakpoint(mx680){
+            margin-bottom: 60px;
+        }
+    }
+    &.aboutMissionVissionExcel{
+        padding-block: 0 150px;
+        background-color: transparent;
+        @include breakpoint(mx1199){
+            padding-block: 0 110px;
+        }
+        @include breakpoint(mx991){
+            padding-block: 0 80px;
+        }
+         @include breakpoint(mx800){
+            padding-block: 0 80px;
+        }
+        @include breakpoint(mx680){
+            padding-block: 0 60px;
+        }
+        .titleHead{
+            margin-bottom: 62px;
+            @include breakpoint(mx991){
+                margin: 0 auto 40px;
+            }
+            @include breakpoint(mx800){
+                margin: 0 auto 40px;
+            }
+            @include breakpoint(mx680){
+                margin: 0 auto 20px;
+                gap: 10px;
+            }
+            p{
+                color: var(--c6a);
+            }
+        }
+        h2{
+            color: var(--c13);
+        }
+        .cardGrp{
+            flex-wrap: wrap;
+            .card{
+                max-width: 348px;
+                flex: 1 1 30%;   
+                @include breakpoint(mx1599){
+                    max-width: 308px;  
+                }
+                @include breakpoint(mx991){
+                    flex: 1 1 298px;
+                }
+                @include breakpoint(mx800){
+                    flex: 1 1 298px;
+                }
+                @include breakpoint(mx767){
+                    flex: 1 1 298px;
+                }
+                @include breakpoint(mx680){
+                    flex: 1 1 198px;
+                }
+                @include breakpoint(mx480){
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+    &.divNowrap{
+        p{
+            overflow: initial;
+            display: block;
+        }
+    }
+    .titleHead{
+        margin: 0 auto 83px;
+        @include breakpoint(mx991){
+            margin: 0 auto 50px;
+        }
+        @include breakpoint(mx800){
+            margin: 0 auto 50px;
+        }
+        @include breakpoint(mx680){
+            margin: 0 auto 20px;
+            gap: 10px;
+        }
+        p{
+            color: var(--white);
+            text-align: center;
+        }
+    }
+    h2{
+        font-size: 57px;
+        line-height: 64px;
+        color: var(--white);
+        text-align: center;
+        @include breakpoint(mx1199){
+            font-size: 50px;
+            line-height: 60px;
+        }
+        @include breakpoint(mx991){
+            font-size: 45px;
+            line-height: 50px;
+            margin-bottom: 0px;
+        }
+        @include breakpoint(mx800){
+            font-size: 45px;
+            line-height: 50px;
+            margin-bottom: 0px;
+        }
+        @include breakpoint(mx767){
+            font-size: 40px;
+            line-height: 45px;
+        }
+        @include breakpoint(mx680){
+            font-size: 30px;
+            line-height: 40px;
+        }
+    }
+
+    .cardGrp{
+        grid-template-columns: 1fr 1fr 1fr;
+        @include breakpoint(mx991){
+            gap: 20px;
+        }
+        @include breakpoint(mx767){
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        @include breakpoint(mx480){
+             grid-template-columns: 1fr;
+        }
+    }
+    .card{
+        background-color: #F7F9FC;
+        padding: 32px;
+        border-radius: 4px;
+        @include breakpoint(mx991){
+            gap: 10px;
+            padding: 25px;
+        }
+        @include breakpoint(mx800){
+            gap: 10px;
+            padding: 25px;
+        }
+        @include breakpoint(mx767){
+           padding: 25px 20px;
+        }
+    }
+    h5 {
+        font-size: var(--fluidFont-22);
+        line-height: 28px;
+        color: var(--c13);
+    }
+    p {
+        font-size: var(--fluidFont-16);
+        line-height: 24px;
+        color: var(--c6a);
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+    a {
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--c13);
+        padding: 5px 15px;
+        border: 2px solid var(--c13);
+        border-radius: 50px;
+        text-decoration: none;
+        transition: ease-in-out 0.4s;
+        width: fit-content;
+        &:hover{
+            color: var(--white);
+            background-color: var(--c13);
+            svg {
+                transform: translateX(3px);
+                path{
+                    fill: var(--white);
+                }
+            }
+        }
+        svg {
+            transition: ease-in-out 0.4s;
+        }
+    }
+}
+.aboutMeetPeople{
+    padding-block: 150px;
+    @include breakpoint(mx1199){
+        padding-block: 110px;
+    }
+    @include breakpoint(mx991){
+       padding-block: 80px;
+    }
+    @include breakpoint(mx800){
+       padding-block: 80px;
+    }
+    @include breakpoint(mx680){
+       padding-block: 60px;
+    }
+    .titleHead{
+        margin: 0 auto 68px;
+        @include breakpoint(mx991){
+            margin: 0 auto 50px;
+        }
+         @include breakpoint(mx800){
+            margin: 0 auto 50px;
+        }
+        @include breakpoint(mx680){
+            margin: 0 auto 20px;
+            gap: 10px;
+        }
+        p{
+            color: var(--c6a);
+            text-align: center;
+        }
+    }
+    h2{
+        font-size: 57px;
+        line-height: 64px;
+        color: var(--c13);
+        text-align: center;
+        @include breakpoint(mx1199){
+            font-size: 50px;
+            line-height: 60px;
+        }
+        @include breakpoint(mx991){
+            font-size: 45px;
+            line-height: 50px;
+            margin-bottom: 0px;
+        }
+        @include breakpoint(mx800){
+            font-size: 45px;
+            line-height: 50px;
+            margin-bottom: 0px;
+        }
+        @include breakpoint(mx767){
+            font-size: 40px;
+            line-height: 45px;
+        }
+        @include breakpoint(mx680){
+            font-size: 30px;
+            line-height: 40px;
+        }
+    }
+    .cardGrp{
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-top: 31px;
+        @include breakpoint(mx1199){
+            gap: 25px;
+        }
+        @include breakpoint(mx991){
+            grid-template-columns: 1fr 1fr 1fr;
+            max-width: 831px;
+            margin-inline: auto;
+        }
+        @include breakpoint(mx767){
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        @include breakpoint(mx480){
+            grid-template-columns: 1fr;
+        }
+    }
+    .cardVis {
+        max-width: 347px;
+        border-radius: 4px;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+        background-color:  #F7F9FC;
+        border: 1px solid #DDE3EB;
+        border-radius: 4px;
+        text-align: center;
+        transition: ease-in-out 0.4s;
+        @include breakpoint(mx767){
+            max-width: 100%;
+        }
+        @include breakpoint(mx575){
+            margin-inline: auto;
+        }
+        &:hover {
+            background-color:  var(--c13);
+            .name {
+                color: #F7F9FC;
+            }
+            .designation {
+                color: #DDE3EB;
+            }
+            .description {
+                color: #DDE3EB;
+            }
+            .social-icon {
+                svg{
+                    path{
+                        fill: #F7F9FC;
+                    }
+                }
+            }
+            .image-section{
+                img{
+                    filter: grayscale(0);
+                }
+            }
+        }
+        .image-section {
+            max-width: 347px;
+            width: 100%;
+            height: 264px;
+            background: linear-gradient(135deg, #e8b4b8, #d4a5aa);
+            position: relative;
+            overflow: hidden;
+            transition: ease-in-out 0.4s;
+            img{
+                transition: ease-in-out 0.4s;
+                filter: grayscale(1);
+            }
+        }
+
+        .profile-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .info-section {
+            color: var(--white);
+            padding: 16px 16px 19px;
+            text-align: center;
+            transition: ease-in-out 0.4s;
+        }
+        .name {
+            font-size: var(--fluidFont-22);
+            line-height: 22px;
+            margin-block: 19px 4px;
+            padding-inline: 10px;
+            transition: ease-in-out 0.4s;
+        }
+        .designation {
+            color: #8b7cf6;
+            font-size: 14px;
+            margin-bottom: 14px;
+            padding-inline: 10px;
+            transition: ease-in-out 0.4s;
+        }
+        .description {
+            color: var(--c6a);
+            font-size: var(--fluidFont-16);
+            line-height: 24px;
+            margin-bottom: 14px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 6px;
+        }
+        .social-icon {
+            text-decoration: none;
+            transition: ease-in-out 0.4s;
+            svg{
+                path{
+                    transition: ease-in-out 0.4s;
+                }
+            }
+        }
+    }
+    .tabCnt {
+        overflow: hidden;
+        .tabs{
+            display: flex;
+            justify-content: center;
+            overflow: auto;
+            overflow-x: auto;
+            @include breakpoint(mx680){
+                justify-content: flex-start;
+            }
+            &::-webkit-scrollbar {
+                height: 8px;
+                margin-left: 5px;
+                left: 5px;
+            }
+            &::-webkit-scrollbar-track {
+                background: #f7f7f7;
+            }
+            &::-webkit-scrollbar-thumb {
+                background:#c9c9c9;
+            }
+        }
+        .tab {
+            padding: 10px 16px;
+            font-size: var(--fluidFont-22);
+            line-height: 28px;
+            font-weight: 500;
+            color: var(--c6a);
+            cursor: pointer;
+            border-top: 2px solid transparent;
+            transition: all 0.3s ease;
+            position: relative;
+            white-space: nowrap;
+        }
+        .tab:hover {
+            color: #495057;
+        }
+        .tab.active {
+            color: var(--c13);
+            border-top-color: #7c4dff;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        
+    }   
+}
+.cultrCmnt{
+    .titleHead{
+        margin: 0 auto 68px;
+        @include breakpoint(mx991){
+            margin: 0 auto 50px;
+        }
+        @include breakpoint(mx800){
+            margin: 0 auto 50px;
+        }
+        @include breakpoint(mx680){
+            margin: 0 auto 20px;
+            gap: 10px;
+        }
+        p{
+            color: var(--c6a);
+            text-align: center;
+        }
+    }
+    h2{
+        font-size: 57px;
+        line-height: 64px;
+        color: var(--c13);
+        text-align: center;
+        @include breakpoint(mx1199){
+            font-size: 50px;
+            line-height: 60px;
+        }
+        @include breakpoint(mx991){
+            font-size: 45px;
+            line-height: 50px;
+            margin-bottom: 0px;
+        }
+        @include breakpoint(mx800){
+            font-size: 45px;
+            line-height: 50px;
+            margin-bottom: 0px;
+        }
+        @include breakpoint(mx767){
+            font-size: 40px;
+            line-height: 45px;
+        }
+        @include breakpoint(mx680){
+            font-size: 30px;
+            line-height: 40px;
+        }
+    }
+    .cultrCmntArea{
+        grid-template-columns: 1fr 1fr 1fr;
+        @include breakpoint(mx991){
+            gap: 25px;
+        }
+        @include breakpoint(mx767){
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        @include breakpoint(mx480){
+            grid-template-columns: 1fr;
+        }
+        .cardSec{
+            background-color: var(--c13);
+            border-radius: 4px;
+            @include breakpoint(mx575){
+                max-width: 350px;
+                margin-inline: auto;
+            }
+            &:hover{
+                .pic{
+                    img{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+            .pic{
+                overflow: hidden;
+                border-radius: 4px 4px 0 0;
+                img{
+                    transition: ease-in-out 0.4s;
+                }
+            }
+        }
+        .textArea{
+            padding: 22px 33px 34px;
+            @include breakpoint(mx991){
+                padding: 22px 20px;
+            }
+            @include breakpoint(mx800){
+                padding: 22px 20px;
+            }
+            .title{
+                font-size: var(--fluidFont-22);
+                line-height: 28px;
+                color: var(--white);
+            }
+            p{
+                font-size: var(--fluidFont-16);
+                line-height: 24px;
+                color: var(--white);
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 7;
+                -webkit-box-orient: vertical;
+            }
+        }
+    }
+}

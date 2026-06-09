@@ -1,0 +1,23 @@
+:root{
+  --white: #ffffff;
+  --black: #000000;
+  --primaryClr: #5D29E8;
+  --c6a: #6a6a6a;
+  --c13: #131313;
+  --c80: #808080;
+  --container-wide-width: 1116px;
+
+  //fonts
+  --fluidFont-16 : clamp(0.875rem, 0.5668rem + 0.361vw, 1rem);
+  --fluidFont-18 : clamp(1rem, 0.6918rem + 0.361vw, 1.125rem);
+  --fluidFont-20 : clamp(1.125rem, 0.8168rem + 0.361vw, 1.25rem);
+  --fluidFont-22 : clamp(1.125rem, 0.5086rem + 0.722vw, 1.375rem);
+  --fluidFont-24 : clamp(1.125rem, 0.725rem + 0.6459vw, 1.5rem);
+  --fluidFont-26 : clamp(1.25rem, 0.3254rem + 1.083vw, 1.625rem);
+  --fluidFont-30 : clamp(1.375rem, 0.1421rem + 1.444vw, 1.875rem);
+  --fluidFont-34 : clamp(1.5rem, -0.0411rem + 1.8051vw, 2.125rem);
+  --fluidFont-40 : clamp(1.5rem, 0.4333rem + 1.7223vw, 2.5rem);
+  --fluidFont-45: clamp(1.75rem, 0.6166rem + 1.82995vw, 2.8125rem);
+  --fluidFont-50: clamp(2rem, 0.7999rem + 1.9376vw, 3.125rem);
+  --fluidFont-64: clamp(2.125rem, 1.5rem + 2.0833vw, 4rem);
+}
