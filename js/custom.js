@@ -177,4 +177,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 /////////// menu slider /////////
+document.addEventListener('DOMContentLoaded', () => {
+    const menuNavSliderEl = document.getElementById('menuNavSlider');
+    if (menuNavSliderEl && !menuNavSliderEl.classList.contains('is-initialized')) {
+        const splide = new Splide('#menuNavSlider', {
+            type: 'loop',
+            arrows: false,
+            pagination: false,
+            gap: '2px'
+        }).mount();
+
+        document.getElementById('prevBtn')?.addEventListener('click', () => {
+            splide.go('<');
+        });
+        document.getElementById('nextBtn')?.addEventListener('click', () => {
+            splide.go('>');
+        });
+    }
+});
+
 

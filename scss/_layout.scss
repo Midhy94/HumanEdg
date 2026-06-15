@@ -179,6 +179,16 @@ button{
                     @include breakpoint(mx680){
                         max-width: 170px;
                     }
+                    a {
+                        display: flex;
+                        align-items: center;
+                        height: 100%;
+                    }
+                    img {
+                        max-height: 50px;
+                        width: auto;
+                        object-fit: contain;
+                    }
                 }
                 .navRight{
                     display: flex;
@@ -656,10 +666,12 @@ footer{
             margin-bottom: 40px;
         }
         .logo{
+            display: flex;
+            align-items: center;
             img{
-                max-width: 343px;
-                width: 100%;
-                height: auto;
+                max-height: 50px;
+                width: auto;
+                object-fit: contain;
             }
         }
         p{

@@ -23,9 +23,9 @@
                 <ul class="linksAfter gap-[22px]">
                   <li class="topMenu"><a href="index.html">Home</a></li>
                   <li class="topMenu"><a href="countries.html">Countries</a></li>
-                  <li class="topMenu"><a href="scholarships.html">Scholarships</a></li>
+                  <li class="topMenu active"><a href="scholarships.html">Scholarships</a></li>
                   <li class="topMenu"><a href="hr-consulting.html">HR Consulting</a></li>
-                  <li class="topMenu active"><a href="about.html">About</a></li>
+                  <li class="topMenu"><a href="about.html">About</a></li>
                 </ul>
                 <div class="nav flex items-center justify-between flex-col">
                   <div class="navMenuHead">
@@ -39,9 +39,9 @@
                         <ul class="linksAfterMob gap-[37px]">
                             <li class="topMenu"><a href="index.html">Home</a></li>
                             <li class="topMenu"><a href="countries.html">Countries</a></li>
-                            <li class="topMenu"><a href="scholarships.html">Scholarships</a></li>
+                            <li class="topMenu active"><a href="scholarships.html">Scholarships</a></li>
                             <li class="topMenu"><a href="hr-consulting.html">HR Consulting</a></li>
-                            <li class="topMenu active"><a href="about.html">About</a></li>
+                            <li class="topMenu"><a href="about.html">About</a></li>
                           </ul>
                         <div class="rightCarosal relative">
                           <div id="menuNavSlider" class="splide">
@@ -114,33 +114,139 @@
       </div>
     </header>
     <main class="ovrflowHdn">
-      <section class="homehedCnt homehedCntAbt z-1 relative">
+      <section class="homehedCnt homehedCntAbt homehedCntInd  z-1 relative">
         <div class="template-containerMaxWth">
-          <div class="homehedCntArea flex justify-between gap-[20px]">
-            <h2 class="w-full font-[400] m-auto text-center">About HumanEdg Educational & HR Consultancy</h2>
+          <div class="homehedCntArea flex justify-center flex-col gap-[11px] text-center max-w-[658px] w-full m-auto">
+            <h2 class="w-full font-[400] m-auto text-center">Scholarship Finder & Language Prep</h2>
+            <p>Evaluate your international eligibility, convert your GPA, and search for scholarship awards</p>
           </div>
         </div>
       </section>
 
-      <section class="fullWidthPic relative" style="background-image: url(images/aboutBgpic.jpg);"></section>
+      <section class="fullWidthPic fullWidthPicInd relative" style="background-image: url(images/scholarships_banner.png);"></section>
 
-      <section class="aboutWelc">
+      <section class="aboutWelc aboutWelcprojDtl">
         <div class="template-containerMaxWth">
-          <div class="aboutWelcArea grid items-center gap-[37px]">
-            <div class="pic max-w-[552px] w-full h-[370px] flex"><img src="images/welcomeHomePic1.jpg" alt="welcomeHomePic1" loading="lazy"/></div>
-            <div class="para max-w-[534px] w-full">
-                <h2 class="font-[400]">Empowering Students and Professionals to Excel Globally</h2>
-                <p class="cmnDesc-16">HumanEdg was founded with a clear vision: to bridge the gap between local potential and global opportunities. As a premier educational and HR consulting agency located in Kochi, we provide tailored counseling, visa guidance, and language coaching to help you transition smoothly into your next academic or professional milestone.</p>
-              </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-[48px]">
+            
+            <!-- Scholarship Finder Tool -->
+            <div class="flex flex-col gap-[20px] p-[32px] rounded-[16px] bg-[#f8fafc] border border-[#e2e8f0]">
+              <h3 class="font-[500] text-[24px] text-[#074163]">Scholarship Finder</h3>
+              <p class="font-[400] text-[#6A6A6A]">Enter your name, preferred study destination, academic score, and budget to get university options.</p>
+              <form id="scholarshipForm" class="flex flex-col gap-[16px]">
+                <div class="flex flex-col gap-[6px]">
+                  <label for="studentName" class="font-[500] text-[14px]">Full Name</label>
+                  <input type="text" id="studentName" name="name" class="inputCtrl" placeholder="Your Name" required>
+                </div>
+                <div class="flex flex-col gap-[6px]">
+                  <label for="prefCountry" class="font-[500] text-[14px]">Preferred Country</label>
+                  <select id="prefCountry" name="country" class="inputCtrl h-[48px]" style="padding: 10px;" required>
+                    <option value="">Select Country</option>
+                    <option value="canada">Canada</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="australia">Australia</option>
+                    <option value="germany">Germany</option>
+                    <option value="usa">United States</option>
+                  </select>
+                </div>
+                <div class="flex flex-col gap-[6px]">
+                  <label for="acadScore" class="font-[500] text-[14px]">Academic Score (%)</label>
+                  <input type="number" id="acadScore" name="score" min="0" max="100" class="inputCtrl" placeholder="e.g. 85" required>
+                </div>
+                <div class="flex flex-col gap-[6px]">
+                  <label for="annualBudget" class="font-[500] text-[14px]">Annual Budget (USD)</label>
+                  <input type="number" id="annualBudget" name="budget" min="0" class="inputCtrl" placeholder="e.g. 20000" required>
+                </div>
+                <button type="submit" class="cmnBtn font-[500] w-full text-center py-[12px]">Search Scholarships</button>
+              </form>
+              <div id="scholarshipResult" class="font-[500] text-[#0a4a70] mt-[10px]"></div>
+            </div>
+
+            <!-- GPA Calculator Tool -->
+            <div class="flex flex-col gap-[20px] p-[32px] rounded-[16px] bg-[#f8fafc] border border-[#e2e8f0]">
+              <h3 class="font-[500] text-[24px] text-[#074163]">GPA Converter (10-Point to 4.0 Scale)</h3>
+              <p class="font-[400] text-[#6A6A6A]">Convert your Indian university CGPA score out of 10 to a US 4.0 GPA scale to evaluate your eligibility.</p>
+              <form id="gpaForm" class="flex flex-col gap-[16px]">
+                <div class="flex flex-col gap-[6px]">
+                  <label for="cgpaVal" class="font-[500] text-[14px]">Enter CGPA (Out of 10)</label>
+                  <input type="number" step="0.01" min="0" max="10" id="cgpaVal" name="cgpa" class="inputCtrl" placeholder="e.g. 8.5" required>
+                </div>
+                <button type="submit" class="cmnBtn font-[500] w-full text-center py-[12px]">Convert GPA</button>
+              </form>
+              <div id="gpaResult" class="font-[500] text-[#0a4a70] mt-[10px]"></div>
+            </div>
+
           </div>
         </div>
       </section>
 
-      <section class="aboutOurStory relative">
+      <section class="aboutMissionVission aboutMissionVissionExcel">
+        <div class="template-containerMaxWth">
+          <div class="titleHead flex items-center justify-center flex-col gap-[18px] max-w-[832px] w-full">
+            <h2 class="font-[400]">Language Coaching & Prep Classes</h2>
+            <p class="cmnDesc-16">Expert-led coaching for standardized language exams required for admissions and visas</p>
+          </div>
+          <div class="cardGrp flex justify-center gap-[36px]">
+            <div class="card flex flex-col gap-[17px]">
+              <div class="icn w-[82px] h-[82px] flex"><svg width="82" height="82" fill="none" viewBox="0 0 82 82"><path fill="#148fb3" d="M58.87 29.964h5.261v-5.261h-5.262v5.261Zm0 13.667h5.261v-5.262h-5.262v5.262Zm0 13.667h5.261v-5.262h-5.262v5.262ZM6.833 68.333V39.292l20.5-14.59 20.5 14.59v29.041H33.64V50.987H21.026v17.346H6.834Zm47.833 0V35.875l-19.185-13.77v-8.438h39.685v54.666h-20.5Z"/></svg></div>
+              <h5 class="font-[500]">IELTS Academic & General</h5>
+              <p class="font-[400]">Comprehensive preparation for all modules: Reading, Writing, Listening, and Speaking, featuring extensive mock tests and feedback.</p>
+            </div>
+            <div class="card flex flex-col gap-[17px]">
+              <div class="icn w-[82px] h-[82px] flex"><svg width="80" height="81" fill="none" viewBox="0 0 80 81"><path fill="#148fb3" d="M52.5 40.5a12.5 12.5 0 1 1-25 0 12.5 12.5 0 0 1 25 0Z"/><path fill="#148fb3" d="M0 40.5S15 13 40 13s40 27.5 40 27.5S65 68 40 68 0 40.5 0 40.5ZM40 58a17.5 17.5 0 1 0 0-35 17.5 17.5 0 0 0 0 35Z"/></svg></div>
+              <h5 class="font-[500]">TOEFL Prep</h5>
+              <p class="font-[400]">Focused training for the TOEFL iBT test to help you achieve a 100+ score required by premier US and UK universities.</p>
+            </div>
+            <div class="card flex flex-col gap-[17px]">
+              <div class="icn w-[82px] h-[82px] flex"><svg width="82" height="82" fill="none" viewBox="0 0 82 82"><path fill="#148fb3" d="M41.547 10.25h-1.093l-8.986 17.938h19.065L41.547 10.25Zm14.692 17.938h17.63l-7.073-14.145a6.832 6.832 0 0 0-6.116-3.793H47.253l8.986 17.938Zm16.81 5.125H43.563v35.362l29.486-35.362ZM38.438 68.674V33.313H8.952l29.486 35.362ZM25.762 28.188l8.952-17.938H21.32a6.833 6.833 0 0 0-6.116 3.793L8.132 28.188h17.63Z"/></svg></div>
+              <h5 class="font-[500]">PTE Academic</h5>
+              <p class="font-[400]">Automated practice materials and specialized training for Pearson Test of English computer-based modules.</p>
+            </div>
+            <div class="card flex flex-col gap-[17px]">
+              <div class="icn w-[82px] h-[82px] flex"><svg width="82" height="82" fill="none" viewBox="0 0 82 82"><path fill="#148fb3" d="M41.547 10.25h-1.093l-8.986 17.938h19.065L41.547 10.25Zm14.692 17.938h17.63l-7.073-14.145a6.832 6.832 0 0 0-6.116-3.793H47.253l8.986 17.938Zm16.81 5.125H43.563v35.362l29.486-35.362ZM38.438 68.674V33.313H8.952l29.486 35.362ZM25.762 28.188l8.952-17.938H21.32a6.833 6.833 0 0 0-6.116 3.793L8.132 28.188h17.63Z"/></svg></div>
+              <h5 class="font-[500]">German Language (A1-B2)</h5>
+              <p class="font-[400]">Beginner to advanced German coaching designed for visa compliance and public university applications.</p>
+            </div>
+            <div class="card flex flex-col gap-[17px]">
+              <div class="icn w-[82px] h-[82px] flex"><svg width="82" height="82" fill="none" viewBox="0 0 82 82"><path fill="#148fb3" d="M41.547 10.25h-1.093l-8.986 17.938h19.065L41.547 10.25Zm14.692 17.938h17.63l-7.073-14.145a6.832 6.832 0 0 0-6.116-3.793H47.253l8.986 17.938Zm16.81 5.125H43.563v35.362l29.486-35.362ZM38.438 68.674V33.313H8.952l29.486 35.362ZM25.762 28.188l8.952-17.938H21.32a6.833 6.833 0 0 0-6.116 3.793L8.132 28.188h17.63Z"/></svg></div>
+              <h5 class="font-[500]">Duolingo English Test</h5>
+              <p class="font-[400]">Fast-track adaptive training for the digital language test accepted by universities in Canada and the US.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="aboutMissionVission divNowrap">
+        <div class="template-containerMaxWth">
+          <div class="titleHead flex items-center justify-center flex-col gap-[18px] max-w-[832px] w-full">
+            <h2 class="font-[400]">Scholarship Guidelines</h2>
+            <p class="cmnDesc-16">Understanding requirements and categories to secure global academic funding</p>
+          </div>
+          <div class="cardGrp grid gap-[36px]">
+            <div class="card flex flex-col gap-[17px]">
+              <div class="icn w-[82px] h-[82px] flex"><svg width="82" height="82" fill="none" viewBox="0 0 82 82"><path fill="#148fb3" d="M58.87 29.964h5.261v-5.261h-5.262v5.261Zm0 13.667h5.261v-5.262h-5.262v5.262Zm0 13.667h5.261v-5.262h-5.262v5.262ZM6.833 68.333V39.292l20.5-14.59 20.5 14.59v29.041H33.64V50.987H21.026v17.346H6.834Zm47.833 0V35.875l-19.185-13.77v-8.438h39.685v54.666h-20.5Z"/></svg></div>
+              <h5 class="font-[500]">Partner Institution Scholarships</h5>
+              <p class="font-[400]">Obtain entrance awards and fee waivers ranging from $2,000 to $10,000 directly from our direct partner colleges in Canada, UK, and Australia.</p>
+            </div>
+            <div class="card flex flex-col gap-[17px]">
+              <div class="icn w-[80px] h-[81px] flex"><svg width="80" height="81" fill="none" viewBox="0 0 80 81"><path fill="#148fb3" d="M52.5 40.5a12.5 12.5 0 1 1-25 0 12.5 12.5 0 0 1 25 0Z"/><path fill="#148fb3" d="M0 40.5S15 13 40 13s40 27.5 40 27.5S65 68 40 68 0 40.5 0 40.5ZM40 58a17.5 17.5 0 1 0 0-35 17.5 17.5 0 0 0 0 35Z"/></svg></div>
+              <h5 class="font-[500]">Government & External Grants</h5>
+              <p class="font-[400]">Apply for national and international scholarship foundations, including Commonwealth, DAAD, and country-specific government awards.</p>
+            </div>
+            <div class="card flex flex-col gap-[17px]">
+              <div class="icn w-[82px] h-[82px] flex"><svg width="82" height="82" fill="none" viewBox="0 0 82 82"><path fill="#148fb3" d="M41.547 10.25h-1.093l-8.986 17.938h19.065L41.547 10.25Zm14.692 17.938h17.63l-7.073-14.145a6.832 6.832 0 0 0-6.116-3.793H47.253l8.986 17.938Zm16.81 5.125H43.563v35.362l29.486-35.362ZM38.438 68.674V33.313H8.952l29.486 35.362ZM25.762 28.188l8.952-17.938H21.32a6.833 6.833 0 0 0-6.116 3.793L8.132 28.188h17.63Z"/></svg></div>
+              <h5 class="font-[500]">SOP & Essay Guidelines</h5>
+              <p class="font-[400]">Draft convincing statements of purpose and scholarship essays to display your vision, credentials, and financial necessity.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="aboutOurStory aboutOurStoryExcel relative">
         <div class="template-containerMaxWth">
           <div class="titleHead flex items-center justify-center flex-col gap-[18px] max-w-[832px] w-full">
             <h2 class="font-[400]">Our Story</h2>
-            <p class="cmnDesc-16">A history of growth, partnerships, and student-focused success stories</p>
+            <p class="cmnDesc-16">Follow our systematic steps to select institutions, prepare for exams, and file visas</p>
           </div>
         </div>
         <div class="relative">
@@ -152,50 +258,40 @@
                   <li class="splide__slide">
                     <div class="timeline-card flex flex-col gap-[11px]">
                       <div class="timeline-marker"></div>
-                      <div class="timeline-year font-[500]">2018</div>
-                      <div class="timeline-title font-[500]">The Beginning of HumanEdg</div>
-                      <div class="timeline-desc font-[400]">HumanEdg was founded in Kochi as a career counseling startup, focusing on providing profile reviews and country guidance to local graduates.</div>
-                      <a href="about.html" class="font-[500] flex items-center gap-[11px] h-[36px]">Read More <span class="w-[12px] h-[12px] flex"><svg width="12" height="12" fill="none" viewBox="0 0 12 12"><path fill="#131313" d="m6 .667-.94.94 3.72 3.726H.667v1.334H8.78l-3.72 3.726.94.94L11.333 6 6 .667Z"/></svg></span>
+                      <div class="timeline-year font-[500]">Step 1</div>
+                      <div class="timeline-title font-[500]">Profile Mapping</div>
+                      <div class="timeline-desc font-[400]">We perform individual profile reviews to analyze your current academic percentage/GPA, backlogs, budgets, and target countries.</div>
+                      <a href="#" class="font-[500] flex items-center gap-[11px] h-[36px]">Read More <span class="w-[12px] h-[12px] flex"><svg width="12" height="12" fill="none" viewBox="0 0 12 12"><path fill="#131313" d="m6 .667-.94.94 3.72 3.726H.667v1.334H8.78l-3.72 3.726.94.94L11.333 6 6 .667Z"/></svg></span>
                       </a>
                     </div>
                   </li>
                   <li class="splide__slide">
                     <div class="timeline-card flex flex-col gap-[11px]">
                       <div class="timeline-marker"></div>
-                      <div class="timeline-year font-[500]">2020</div>
-                      <div class="timeline-title font-[500]">German & Language Prep</div>
-                      <div class="timeline-desc font-[400]">Established intensive language preparation pathways for IELTS, enabling students to achieve required band scores for direct university entries.</div>
-                      <a href="about.html" class="font-[500] flex items-center gap-[11px] h-[36px]">Read More <span class="w-[12px] h-[12px] flex"><svg width="12" height="12" fill="none" viewBox="0 0 12 12"><path fill="#131313" d="m6 .667-.94.94 3.72 3.726H.667v1.334H8.78l-3.72 3.726.94.94L11.333 6 6 .667Z"/></svg></span>
+                      <div class="timeline-year font-[500]">Step 2</div>
+                      <div class="timeline-title font-[500]">Language Prep</div>
+                      <div class="timeline-desc font-[400]">Choose from our structured coaching modules for IELTS, TOEFL, PTE, or German language training to meet admission scores.</div>
+                      <a href="#" class="font-[500] flex items-center gap-[11px] h-[36px]">Read More <span class="w-[12px] h-[12px] flex"><svg width="12" height="12" fill="none" viewBox="0 0 12 12"><path fill="#131313" d="m6 .667-.94.94 3.72 3.726H.667v1.334H8.78l-3.72 3.726.94.94L11.333 6 6 .667Z"/></svg></span>
                       </a>
                     </div>
                   </li>
                   <li class="splide__slide">
                     <div class="timeline-card flex flex-col gap-[11px]">
                       <div class="timeline-marker"></div>
-                      <div class="timeline-year font-[500]">2022</div>
-                      <div class="timeline-title font-[500]">HR Consulting Division</div>
-                      <div class="timeline-desc font-[400]">Recognizing the need for work readiness training, we launched our HR Consulting division to support employers with hiring, soft-skills training, and policy guidance.</div>
-                      <a href="about.html" class="font-[500] flex items-center gap-[11px] h-[36px]">Read More <span class="w-[12px] h-[12px] flex"><svg width="12" height="12" fill="none" viewBox="0 0 12 12"><path fill="#131313" d="m6 .667-.94.94 3.72 3.726H.667v1.334H8.78l-3.72 3.726.94.94L11.333 6 6 .667Z"/></svg></span>
+                      <div class="timeline-year font-[500]">Step 3</div>
+                      <div class="timeline-title font-[500]">University Application</div>
+                      <div class="timeline-desc font-[400]">We manage university shortlists, SOP revisions, reference letters, and secure offer letters with speed.</div>
+                      <a href="#" class="font-[500] flex items-center gap-[11px] h-[36px]">Read More <span class="w-[12px] h-[12px] flex"><svg width="12" height="12" fill="none" viewBox="0 0 12 12"><path fill="#131313" d="m6 .667-.94.94 3.72 3.726H.667v1.334H8.78l-3.72 3.726.94.94L11.333 6 6 .667Z"/></svg></span>
                       </a>
                     </div>
                   </li>
                   <li class="splide__slide">
                     <div class="timeline-card flex flex-col gap-[11px]">
                       <div class="timeline-marker"></div>
-                      <div class="timeline-year font-[500]">2024</div>
-                      <div class="timeline-title font-[500]">Language Center Launch</div>
-                      <div class="timeline-desc font-[400]">We expanded our Kochi offices and launched intensive language training classes for IELTS, TOEFL, PTE, and professional German language levels A1 to B2.</div>
-                      <a href="about.html" class="font-[500] flex items-center gap-[11px] h-[36px]">Read More <span class="w-[12px] h-[12px] flex"><svg width="12" height="12" fill="none" viewBox="0 0 12 12"><path fill="#131313" d="m6 .667-.94.94 3.72 3.726H.667v1.334H8.78l-3.72 3.726.94.94L11.333 6 6 .667Z"/></svg></span>
-                      </a>
-                    </div>
-                  </li>
-                  <li class="splide__slide">
-                    <div class="timeline-card flex flex-col gap-[11px]">
-                      <div class="timeline-marker"></div>
-                      <div class="timeline-year font-[500]">2026</div>
-                      <div class="timeline-title font-[500]">Global University Network</div>
-                      <div class="timeline-desc font-[400]">Partnered with 120+ top-tier global universities across Canada, UK, USA, Australia, and Germany, enabling seamless direct admissions and scholarships.</div>
-                      <a href="about.html" class="font-[500] flex items-center gap-[11px] h-[36px]">Read More <span class="w-[12px] h-[12px] flex"><svg width="12" height="12" fill="none" viewBox="0 0 12 12"><path fill="#131313" d="m6 .667-.94.94 3.72 3.726H.667v1.334H8.78l-3.72 3.726.94.94L11.333 6 6 .667Z"/></svg></span>
+                      <div class="timeline-year font-[500]">Step 4</div>
+                      <div class="timeline-title font-[500]">Visa Compliance</div>
+                      <div class="timeline-desc font-[400]">Our visa experts guide you through Blocked Accounts, GIC setups, bank education loans, and mock visa interview training.</div>
+                      <a href="#" class="font-[500] flex items-center gap-[11px] h-[36px]">Read More <span class="w-[12px] h-[12px] flex"><svg width="12" height="12" fill="none" viewBox="0 0 12 12"><path fill="#131313" d="m6 .667-.94.94 3.72 3.726H.667v1.334H8.78l-3.72 3.726.94.94L11.333 6 6 .667Z"/></svg></span>
                       </a>
                     </div>
                   </li>
@@ -217,161 +313,43 @@
         </div>
       </section>
 
-      <section class="aboutMissionVission">
+      <section class="welcomeHome welcomeHomeIndust">
         <div class="template-containerMaxWth">
-          <div class="titleHead flex items-center justify-center flex-col gap-[18px] max-w-[832px] w-full">
-            <h2 class="font-[400]">Mission, Vision & Values</h2>
-            <p class="cmnDesc-16">Guiding principles that drive our placement success and service transparency</p>
-          </div>
-          <div class="cardGrp grid gap-[36px]">
-            <div class="card flex flex-col gap-[17px]">
-              <div class="icn w-[82px] h-[82px] flex"><svg width="82" height="82" fill="none" viewBox="0 0 82 82"><path fill="#148fb3" d="M58.87 29.964h5.261v-5.261h-5.262v5.261Zm0 13.667h5.261v-5.262h-5.262v5.262Zm0 13.667h5.261v-5.262h-5.262v5.262ZM6.833 68.333V39.292l20.5-14.59 20.5 14.59v29.041H33.64V50.987H21.026v17.346H6.834Zm47.833 0V35.875l-19.185-13.77v-8.438h39.685v54.666h-20.5Z"/></svg></div>
-              <h5 class="font-[500]">Our Mission</h5>
-              <p class="font-[400]">To provide honest, student-first counseling and compliant visa solutions that align academic goals with long-term international career opportunities.</p>
-              <a href="about.html" class="font-[500] flex items-center gap-[11px] h-[36px]">Read More <span class="w-[12px] h-[12px] flex"><svg width="12" height="12" fill="none" viewBox="0 0 12 12"><path fill="#131313" d="m6 .667-.94.94 3.72 3.726H.667v1.334H8.78l-3.72 3.726.94.94L11.333 6 6 .667Z"/></svg></span></a>
+          <div class="welcomeHomeArea">
+            <div class="titleHead flex items-center justify-center flex-col gap-[18px] max-w-[832px] w-full m-auto">
+              <h2 class="font-[400]">Proven Success Stories</h2>
+              <p class="cmnDesc-16">Learn how international students achieved admission funding under our direct mentorship</p>
             </div>
-            <div class="card flex flex-col gap-[17px]">
-              <div class="icn w-[82px] h-[82px] flex"><svg width="80" height="81" fill="none" viewBox="0 0 80 81"><path fill="#148fb3" d="M52.5 40.5a12.5 12.5 0 1 1-25 0 12.5 12.5 0 0 1 25 0Z"/><path fill="#148fb3" d="M0 40.5S15 13 40 13s40 27.5 40 27.5S65 68 40 68 0 40.5 0 40.5ZM40 58a17.5 17.5 0 1 0 0-35 17.5 17.5 0 0 0 0 35Z"/></svg></div>
-              <h5 class="font-[500]">Our Vision</h5>
-              <p class="font-[400]">To be Kochi's most trusted and transparent study abroad agency, recognized for our compliance, post-landing support, and language training excellence.</p>
-              <a href="about.html" class="font-[500] flex items-center gap-[11px] h-[36px]">Read More <span class="w-[12px] h-[12px] flex"><svg width="12" height="12" fill="none" viewBox="0 0 12 12"><path fill="#131313" d="m6 .667-.94.94 3.72 3.726H.667v1.334H8.78l-3.72 3.726.94.94L11.333 6 6 .667Z"/></svg></span></a>
-            </div>
-            <div class="card flex flex-col gap-[17px]">
-              <div class="icn w-[82px] h-[82px] flex"><svg width="82" height="82" fill="none" viewBox="0 0 82 82"><path fill="#148fb3" d="M41.547 10.25h-1.093l-8.986 17.938h19.065L41.547 10.25Zm14.692 17.938h17.63l-7.073-14.145a6.832 6.832 0 0 0-6.116-3.793H47.253l8.986 17.938Zm16.81 5.125H43.563v35.362l29.486-35.362ZM38.438 68.674V33.313H8.952l29.486 35.362ZM25.762 28.188l8.952-17.938H21.32a6.833 6.833 0 0 0-6.116 3.793L8.132 28.188h17.63Z"/></svg></div>
-              <h5 class="font-[500]">Our Values</h5>
-              <p class="font-[400]">Transparency in process and fee structures, integrity in academic documents and SOP assistance, and continuous student placement advocacy.</p>
-              <a href="about.html" class="font-[500] flex items-center gap-[11px] h-[36px]">Read More <span class="w-[12px] h-[12px] flex"><svg width="12" height="12" fill="none" viewBox="0 0 12 12"><path fill="#131313" d="m6 .667-.94.94 3.72 3.726H.667v1.334H8.78l-3.72 3.726.94.94L11.333 6 6 .667Z"/></svg></span></a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="aboutMeetPeople">
-        <div class="template-containerMaxWth">
-          <div class="titleHead flex items-center justify-center flex-col gap-[18px] ">
-            <h2 class="font-[400]">Meet the People Behind the Vision</h2>
-            <p class="cmnDesc-16 max-w-[832px] w-full">Meet our experienced counselors, language coaches, and recruitment coordinators in Kochi dedicated to your global career success.</p>
-          </div>
-
-          <div class="tabCnt">
-            <div class="tabs">
-                <div class="tab active" data-tab="executives">Leadership & Counselors</div>
-                <div class="tab" data-tab="board">Board Members</div>
-                <div class="tab" data-tab="employees">Our Core Employees</div>
-            </div>
-            <div class="tabBody">
-              <div class="tab-content active" id="executives">
-                <div class="cardGrp grid gap-[34px]">
-                  <div class="cardVis flex flex-col">
-                    <a href="about.html" class="name font-[400]">Nidhi Nair</a>
-                    <a href="about.html" class="designation font-[500]">Managing Director & Chief Counselor</a>
-                    <a href="about.html" class="image-section"><img src="images/aboutMeetPeoplePic1.jpg" alt="Nidhi Nair" class="profile-image" loading="lazy"></a>
-                    <div class="info-section">
-                      <div class="description font-[400]">With over 12 years of experience in student immigration and admissions, Nidhi guides profile mapping and university partnerships.</div>
-                      <div class="social-links">
-                          <a href="#" class="social-icon w-[30px] h-[30px] flex"><svg width="30" height="30" fill="none" viewBox="0 0 30 30"><path fill="#148fb3" d="M15 .6C7.047.6.6 7.047.6 15S7.047 29.4 15 29.4 29.4 22.953 29.4 15 22.953.6 15 .6ZM11.475 20.97H8.56v-9.384h2.916v9.384ZM10 10.433c-.92 0-1.516-.653-1.516-1.46 0-.823.613-1.456 1.554-1.456.94 0 1.516.633 1.534 1.456 0 .807-.594 1.46-1.572 1.46Zm12.126 10.536H19.21v-5.2c0-1.211-.423-2.033-1.477-2.033-.806 0-1.284.556-1.496 1.092-.078.19-.097.46-.097.729v5.41H13.22v-6.39c0-1.171-.037-2.15-.076-2.994h2.533l.134 1.304h.058c.384-.612 1.325-1.515 2.898-1.515 1.919 0 3.357 1.285 3.357 4.048v5.549Z"/></svg></a>
-                      </div>
-                    </div>
+            <div class="counterArea counterArea2 grid gap-[41px]">
+              <div class="pic max-w-[348px] w-full h-[457px] flex"><img src="images/welcomeHomePic3.jpg" alt="welcomeHomePic3" loading="lazy"></div>
+              <div class="textSec flex flex-col gap-[33px]">
+                <div class="subtitle font-[400] max-w-[634px] w-full">Aarav Mehta - Griffith University</div>
+                <ul class="flex flex-col gap-[11px] max-w-[703px] w-full">
+                  <li class="font-[400]"><span class="font-[500]">Challenge</span>: Aarav carried a high CGPA of 9.2 but required direct admission funding to cover his tuition in Australia.</li>
+                  <li class="font-[400]"><span class="font-[500]">Solution</span>: HumanEdg prepared his profile for Griffith's Academic Excellence Scholarship and refined his SOP.</li>
+                  <li class="font-[400]"><span class="font-[500]">Outcome</span>: Successfully secured a 50% tuition scholarship and got subclass 500 visa clearance on first attempt.</li>
+                </ul>
+                <div class="counterGrp counterGrp2">
+                  <div class="counterCard" id="card1">
+                    <div class="countNum font-[500]" data-target="50">0%</div>
+                    <div class="counterLabel font-[400]">Tuition Scholarship</div>
                   </div>
-                  <div class="cardVis flex flex-col">
-                    <a href="about.html" class="name font-[400]">Albin Joseph</a>
-                    <a href="about.html" class="designation font-[500]">Senior German Language Trainer</a>
-                    <a href="about.html" class="image-section"><img src="images/aboutMeetPeoplePic2.jpg" alt="Albin Joseph" class="profile-image" loading="lazy"></a>
-                    <div class="info-section">
-                      <div class="description font-[400]">Certified German language expert with a track record of coaching students from A1 to B2 proficiency for public university admissions.</div>
-                      <div class="social-links">
-                          <a href="#" class="social-icon w-[30px] h-[30px] flex"><svg width="30" height="30" fill="none" viewBox="0 0 30 30"><path fill="#148fb3" d="M15 .6C7.047.6.6 7.047.6 15S7.047 29.4 15 29.4 29.4 22.953 29.4 15 22.953.6 15 .6ZM11.475 20.97H8.56v-9.384h2.916v9.384ZM10 10.433c-.92 0-1.516-.653-1.516-1.46 0-.823.613-1.456 1.554-1.456.94 0 1.516.633 1.534 1.456 0 .807-.594 1.46-1.572 1.46Zm12.126 10.536H19.21v-5.2c0-1.211-.423-2.033-1.477-2.033-.806 0-1.284.556-1.496 1.092-.078.19-.097.46-.097.729v5.41H13.22v-6.39c0-1.171-.037-2.15-.076-2.994h2.533l.134 1.304h.058c.384-.612 1.325-1.515 2.898-1.515 1.919 0 3.357 1.285 3.357 4.048v5.549Z"/></svg></a>
-                      </div>
-                    </div>
+                  <div class="counterCard" id="card2">
+                    <div class="countNum font-[500]" data-target="9">0</div>
+                    <div class="counterLabel font-[400]">CGPA Academic Score</div>
                   </div>
-                  <div class="cardVis flex flex-col">
-                    <a href="about.html" class="name font-[400]">Siddharth Mehta</a>
-                    <a href="about.html" class="designation font-[500]">Head of HR & Corporate Training</a>
-                    <a href="about.html" class="image-section"><img src="images/aboutMeetPeoplePic3.jpg" alt="Siddharth Mehta" class="profile-image" loading="lazy"></a>
-                    <div class="info-section">
-                      <div class="description font-[400]">Leads our recruitment consulting division, helping local employers build talent pipelines and conducting student soft-skills workshops.</div>
-                      <div class="social-links">
-                          <a href="#" class="social-icon w-[30px] h-[30px] flex"><svg width="30" height="30" fill="none" viewBox="0 0 30 30"><path fill="#148fb3" d="M15 .6C7.047.6.6 7.047.6 15S7.047 29.4 15 29.4 29.4 22.953 29.4 15 22.953.6 15 .6ZM11.475 20.97H8.56v-9.384h2.916v9.384ZM10 10.433c-.92 0-1.516-.653-1.516-1.46 0-.823.613-1.456 1.554-1.456.94 0 1.516.633 1.534 1.456 0 .807-.594 1.46-1.572 1.46Zm12.126 10.536H19.21v-5.2c0-1.211-.423-2.033-1.477-2.033-.806 0-1.284.556-1.496 1.092-.078.19-.097.46-.097.729v5.41H13.22v-6.39c0-1.171-.037-2.15-.076-2.994h2.533l.134 1.304h.058c.384-.612 1.325-1.515 2.898-1.515 1.919 0 3.357 1.285 3.357 4.048v5.549Z"/></svg></a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="cardVis flex flex-col">
-                    <a href="about.html" class="name font-[400]">Meera K. R.</a>
-                    <a href="about.html" class="designation font-[500]">Visa Compliance Officer</a>
-                    <a href="about.html" class="image-section"><img src="images/aboutMeetPeoplePic4.jpg" alt="Meera K. R." class="profile-image" loading="lazy"></a>
-                    <div class="info-section">
-                      <div class="description font-[400]">Specializes in document validation, financial file scrutiny, and visa application procedures for Canada, UK, and Australia.</div>
-                      <div class="social-links">
-                          <a href="#" class="social-icon w-[30px] h-[30px] flex"><svg width="30" height="30" fill="none" viewBox="0 0 30 30"><path fill="#148fb3" d="M15 .6C7.047.6.6 7.047.6 15S7.047 29.4 15 29.4 29.4 22.953 29.4 15 22.953.6 15 .6ZM11.475 20.97H8.56v-9.384h2.916v9.384ZM10 10.433c-.92 0-1.516-.653-1.516-1.46 0-.823.613-1.456 1.554-1.456.94 0 1.516.633 1.534 1.456 0 .807-.594 1.46-1.572 1.46Zm12.126 10.536H19.21v-5.2c0-1.211-.423-2.033-1.477-2.033-.806 0-1.284.556-1.496 1.092-.078.19-.097.46-.097.729v5.41H13.22v-6.39c0-1.171-.037-2.15-.076-2.994h2.533l.134 1.304h.058c.384-.612 1.325-1.515 2.898-1.515 1.919 0 3.357 1.285 3.357 4.048v5.549Z"/></svg></a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="cardVis flex flex-col">
-                    <a href="about.html" class="name font-[400]">Anjali Sharma</a>
-                    <a href="about.html" class="designation font-[500]">Admissions Coordinator</a>
-                    <a href="about.html" class="image-section"><img src="images/aboutMeetPeoplePic5.jpg" alt="Anjali Sharma" class="profile-image" loading="lazy"></a>
-                    <div class="info-section">
-                      <div class="description font-[400]">Manages direct university communication, application tracking, and coordinates scholarship recommendations.</div>
-                      <div class="social-links">
-                          <a href="#" class="social-icon w-[30px] h-[30px] flex"><svg width="30" height="30" fill="none" viewBox="0 0 30 30"><path fill="#148fb3" d="M15 .6C7.047.6.6 7.047.6 15S7.047 29.4 15 29.4 29.4 22.953 29.4 15 22.953.6 15 .6ZM11.475 20.97H8.56v-9.384h2.916v9.384ZM10 10.433c-.92 0-1.516-.653-1.516-1.46 0-.823.613-1.456 1.554-1.456.94 0 1.516.633 1.534 1.456 0 .807-.594 1.46-1.572 1.46Zm12.126 10.536H19.21v-5.2c0-1.211-.423-2.033-1.477-2.033-.806 0-1.284.556-1.496 1.092-.078.19-.097.46-.097.729v5.41H13.22v-6.39c0-1.171-.037-2.15-.076-2.994h2.533l.134 1.304h.058c.384-.612 1.325-1.515 2.898-1.515 1.919 0 3.357 1.285 3.357 4.048v5.549Z"/></svg></a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="cardVis flex flex-col">
-                    <a href="about.html" class="name font-[400]">George Varghese</a>
-                    <a href="about.html" class="designation font-[500]">Post-Arrival Coordinator</a>
-                    <a href="about.html" class="image-section"><img src="images/aboutMeetPeoplePic6.jpg" alt="George Varghese" class="profile-image" loading="lazy"></a>
-                    <div class="info-section">
-                      <div class="description font-[400]">Coordinates airport pickups, student housing checklists, and bank account setup support for our arriving students.</div>
-                      <div class="social-links">
-                          <a href="#" class="social-icon w-[30px] h-[30px] flex"><svg width="30" height="30" fill="none" viewBox="0 0 30 30"><path fill="#148fb3" d="M15 .6C7.047.6.6 7.047.6 15S7.047 29.4 15 29.4 29.4 22.953 29.4 15 22.953.6 15 .6ZM11.475 20.97H8.56v-9.384h2.916v9.384ZM10 10.433c-.92 0-1.516-.653-1.516-1.46 0-.823.613-1.456 1.554-1.456.94 0 1.516.633 1.534 1.456 0 .807-.594 1.46-1.572 1.46Zm12.126 10.536H19.21v-5.2c0-1.211-.423-2.033-1.477-2.033-.806 0-1.284.556-1.496 1.092-.078.19-.097.46-.097.729v5.41H13.22v-6.39c0-1.171-.037-2.15-.076-2.994h2.533l.134 1.304h.058c.384-.612 1.325-1.515 2.898-1.515 1.919 0 3.357 1.285 3.357 4.048v5.549Z"/></svg></a>
-                      </div>
-                    </div>
+                  <div class="counterCard" id="card3">
+                    <div class="countNum font-[500]" data-target="100">0%</div>
+                    <div class="counterLabel font-[400]">Visa Approval Rate</div>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <div class="tab-content" id="board"></div>
-              <div class="tab-content" id="employees"></div>
+              
             </div>
           </div>
         </div>
       </section>
 
-      <section class="cultrCmnt">
-        <div class="template-containerMaxWth">
-          <div class="titleHead flex items-center justify-center flex-col gap-[18px] ">
-            <h2 class="font-[400]">Culture & Commitment</h2>
-            <p class="cmnDesc-16 max-w-[832px] w-full">Our commitment to student success doesn't end at the airport</p>
-          </div>
-          <div class="cultrCmntArea grid gap-[30px]">
-            <div class="cardSec flex flex-col">
-              <div class="pic max-w-[352px] h-[241px] w-full flex"><img src="images/cultrCmntPic1.jpg" alt="Student-Centric Coaching" loading="lazy"></div>
-              <div class="textArea flex flex-col gap-[11px]">
-                <div class="title font-[400]">Student-Centric Coaching</div>
-                <p class="font-[400]">We prioritize one-on-one sessions over batch counseling. Each student receives individual attention to map their GPA, language scores, and budget to the right campus.</p>
-              </div>
-            </div>
-            <div class="cardSec flex flex-col">
-              <div class="pic max-w-[352px] h-[241px] w-full flex"><img src="images/cultrCmntPic2.jpg" alt="Visa Scrutiny & Compliance" loading="lazy"></div>
-              <div class="textArea flex flex-col gap-[11px]">
-                <div class="title font-[400]">Visa Scrutiny & Compliance</div>
-                <p class="font-[400]">We strictly follow country-specific embassy guidelines. Our files undergo multi-tier reviews to ensure high visa success rates and avoid document compliance errors.</p>
-              </div>
-            </div>
-            <div class="cardSec flex flex-col">
-              <div class="pic max-w-[352px] h-[241px] w-full flex"><img src="images/cultrCmntPic3.jpg" alt="Post-Landing Alumni Network" loading="lazy"></div>
-              <div class="textArea flex flex-col gap-[11px]">
-                <div class="title font-[400]">Post-Landing Alumni Network</div>
-                <p class="font-[400]">We connect newly arriving students with senior student groups in destination countries. We help with accommodation checklists, bank accounts, and local orientation.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <section class="redyConf">
         <div class="template-containerMaxWth">
@@ -435,6 +413,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/splide.min.js"></script>
     <script src="js/custom.js"></script>
+    <script src="js/script.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function () {
         var splide = new Splide( '.timelineSplide.splide', {
@@ -447,23 +426,7 @@
         splide.mount();
       });
     </script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const tabs = document.querySelectorAll('.tab');
-        const tabContents = document.querySelectorAll('.tab-content');
-          
-        tabs.forEach(tab => {
-          tab.addEventListener('click', function() {
-            const targetTab = this.getAttribute('data-tab');
-            tabs.forEach(t => t.classList.remove('active'));
-            tabContents.forEach(content => content.classList.remove('active'));
-            this.classList.add('active');
-            document.getElementById(targetTab).classList.add('active');
-          });
-        });
-      });
-    </script>
-    <script>
+        <script>
       document.addEventListener('DOMContentLoaded', function () {
         const splide = new Splide('#menuNavSlider', {
             type: 'loop',
