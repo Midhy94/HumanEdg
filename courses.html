@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HumanEdg | Global Academy & Study Abroad</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="icon" href="images/favicon.png">
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"> 
+  <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/app.css?v=0.03">
+</head>
+  <body>
+    <header class="mainHeader cmnNav header fixHeaderNormal">
+      <div class="template-containerMaxWth">
+        <nav class="mainNavSec headerMenuSec">
+          <div class="mainNav">
+            <div class="mainNavWrap mainNavWrapTop">
+              <div class="navLogoDiv">
+                <a href="index.html"><img src="images/logo.png" alt="logo" loading="lazy"></a>
+              </div>
+              <div class="navRight">
+                <ul class="linksAfter gap-[22px]">
+                  <li class="topMenu"><a href="index.html">Home</a></li>
+                  <li class="topMenu"><a href="countries.html">Countries</a></li>
+                  <li class="topMenu"><a href="scholarships.html">Scholarships</a></li>
+                  <li class="topMenu active"><a href="courses.html">Courses</a></li>
+                  <li class="topMenu"><a href="about.html">About</a></li>
+                </ul>
+                <div class="nav flex items-center justify-between flex-col">
+                  <div class="navMenuHead">
+                    <div class="template-containerMaxWth">
+                      <a class="logoMenu w-[36px] h-[36px] flex" href="index.html"><img src="images/logoNav.png" alt="logoNav" loading="lazy"></a>
+                    </div>
+                  </div>
+                  <div class="navMenuBody">
+                    <div class="template-containerMaxWth h-full">
+                      <div class="menuTwSec grid gap-[20px]">
+                        <ul class="linksAfterMob gap-[37px]">
+                            <li class="topMenu"><a href="index.html">Home</a></li>
+                            <li class="topMenu"><a href="countries.html">Countries</a></li>
+                            <li class="topMenu"><a href="scholarships.html">Scholarships</a></li>
+                            <li class="topMenu active"><a href="courses.html">Courses</a></li>
+                            <li class="topMenu"><a href="about.html">About</a></li>
+                          </ul>
+                        <div class="rightCarosal relative">
+                          <div id="menuNavSlider" class="splide">
+                            <div class="splide__track">
+                              <ul class="splide__list">
+                                <li class="splide__slide">
+                                  <div class="pic h-[288px] w-full">
+                                    <img class="slide-image" src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=800" alt="menu_global_education"/>
+                                    <a href="#" class="top-icon w-[60px] h-[60px] max-h-[60px] flex items-center justify-center absolute"><svg width="57" height="57" fill="none" viewBox="0 0 57 57"><path fill="#fff" d="M38.905 33.925c-.234.213-.546.34-.9.324a1.257 1.257 0 0 1-1.19-1.305l.602-13.044-13.044-.602a1.258 1.258 0 0 1-1.19-1.306 1.258 1.258 0 0 1 1.305-1.19l14.292.66a1.258 1.258 0 0 1 1.19 1.305l-.659 14.292a1.236 1.236 0 0 1-.406.866Z"/><path fill="#fff" d="M39.356 19.824 18.628 38.723a1.26 1.26 0 0 1-1.766-.082 1.26 1.26 0 0 1 .082-1.766L37.67 17.977a1.26 1.26 0 0 1 1.766.081 1.26 1.26 0 0 1-.081 1.766Z"/></svg></a>
+                                  </div>
+                                  <div class="caption max-w-[348px] w-full font-[400]">
+                                    Your gateway to <strong class="font-[700]">global education</strong> and <strong class="font-[700]">professional success</strong>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="nav-buttons">
+                            <button class="flex items-center justify-center" id="prevBtn"><svg width="14" height="22" fill="none" viewBox="0 0 14 22"><path fill="#C8CBCF" d="M11.15 21.7c-.475 0-.95-.175-1.325-.55L1 12.325a1.886 1.886 0 0 1 0-2.65L9.825.85a1.886 1.886 0 0 1 2.65 0 1.886 1.886 0 0 1 0 2.65l-7.5 7.5 7.5 7.5a1.886 1.886 0 0 1 0 2.65c-.35.375-.825.55-1.325.55Z"/></svg></button>
+                            <button class="flex items-center justify-center" id="nextBtn"><svg width="14" height="22" fill="none" viewBox="0 0 14 22"><path fill="#C8CBCF" d="M2.85 21.7c-.475 0-.95-.175-1.325-.55a1.886 1.886 0 0 1 0-2.65l7.5-7.5-7.5-7.5a1.886 1.886 0 0 1 0-2.65 1.886 1.886 0 0 1 2.65 0L13 9.675a1.886 1.886 0 0 1 0 2.65L4.175 21.15c-.375.375-.85.55-1.325.55Z"/></svg></button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="menuTwBtm flex justify-between gap-[20px]">
+                          <ul class="linksAfterMob linksAfterMob2 gap-[37px]">
+                            <li class="topMenu"><a href="about.html#team">Team</a></li>
+                            <li class="topMenu"><a href="contact.html">Book Counselling</a></li>
+                          </ul>
+                          <div class="icn flex w-[201px] h-[212px]"><img class="slide-image" src="images/menuLogoIcn.png" alt="menuLogoIcn" loading="lazy"/></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="navMenuFooter w-full">
+                    <div class="template-containerMaxWth">
+                      <div class="flex items-center justify-between gap-[20px]">
+                        <ul class="flex items-center gap-[43px]">
+                          <li><a href="#"><svg width="26" height="26" fill="none" viewBox="0 0 26 26"><path fill="#C8CBCF" d="M25.5 13C25.5 6.096 19.904.5 13 .5S.5 6.096.5 13c0 6.239 4.571 11.41 10.547 12.348v-8.735H7.873V13h3.174v-2.754c0-3.133 1.866-4.863 4.721-4.863 1.367 0 2.798.244 2.798.244v3.076H16.99c-1.552 0-2.037.964-2.037 1.953V13h3.467l-.554 3.613h-2.913v8.735C20.93 24.41 25.5 19.24 25.5 13Z"/></svg></a></li>
+                          <li><a href="#"><svg width="26" height="24" fill="none" viewBox="0 0 26 24"><path fill="#C8CBCF" d="m11.11 15.314 5.953 7.936h8.75L15.99 10.152 24.163.75H20.85l-6.396 7.357L8.937.75H.188l9.388 12.519L.9 23.25h3.313l6.897-7.936Zm7.203 5.436L5.188 3.25h2.5l13.125 17.5h-2.5Z"/></svg></a></li>
+                          <li><a href="#"><svg width="26" height="26" fill="none" viewBox="0 0 26 26"><path fill="#C8CBCF" d="M13.007 2.752c3.342 0 3.738.015 5.052.074 1.221.053 1.881.259 2.32.43a3.868 3.868 0 0 1 1.437.933c.44.44.709.855.933 1.436.171.44.377 1.104.43 2.32.059 1.32.074 1.716.074 5.053 0 3.341-.015 3.737-.074 5.051-.053 1.222-.259 1.881-.43 2.321a3.869 3.869 0 0 1-.933 1.436c-.44.44-.855.709-1.436.934-.44.17-1.104.376-2.32.43-1.32.058-1.716.073-5.053.073-3.341 0-3.737-.015-5.051-.073-1.222-.054-1.881-.26-2.321-.43a3.867 3.867 0 0 1-1.437-.934 3.847 3.847 0 0 1-.933-1.436c-.17-.44-.376-1.104-.43-2.32-.058-1.32-.073-1.716-.073-5.052 0-3.342.015-3.738.073-5.052.054-1.222.26-1.881.43-2.32a3.868 3.868 0 0 1 .933-1.437c.44-.44.855-.709 1.437-.933.44-.171 1.104-.377 2.32-.43 1.315-.06 1.71-.074 5.052-.074Zm0-2.252c-3.395 0-3.82.015-5.154.073-1.329.059-2.243.274-3.034.582A6.105 6.105 0 0 0 2.6 2.6a6.128 6.128 0 0 0-1.446 2.213C.847 5.61.632 6.52.573 7.848.515 9.187.5 9.612.5 13.008c0 3.395.015 3.82.073 5.154.059 1.329.274 2.242.582 3.034A6.105 6.105 0 0 0 2.6 23.414a6.114 6.114 0 0 0 2.213 1.441c.796.308 1.705.523 3.034.581 1.334.06 1.759.074 5.154.074 3.396 0 3.821-.015 5.155-.074 1.329-.058 2.242-.273 3.034-.58a6.113 6.113 0 0 0 2.213-1.442 6.114 6.114 0 0 0 1.441-2.213c.308-.797.523-1.706.582-3.034.058-1.334.073-1.76.073-5.155 0-3.395-.015-3.82-.073-5.154-.059-1.33-.274-2.243-.582-3.034A5.858 5.858 0 0 0 23.414 2.6 6.113 6.113 0 0 0 21.2 1.16c-.797-.308-1.706-.523-3.034-.582C16.827.515 16.403.5 13.007.5Z"/><path fill="#C8CBCF" d="M13.007 6.583a6.426 6.426 0 0 0-6.424 6.424 6.426 6.426 0 0 0 6.424 6.425 6.426 6.426 0 0 0 6.425-6.425 6.426 6.426 0 0 0-6.425-6.424Zm0 10.592a4.168 4.168 0 1 1 .002-8.336 4.168 4.168 0 0 1-.002 8.336ZM21.186 6.329a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"/></svg></a></li>
+                          <li><a href="#"><svg width="26" height="26" fill="none" viewBox="0 0 26 26"><path fill="#C8CBCF" d="M13.01.48C6.101.48.5 6.08.5 12.99c0 5.302 3.295 9.833 7.949 11.655-.113-.988-.206-2.512.041-3.593.227-.979 1.462-6.22 1.462-6.22s-.37-.751-.37-1.853c0-1.74 1.009-3.037 2.265-3.037 1.07 0 1.585.803 1.585 1.76 0 1.071-.68 2.678-1.04 4.17-.298 1.246.629 2.266 1.854 2.266 2.224 0 3.933-2.348 3.933-5.725 0-2.996-2.152-5.087-5.23-5.087-3.563 0-5.653 2.667-5.653 5.427 0 1.07.412 2.224.926 2.852a.373.373 0 0 1 .083.36c-.093.392-.31 1.246-.35 1.421-.052.227-.186.278-.422.165-1.566-.731-2.544-3.007-2.544-4.85 0-3.943 2.863-7.568 8.268-7.568 4.335 0 7.713 3.09 7.713 7.228 0 4.315-2.719 7.785-6.487 7.785-1.267 0-2.461-.66-2.863-1.442l-.782 2.976c-.278 1.091-1.04 2.45-1.555 3.284 1.174.36 2.41.556 3.707.556 6.909 0 12.51-5.6 12.51-12.51C25.52 6.08 19.92.48 13.01.48Z"/></svg></a></li>
+                        </ul>
+                        <div class="enquireBtn"><a href="#" class="cmnBtn">Enquire Now</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="secRight flex items-center gap-[16px]">
+                <div class="loginBtn"><a href="contact.html" class="cmnBtn">Contact Us</a></div>
+                <div class="hamburger">
+                  <button class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="ovrflowHdn">
+      <!-- Premium Hero Section with search/filter -->
+      <section class="homehedCnt homehedCntAbt homehedCntInd z-1 relative !pb-[40px] bg-[#074163]">
+        <div class="template-containerMaxWth">
+          <div class="homehedCntArea flex justify-center flex-col gap-[18px] text-center max-w-[800px] w-full m-auto">
+            <h2 class="w-full font-[400] m-auto text-center text-white">HumanEdg Global Academy</h2>
+            <p class="text-[#b2cddc]">Empower your global career with professional certificates, intensive language preparation modules, and exam training programs.</p>
+            
+            <!-- Dynamic Search input -->
+            <div class="w-full max-w-[600px] m-auto mt-[16px] relative">
+              <input type="text" id="courseSearch" class="w-full h-[52px] pl-[48px] pr-[20px] rounded-full border-none bg-white/10 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-[#148fb3] backdrop-blur-md" placeholder="Search courses, e.g. IELTS, German, Python...">
+              <div class="absolute left-[18px] top-[14px] w-[24px] h-[24px]">
+                <svg width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.5 21a9.5 9.5 0 1 0 0-19 9.5 9.5 0 0 0 0 19ZM22 22l-2-2"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Category Filter Tabs -->
+      <section class="bg-[#f8fafc] py-[24px] border-b border-[#e2e8f0]">
+        <div class="template-containerMaxWth">
+          <div class="flex flex-wrap justify-center gap-[12px] md:gap-[20px]">
+            <button class="filter-tab px-[20px] py-[10px] rounded-full text-[14px] font-[500] bg-[#074163] text-white transition-all cursor-pointer shadow-sm hover:scale-[1.02]" data-filter="all">All Programs</button>
+            <button class="filter-tab px-[20px] py-[10px] rounded-full text-[14px] font-[500] bg-white text-[#4a5568] border border-[#cbd5e1] transition-all cursor-pointer hover:bg-slate-50 hover:scale-[1.02]" data-filter="language">Language & Test Prep</button>
+            <button class="filter-tab px-[20px] py-[10px] rounded-full text-[14px] font-[500] bg-white text-[#4a5568] border border-[#cbd5e1] transition-all cursor-pointer hover:bg-slate-50 hover:scale-[1.02]" data-filter="tech">Tech & Coding</button>
+            <button class="filter-tab px-[20px] py-[10px] rounded-full text-[14px] font-[500] bg-white text-[#4a5568] border border-[#cbd5e1] transition-all cursor-pointer hover:bg-slate-50 hover:scale-[1.02]" data-filter="career">Professional & Career Skills</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Course List Section -->
+      <section class="py-[60px] bg-white">
+        <div class="template-containerMaxWth">
+          <div id="noCoursesMessage" class="hidden text-center py-[40px] text-slate-500 font-[500] text-[18px]">
+            No courses found matching your search. Please try another term.
+          </div>
+          
+          <div id="courseGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px]">
+            
+            <!-- Card 1: IELTS -->
+            <div class="course-card flex flex-col bg-[#f8fafc] border border-[#e2e8f0] rounded-[16px] overflow-hidden transition-all duration-300 hover:shadow-lg" data-category="language" data-title="ielts academic general language test prep">
+              <div class="h-[200px] w-full bg-[#148fb3]/10 flex items-center justify-center relative p-[20px] border-b border-[#e2e8f0]">
+                <span class="absolute top-[16px] left-[16px] px-[12px] py-[4px] rounded-full bg-[#148fb3] text-white text-[12px] font-[600] uppercase tracking-wide shadow-sm">Language</span>
+                <span class="absolute top-[16px] right-[16px] px-[12px] py-[4px] rounded-full bg-[#074163]/10 text-[#074163] text-[12px] font-[600]">8 Weeks</span>
+                <div class="flex flex-col items-center justify-center">
+                  <div class="w-[64px] h-[64px] rounded-full bg-[#148fb3] flex items-center justify-center text-white mb-[8px] font-bold text-[24px]">I</div>
+                  <h4 class="font-[600] text-[20px] text-[#074163] text-center">IELTS Masterclass</h4>
+                </div>
+              </div>
+              <div class="p-[28px] flex flex-col flex-grow">
+                <p class="text-[#64748b] text-[15px] font-[400] mb-[20px] leading-relaxed">Comprehensive band-guaranteed coaching for Academic & General IELTS. Access official examiners' materials, intensive speaking mock tests, and structured essay revisions.</p>
+                <div class="mt-auto flex flex-col gap-[16px]">
+                  <!-- Accordion Syllabus -->
+                  <div class="border border-slate-200 rounded-lg overflow-hidden bg-white">
+                    <button class="accordion-trigger w-full flex justify-between items-center px-[16px] py-[12px] text-left text-[14px] font-[600] text-[#074163] hover:bg-slate-50 transition-colors" aria-expanded="false">
+                      <span>View Syllabus Outline</span>
+                      <svg class="w-4 h-4 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="accordion-body max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                      <ul class="px-[16px] pb-[16px] text-[13px] text-slate-600 list-disc list-inside space-y-[6px]">
+                        <li><strong>Weeks 1-2:</strong> Listening strategies and mock exercises</li>
+                        <li><strong>Weeks 3-4:</strong> Reading structures, scanning & skimming</li>
+                        <li><strong>Weeks 5-6:</strong> Task 1 & 2 Writing formats and timing</li>
+                        <li><strong>Weeks 7-8:</strong> Speaking cue-cards & certified assessment mock checks</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <button class="cmnBtn w-full text-center py-[12px] font-[500] cursor-pointer hover:bg-[#062d45]" onclick="openEnrollModal('IELTS Masterclass')">Register Interest</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2: German Language -->
+            <div class="course-card flex flex-col bg-[#f8fafc] border border-[#e2e8f0] rounded-[16px] overflow-hidden transition-all duration-300 hover:shadow-lg" data-category="language" data-title="german language intensive levels a1 a2 b1 b2 study abroad">
+              <div class="h-[200px] w-full bg-[#148fb3]/10 flex items-center justify-center relative p-[20px] border-b border-[#e2e8f0]">
+                <span class="absolute top-[16px] left-[16px] px-[12px] py-[4px] rounded-full bg-[#148fb3] text-white text-[12px] font-[600] uppercase tracking-wide shadow-sm">Language</span>
+                <span class="absolute top-[16px] right-[16px] px-[12px] py-[4px] rounded-full bg-[#074163]/10 text-[#074163] text-[12px] font-[600]">12 Weeks / Lvl</span>
+                <div class="flex flex-col items-center justify-center">
+                  <div class="w-[64px] h-[64px] rounded-full bg-[#074163] flex items-center justify-center text-white mb-[8px] font-bold text-[24px]">DE</div>
+                  <h4 class="font-[600] text-[20px] text-[#074163] text-center">German (A1 to B2)</h4>
+                </div>
+              </div>
+              <div class="p-[28px] flex flex-col flex-grow">
+                <p class="text-[#64748b] text-[15px] font-[400] mb-[20px] leading-relaxed">Structured intensive pathways designed for student immigration to Germany. Covers complete grammar, vocabulary building, auditory training, and Goethe exam preparation.</p>
+                <div class="mt-auto flex flex-col gap-[16px]">
+                  <div class="border border-slate-200 rounded-lg overflow-hidden bg-white">
+                    <button class="accordion-trigger w-full flex justify-between items-center px-[16px] py-[12px] text-left text-[14px] font-[600] text-[#074163] hover:bg-slate-50 transition-colors" aria-expanded="false">
+                      <span>View Syllabus Outline</span>
+                      <svg class="w-4 h-4 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="accordion-body max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                      <ul class="px-[16px] pb-[16px] text-[13px] text-slate-600 list-disc list-inside space-y-[6px]">
+                        <li><strong>Level A1:</strong> German alphabets, greetings, and basic daily phrases</li>
+                        <li><strong>Level A2:</strong> Routine exchanges, family terms, basic workplace talk</li>
+                        <li><strong>Level B1:</strong> Independent expression, opinion building, simple essays</li>
+                        <li><strong>Level B2:</strong> Technical understanding, Goethe exam practice, speaking fluently</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <button class="cmnBtn w-full text-center py-[12px] font-[500] cursor-pointer hover:bg-[#062d45]" onclick="openEnrollModal('German Language (A1 to B2)')">Register Interest</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3: PTE Academic -->
+            <div class="course-card flex flex-col bg-[#f8fafc] border border-[#e2e8f0] rounded-[16px] overflow-hidden transition-all duration-300 hover:shadow-lg" data-category="language" data-title="pte pearson test english language computer test prep">
+              <div class="h-[200px] w-full bg-[#148fb3]/10 flex items-center justify-center relative p-[20px] border-b border-[#e2e8f0]">
+                <span class="absolute top-[16px] left-[16px] px-[12px] py-[4px] rounded-full bg-[#148fb3] text-white text-[12px] font-[600] uppercase tracking-wide shadow-sm">Language</span>
+                <span class="absolute top-[16px] right-[16px] px-[12px] py-[4px] rounded-full bg-[#074163]/10 text-[#074163] text-[12px] font-[600]">6 Weeks</span>
+                <div class="flex flex-col items-center justify-center">
+                  <div class="w-[64px] h-[64px] rounded-full bg-[#148fb3] flex items-center justify-center text-white mb-[8px] font-bold text-[24px]">P</div>
+                  <h4 class="font-[600] text-[20px] text-[#074163] text-center">PTE Academic Masterclass</h4>
+                </div>
+              </div>
+              <div class="p-[28px] flex flex-col flex-grow">
+                <p class="text-[#64748b] text-[15px] font-[400] mb-[20px] leading-relaxed">Targeted practice utilizing our simulated Pearson AI Scoring portals. Structured mock exercises cover read alouds, fill-in-the-blank grammar hacks, and speech-to-text algorithms.</p>
+                <div class="mt-auto flex flex-col gap-[16px]">
+                  <div class="border border-slate-200 rounded-lg overflow-hidden bg-white">
+                    <button class="accordion-trigger w-full flex justify-between items-center px-[16px] py-[12px] text-left text-[14px] font-[600] text-[#074163] hover:bg-slate-50 transition-colors" aria-expanded="false">
+                      <span>View Syllabus Outline</span>
+                      <svg class="w-4 h-4 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="accordion-body max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                      <ul class="px-[16px] pb-[16px] text-[13px] text-slate-600 list-disc list-inside space-y-[6px]">
+                        <li><strong>Weeks 1-2:</strong> Speaking templates and read aloud shortcuts</li>
+                        <li><strong>Week 3:</strong> Audio listening, summarization, and transcription</li>
+                        <li><strong>Week 4:</strong> Computer reading passage algorithms & grammar checks</li>
+                        <li><strong>Weeks 5-6:</strong> Full-length mock portal sessions with AI score sheets</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <button class="cmnBtn w-full text-center py-[12px] font-[500] cursor-pointer hover:bg-[#062d45]" onclick="openEnrollModal('PTE Academic Masterclass')">Register Interest</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4: Web Development -->
+            <div class="course-card flex flex-col bg-[#f8fafc] border border-[#e2e8f0] rounded-[16px] overflow-hidden transition-all duration-300 hover:shadow-lg" data-category="tech" data-title="frontend web development coding react js javascript html css bootcamp">
+              <div class="h-[200px] w-full bg-[#148fb3]/10 flex items-center justify-center relative p-[20px] border-b border-[#e2e8f0]">
+                <span class="absolute top-[16px] left-[16px] px-[12px] py-[4px] rounded-full bg-orange-500 text-white text-[12px] font-[600] uppercase tracking-wide shadow-sm">Tech</span>
+                <span class="absolute top-[16px] right-[16px] px-[12px] py-[4px] rounded-full bg-[#074163]/10 text-[#074163] text-[12px] font-[600]">12 Weeks</span>
+                <div class="flex flex-col items-center justify-center">
+                  <div class="w-[64px] h-[64px] rounded-full bg-[#074163] flex items-center justify-center text-white mb-[8px] font-bold text-[24px]"><svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg></div>
+                  <h4 class="font-[600] text-[20px] text-[#074163] text-center">Web Development Bootcamp</h4>
+                </div>
+              </div>
+              <div class="p-[28px] flex flex-col flex-grow">
+                <p class="text-[#64748b] text-[15px] font-[400] mb-[20px] leading-relaxed">Launch your coding journey. Master modern front-end technologies: HTML5, CSS3, Tailwind CSS, Javascript (ES6), and building reactive user interfaces using React.js.</p>
+                <div class="mt-auto flex flex-col gap-[16px]">
+                  <div class="border border-slate-200 rounded-lg overflow-hidden bg-white">
+                    <button class="accordion-trigger w-full flex justify-between items-center px-[16px] py-[12px] text-left text-[14px] font-[600] text-[#074163] hover:bg-slate-50 transition-colors" aria-expanded="false">
+                      <span>View Syllabus Outline</span>
+                      <svg class="w-4 h-4 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="accordion-body max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                      <ul class="px-[16px] pb-[16px] text-[13px] text-slate-600 list-disc list-inside space-y-[6px]">
+                        <li><strong>Weeks 1-3:</strong> Semantic HTML5 structure & layouts using Flexbox/Grid CSS</li>
+                        <li><strong>Weeks 4-6:</strong> Modern UI design with Tailwind CSS and CSS animations</li>
+                        <li><strong>Weeks 7-9:</strong> Core Javascript programming, DOM nodes, fetch APIs</li>
+                        <li><strong>Weeks 10-12:</strong> React framework components, state hooks, and final projects</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <button class="cmnBtn w-full text-center py-[12px] font-[500] cursor-pointer hover:bg-[#062d45]" onclick="openEnrollModal('Web Development Bootcamp')">Register Interest</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 5: Python & AI -->
+            <div class="course-card flex flex-col bg-[#f8fafc] border border-[#e2e8f0] rounded-[16px] overflow-hidden transition-all duration-300 hover:shadow-lg" data-category="tech" data-title="python programming ai basics artificial intelligence coding data science">
+              <div class="h-[200px] w-full bg-[#148fb3]/10 flex items-center justify-center relative p-[20px] border-b border-[#e2e8f0]">
+                <span class="absolute top-[16px] left-[16px] px-[12px] py-[4px] rounded-full bg-orange-500 text-white text-[12px] font-[600] uppercase tracking-wide shadow-sm">Tech</span>
+                <span class="absolute top-[16px] right-[16px] px-[12px] py-[4px] rounded-full bg-[#074163]/10 text-[#074163] text-[12px] font-[600]">8 Weeks</span>
+                <div class="flex flex-col items-center justify-center">
+                  <div class="w-[64px] h-[64px] rounded-full bg-[#148fb3] flex items-center justify-center text-white mb-[8px] font-bold text-[24px]">Py</div>
+                  <h4 class="font-[600] text-[20px] text-[#074163] text-center">Python & AI Foundations</h4>
+                </div>
+              </div>
+              <div class="p-[28px] flex flex-col flex-grow">
+                <p class="text-[#64748b] text-[15px] font-[400] mb-[20px] leading-relaxed">Establish essential analytics and scripting capabilities. Focuses on core Python, data structures, data analysis via Pandas, and simple Machine Learning pipelines.</p>
+                <div class="mt-auto flex flex-col gap-[16px]">
+                  <div class="border border-slate-200 rounded-lg overflow-hidden bg-white">
+                    <button class="accordion-trigger w-full flex justify-between items-center px-[16px] py-[12px] text-left text-[14px] font-[600] text-[#074163] hover:bg-slate-50 transition-colors" aria-expanded="false">
+                      <span>View Syllabus Outline</span>
+                      <svg class="w-4 h-4 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="accordion-body max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                      <ul class="px-[16px] pb-[16px] text-[13px] text-slate-600 list-disc list-inside space-y-[6px]">
+                        <li><strong>Weeks 1-2:</strong> Python basics, loops, lists, and function scopes</li>
+                        <li><strong>Weeks 3-4:</strong> File handling, CSV scripts, and using external APIs</li>
+                        <li><strong>Weeks 5-6:</strong> Data Science basics using Pandas, NumPy, and Matplotlib</li>
+                        <li><strong>Weeks 7-8:</strong> Machine Learning concepts, regressions, and AI APIs</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <button class="cmnBtn w-full text-center py-[12px] font-[500] cursor-pointer hover:bg-[#062d45]" onclick="openEnrollModal('Python & AI Foundations')">Register Interest</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 6: Business communication -->
+            <div class="course-card flex flex-col bg-[#f8fafc] border border-[#e2e8f0] rounded-[16px] overflow-hidden transition-all duration-300 hover:shadow-lg" data-category="career" data-title="business english communication corporate soft skills email writing presentation career">
+              <div class="h-[200px] w-full bg-[#148fb3]/10 flex items-center justify-center relative p-[20px] border-b border-[#e2e8f0]">
+                <span class="absolute top-[16px] left-[16px] px-[12px] py-[4px] rounded-full bg-emerald-600 text-white text-[12px] font-[600] uppercase tracking-wide shadow-sm">Career</span>
+                <span class="absolute top-[16px] right-[16px] px-[12px] py-[4px] rounded-full bg-[#074163]/10 text-[#074163] text-[12px] font-[600]">6 Weeks</span>
+                <div class="flex flex-col items-center justify-center">
+                  <div class="w-[64px] h-[64px] rounded-full bg-[#074163] flex items-center justify-center text-white mb-[8px] font-bold text-[24px]">BC</div>
+                  <h4 class="font-[600] text-[20px] text-[#074163] text-center">Business English & Communication</h4>
+                </div>
+              </div>
+              <div class="p-[28px] flex flex-col flex-grow">
+                <p class="text-[#64748b] text-[15px] font-[400] mb-[20px] leading-relaxed">Transition seamlessly to corporate cultures. Improve professional emails, presentation skills, business jargon, corporate writing rules, and mock negotiations.</p>
+                <div class="mt-auto flex flex-col gap-[16px]">
+                  <div class="border border-slate-200 rounded-lg overflow-hidden bg-white">
+                    <button class="accordion-trigger w-full flex justify-between items-center px-[16px] py-[12px] text-left text-[14px] font-[600] text-[#074163] hover:bg-slate-50 transition-colors" aria-expanded="false">
+                      <span>View Syllabus Outline</span>
+                      <svg class="w-4 h-4 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="accordion-body max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                      <ul class="px-[16px] pb-[16px] text-[13px] text-slate-600 list-disc list-inside space-y-[6px]">
+                        <li><strong>Weeks 1-2:</strong> Professional email writing and formatting etiquette</li>
+                        <li><strong>Weeks 3-4:</strong> Effective presentation structures & body language hacks</li>
+                        <li><strong>Week 5:</strong> Meeting negotiations and conflict resolution dialogue</li>
+                        <li><strong>Week 6:</strong> Global culture workshops and international business norms</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <button class="cmnBtn w-full text-center py-[12px] font-[500] cursor-pointer hover:bg-[#062d45]" onclick="openEnrollModal('Business English & Communication')">Register Interest</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 7: Interview prep -->
+            <div class="course-card flex flex-col bg-[#f8fafc] border border-[#e2e8f0] rounded-[16px] overflow-hidden transition-all duration-300 hover:shadow-lg" data-category="career" data-title="interview preparation linkedin profile resume cv mapping global career">
+              <div class="h-[200px] w-full bg-[#148fb3]/10 flex items-center justify-center relative p-[20px] border-b border-[#e2e8f0]">
+                <span class="absolute top-[16px] left-[16px] px-[12px] py-[4px] rounded-full bg-emerald-600 text-white text-[12px] font-[600] uppercase tracking-wide shadow-sm">Career</span>
+                <span class="absolute top-[16px] right-[16px] px-[12px] py-[4px] rounded-full bg-[#074163]/10 text-[#074163] text-[12px] font-[600]">4 Weeks</span>
+                <div class="flex flex-col items-center justify-center">
+                  <div class="w-[64px] h-[64px] rounded-full bg-[#148fb3] flex items-center justify-center text-white mb-[8px] font-bold text-[24px]">IR</div>
+                  <h4 class="font-[600] text-[20px] text-[#074163] text-center">Interview & CV Readiness</h4>
+                </div>
+              </div>
+              <div class="p-[28px] flex flex-col flex-grow">
+                <p class="text-[#64748b] text-[15px] font-[400] mb-[20px] leading-relaxed">Perfect your professional presence. Build country-specific ATS-friendly CVs, optimize your LinkedIn profile, and prepare for behavior-based interview scenarios.</p>
+                <div class="mt-auto flex flex-col gap-[16px]">
+                  <div class="border border-slate-200 rounded-lg overflow-hidden bg-white">
+                    <button class="accordion-trigger w-full flex justify-between items-center px-[16px] py-[12px] text-left text-[14px] font-[600] text-[#074163] hover:bg-slate-50 transition-colors" aria-expanded="false">
+                      <span>View Syllabus Outline</span>
+                      <svg class="w-4 h-4 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="accordion-body max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                      <ul class="px-[16px] pb-[16px] text-[13px] text-slate-600 list-disc list-inside space-y-[6px]">
+                        <li><strong>Week 1:</strong> ATS resume audits and industry formatting guidelines</li>
+                        <li><strong>Week 2:</strong> LinkedIn profile branding, networking, & search filters</li>
+                        <li><strong>Week 3:</strong> Star interview response methods & case interview layouts</li>
+                        <li><strong>Week 4:</strong> Mock interview panels with detailed feedback sessions</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <button class="cmnBtn w-full text-center py-[12px] font-[500] cursor-pointer hover:bg-[#062d45]" onclick="openEnrollModal('Interview & CV Readiness')">Register Interest</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Bottom Ready CTA -->
+      <section class="redyConf bg-slate-50 py-[60px]">
+        <div class="template-containerMaxWth">
+          <div class="titleHead flex items-center justify-center flex-col gap-[33px] max-w-[950px] w-full">
+            <h2 class="font-[400]">Not Sure Which Program is Right for You?</h2>
+            <p class="cmnDesc-16">Connect with our academic counsellors today for a free skill diagnostic and course mapping session to align your study abroad or professional goals.</p>
+          </div>
+          <div class="btnGrp flex justify-center gap-[24px]">
+            <a href="contact.html" class="cmnBtn font-[500]">Schedule Diagnostic Session</a>
+            <a href="about.html" class="cmnBtn cmnBtnBdr font-[500]">Learn About Our Methodology</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Interactive Enrollment Registration Modal -->
+    <div id="enrollModal" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 opacity-0 pointer-events-none transition-opacity duration-300 p-[16px]">
+      <div class="bg-white rounded-2xl max-w-[500px] w-full p-[32px] relative transform scale-95 transition-transform duration-300 shadow-2xl">
+        <button onclick="closeEnrollModal()" class="absolute right-[24px] top-[24px] text-slate-400 hover:text-slate-600 transition-colors cursor-pointer">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+        <h3 class="text-[22px] font-[600] text-[#074163] mb-[8px]">Academy Enrollment Request</h3>
+        <p class="text-[14px] text-slate-500 mb-[24px]">Submit your information to receive a detailed course syllabus, fee schedule, and start dates for: <br><strong id="selectedCourseName" class="text-[#148fb3]">Course Name</strong></p>
+        
+        <form id="enrollmentForm" class="flex flex-col gap-[16px]">
+          <input type="hidden" id="enrollCourseInput" name="course_name">
+          <div class="flex flex-col gap-[6px]">
+            <label for="enrollName" class="text-[13px] font-[500] text-slate-700">Full Name</label>
+            <input type="text" id="enrollName" required class="w-full h-[46px] px-[16px] rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#148fb3]" placeholder="Your Name">
+          </div>
+          <div class="flex flex-col gap-[6px]">
+            <label for="enrollEmail" class="text-[13px] font-[500] text-slate-700">Email Address</label>
+            <input type="email" id="enrollEmail" required class="w-full h-[46px] px-[16px] rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#148fb3]" placeholder="you@example.com">
+          </div>
+          <div class="flex flex-col gap-[6px]">
+            <label for="enrollPhone" class="text-[13px] font-[500] text-slate-700">WhatsApp Phone Number</label>
+            <input type="tel" id="enrollPhone" required class="w-full h-[46px] px-[16px] rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#148fb3]" placeholder="e.g. +91 99950 XXXXX">
+          </div>
+          <div class="flex flex-col gap-[6px]">
+            <label for="enrollBatch" class="text-[13px] font-[500] text-slate-700">Preferred Batch</label>
+            <select id="enrollBatch" class="w-full h-[46px] px-[16px] rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#148fb3]">
+              <option value="weekday-regular">Weekday Intensive (Regular)</option>
+              <option value="weekend-fasttrack">Weekend Fast-Track (Working Professionals)</option>
+              <option value="online-evening">Online Evening Classes (Flexible)</option>
+            </select>
+          </div>
+          <button type="submit" class="cmnBtn w-full py-[12px] font-[600] text-center mt-[12px] cursor-pointer">Submit Registration</button>
+        </form>
+        
+        <!-- Success Alert inside modal -->
+        <div id="enrollSuccessAlert" class="hidden absolute inset-0 bg-white rounded-2xl p-[32px] flex flex-col items-center justify-center text-center">
+          <div class="w-[64px] h-[64px] rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mb-[16px]">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <h4 class="text-[20px] font-[600] text-slate-800 mb-[8px]">Inquiry Received Successfully!</h4>
+          <p class="text-[14px] text-slate-500 max-w-[320px] mb-[24px]">Thank you for registering. Our academy coordinator will send the syllabus details and schedules via WhatsApp/Email shortly.</p>
+          <button onclick="closeEnrollModal()" class="cmnBtn px-[24px] py-[10px] font-[500] cursor-pointer">Done</button>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="template-containerMaxWth">
+        <div class="footerMenu flex gap-[30px] justify-between">
+          <div class="logoSec flex flex-col max-w-[362px] w-full gap-[24px]">
+            <a href="index.html" class="logo flex max-w-[343px] w-full"> <img src="images/footerLogo.png" alt="footerLogo" loading="lazy"/></a>
+            <p class="font-[400]">HumanEdg provides country-specific counselling, visa support, cultural training, scholarship support, language coaching, and post-landing guidance.</p>
+            <ul class="flex items-center gap-[40px]">
+              <li><a href="#"><svg width="30" height="31" fill="none" viewBox="0 0 30 31"><path fill="#C8CBCF" d="M27.5 15.573c0-6.903-5.596-12.5-12.5-12.5S2.5 8.67 2.5 15.573c0 6.24 4.571 11.41 10.547 12.348v-8.735H9.873v-3.613h3.174V12.82c0-3.132 1.866-4.863 4.721-4.863 1.367 0 2.798.244 2.798.244v3.076H18.99c-1.552 0-2.037.964-2.037 1.954v2.343h3.467l-.554 3.613h-2.913v8.735C22.93 26.984 27.5 21.812 27.5 15.573Z"/></svg></a></li>
+              <li><a href="#"><svg width="30" height="31" fill="none" viewBox="0 0 30 31"><path fill="#C8CBCF" d="m13.11 18.887 5.953 7.936h8.75L17.99 13.726l8.173-9.403H22.85l-6.396 7.358-5.517-7.358h-8.75l9.388 12.519L2.9 26.823h3.313l6.897-7.936Zm7.203 5.436L7.188 6.823h2.5l13.124 17.5h-2.5Z"/></svg></a></li>
+              <li><a href="#"><svg width="30" height="31" fill="none" viewBox="0 0 30 31"><path fill="#C8CBCF" d="M15.007 5.326c3.342 0 3.738.014 5.052.073 1.221.054 1.881.259 2.32.43a3.868 3.868 0 0 1 1.437.933c.44.44.709.855.933 1.436.171.44.377 1.104.43 2.321.059 1.32.074 1.715.074 5.052 0 3.342-.015 3.737-.074 5.052-.053 1.221-.259 1.88-.43 2.32a3.87 3.87 0 0 1-.933 1.437c-.44.44-.855.708-1.436.933-.44.17-1.104.376-2.32.43-1.32.058-1.716.073-5.053.073-3.341 0-3.737-.015-5.051-.073-1.222-.054-1.881-.26-2.321-.43a3.868 3.868 0 0 1-1.437-.933 3.847 3.847 0 0 1-.933-1.437c-.17-.44-.376-1.104-.43-2.32-.058-1.32-.073-1.715-.073-5.052 0-3.342.015-3.738.073-5.052.054-1.221.26-1.881.43-2.32a3.868 3.868 0 0 1 .933-1.437c.44-.44.855-.708 1.437-.933.44-.171 1.104-.376 2.32-.43 1.315-.059 1.71-.073 5.052-.073Zm0-2.253c-3.395 0-3.82.015-5.154.074-1.329.058-2.243.273-3.034.58A6.105 6.105 0 0 0 4.6 5.175a6.128 6.128 0 0 0-1.446 2.213c-.308.797-.523 1.705-.582 3.034-.058 1.339-.073 1.764-.073 5.16 0 3.395.015 3.82.073 5.154.059 1.329.274 2.242.582 3.034A6.106 6.106 0 0 0 4.6 25.987a6.114 6.114 0 0 0 2.213 1.441c.796.308 1.705.523 3.034.582 1.334.058 1.759.073 5.154.073 3.396 0 3.821-.015 5.155-.073 1.329-.059 2.242-.274 3.034-.582a6.113 6.113 0 0 0 2.213-1.44 6.114 6.114 0 0 0 1.441-2.214c.308-.797.523-1.705.582-3.034.058-1.334.073-1.759.073-5.154 0-3.396-.015-3.821-.073-5.155-.059-1.329-.274-2.242-.582-3.034a5.858 5.858 0 0 0-1.431-2.223A6.113 6.113 0 0 0 23.2 3.733c-.797-.308-1.706-.523-3.034-.582-1.34-.063-1.764-.078-5.16-.078Z"/></svg></a></li>
+              <li><a href="#"><svg width="30" height="31" fill="none" viewBox="0 0 30 31"><path fill="#C8CBCF" d="M15.01 3.053c-6.909 0-12.51 5.601-12.51 12.51 0 5.303 3.295 9.833 7.949 11.656-.113-.989-.206-2.513.041-3.594.227-.978 1.462-6.219 1.462-6.219s-.37-.752-.37-1.853c0-1.74 1.009-3.038 2.265-3.038 1.07 0 1.585.803 1.585 1.76 0 1.072-.68 2.678-1.04 4.171-.298 1.246.629 2.265 1.854 2.265 2.224 0 3.933-2.347 3.933-5.725 0-2.996-2.152-5.086-5.23-5.086-3.563 0-5.653 2.667-5.653 5.426 0 1.071.412 2.224.926 2.852a.373.373 0 0 1 .083.36c-.093.392-.31 1.247-.35 1.422-.052.226-.186.278-.422.164-1.566-.73-2.544-3.006-2.544-4.85 0-3.943 2.863-7.567 8.268-7.567 4.335 0 7.713 3.089 7.713 7.228 0 4.314-2.719 7.784-6.487 7.784-1.267 0-2.461-.659-2.863-1.441l-.782 2.975c-.278 1.092-1.04 2.45-1.555 3.285 1.174.36 2.41.556 3.707.556 6.909 0 12.51-5.601 12.51-12.51.02-6.93-5.58-12.531-12.49-12.531Z"/></svg></a></li>
+            </ul>
+          </div>
+          <div class="footerWidget flex items-start gap-[20px] justify-between max-w-[640px] w-full">
+            <div class="menuCol">
+              <h4 class="font-[700] capitalize">Services</h4>
+              <ul>
+                <li><a href="scholarships.html">Study Abroad</a></li>
+                <li><a href="scholarships.html">Language Classes</a></li>
+                <li><a href="courses.html">Courses</a></li>
+              </ul>
+            </div>
+            <div class="menuCol">
+              <h4 class="font-[700] capitalize">Countries</h4>
+              <ul>
+                <li><a href="countries.html">Canada</a></li>
+                <li><a href="countries.html">United Kingdom</a></li>
+                <li><a href="countries.html">Australia</a></li>
+                <li><a href="countries.html">Germany</a></li>
+              </ul>
+            </div>
+            <div class="menuCol">
+              <h4 class="font-[700] capitalize">Quick Links</h4>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Book Counselling</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+        © 2026 HumanEdg Global Academy & Study Abroad. All rights reserved.
+        </div>
+      </div>
+    </footer> 
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="js/splide.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/script.js"></script>
+    
+    <!-- Custom Courses Filtering & Accordion Logic -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        
+        // 1. Accordion logic inside cards
+        const triggers = document.querySelectorAll('.accordion-trigger');
+        triggers.forEach(trigger => {
+          trigger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const parent = trigger.parentElement;
+            const body = parent.querySelector('.accordion-body');
+            const svg = trigger.querySelector('svg');
+            const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+            
+            // Toggle active trigger
+            trigger.setAttribute('aria-expanded', !isExpanded);
+            
+            if (!isExpanded) {
+              body.style.maxHeight = body.scrollHeight + 'px';
+              svg.classList.add('rotate-180');
+            } else {
+              body.style.maxHeight = '0px';
+              svg.classList.remove('rotate-180');
+            }
+          });
+        });
+
+        // 2. Search & Category Tab Filtering
+        const searchInput = document.getElementById('courseSearch');
+        const tabs = document.querySelectorAll('.filter-tab');
+        const cards = document.querySelectorAll('.course-card');
+        const grid = document.getElementById('courseGrid');
+        const noCoursesMsg = document.getElementById('noCoursesMessage');
+        
+        let activeFilter = 'all';
+        let searchQuery = '';
+        
+        function filterCourses() {
+          let visibleCount = 0;
+          
+          cards.forEach(card => {
+            const category = card.getAttribute('data-category');
+            const titleText = card.getAttribute('data-title') || '';
+            const matchesCategory = (activeFilter === 'all' || category === activeFilter);
+            const matchesSearch = titleText.toLowerCase().includes(searchQuery.toLowerCase());
+            
+            if (matchesCategory && matchesSearch) {
+              card.classList.remove('hidden');
+              visibleCount++;
+            } else {
+              card.classList.add('hidden');
+            }
+          });
+          
+          if (visibleCount === 0) {
+            noCoursesMsg.classList.remove('hidden');
+            grid.classList.add('hidden');
+          } else {
+            noCoursesMsg.classList.add('hidden');
+            grid.classList.remove('hidden');
+          }
+        }
+        
+        // Filter tabs click listener
+        tabs.forEach(tab => {
+          tab.addEventListener('click', () => {
+            tabs.forEach(t => {
+              t.classList.remove('bg-[#074163]', 'text-white');
+              t.classList.add('bg-white', 'text-[#4a5568]', 'border', 'border-[#cbd5e1]');
+            });
+            
+            tab.classList.remove('bg-white', 'text-[#4a5568]', 'border', 'border-[#cbd5e1]');
+            tab.classList.add('bg-[#074163]', 'text-white');
+            
+            activeFilter = tab.getAttribute('data-filter');
+            filterCourses();
+          });
+        });
+        
+        // Live search keyup listener
+        searchInput.addEventListener('input', (e) => {
+          searchQuery = e.target.value;
+          filterCourses();
+        });
+      });
+
+      // 3. Enrollment Modal Functions
+      const enrollModal = document.getElementById('enrollModal');
+      const selectedCourseName = document.getElementById('selectedCourseName');
+      const enrollCourseInput = document.getElementById('enrollCourseInput');
+      const enrollmentForm = document.getElementById('enrollmentForm');
+      const successAlert = document.getElementById('enrollSuccessAlert');
+
+      function openEnrollModal(courseName) {
+        selectedCourseName.innerText = courseName;
+        enrollCourseInput.value = courseName;
+        
+        // Reset modal state
+        enrollmentForm.reset();
+        successAlert.classList.add('hidden');
+        
+        // Show modal
+        enrollModal.classList.remove('pointer-events-none', 'opacity-0');
+        enrollModal.querySelector('div').classList.remove('scale-95');
+        enrollModal.querySelector('div').classList.add('scale-100');
+        
+        // Disable page scrolling when modal is open
+        document.body.classList.add('ovrflowHdn');
+      }
+
+      function closeEnrollModal() {
+        // Hide modal
+        enrollModal.classList.add('pointer-events-none', 'opacity-0');
+        enrollModal.querySelector('div').classList.remove('scale-100');
+        enrollModal.querySelector('div').classList.add('scale-95');
+        
+        // Enable page scrolling
+        document.body.classList.remove('ovrflowHdn');
+      }
+
+      // Handle enrollment form submission
+      enrollmentForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Simulate email/WhatsApp processing success
+        successAlert.classList.remove('hidden');
+      });
+      
+      // Close modal on background click
+      enrollModal.addEventListener('click', (e) => {
+        if (e.target === enrollModal) {
+          closeEnrollModal();
+        }
+      });
+    </script>
+    </script>
+  </body>
+</html>

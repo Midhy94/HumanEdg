@@ -1,12 +1,12 @@
 const countryData = {
   canada: {
     name: "Canada",
-    banner: "images/ourProjectIndustListPic1.jpg",
+    banner: "https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?q=80&w=1600",
     description1: "Canada remains a top choice for international students due to its world-class colleges, flexible work-while-study policies, and pathways for permanent residency. Major student hubs include Toronto, Vancouver, Montreal, and Calgary.",
     description2: "Known for its high academic standards and rigorous quality controls, a Canadian degree or diploma is widely recognized as equivalent to one from the US or Commonwealth countries.",
     welcomeTitle: "Why Study in Canada?",
     welcomeDesc: "Canada is recognized globally for its high standard of living, excellent health care, and career opportunities. International students can work up to 20 hours per week during academic semesters and full-time during scheduled breaks. The Post-Graduation Work Permit (PGWP) allows graduates to work in Canada for up to three years, providing a clear pathway to permanent residency.",
-    welcomePic: "images/welcomeHomePic1.jpg",
+    welcomePic: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=800",
     intakes: "Fall (September), Winter (January), and Summer (May) intakes. Applications should be submitted 6-8 months in advance.",
     visaDetails: "Student visas are processed under the Student Direct Stream (SDS) or non-SDS. Requires a blocked GIC of CAD 20,635 and language proof.",
     workPermit: "Up to 3 years Post-Graduation Work Permit (PGWP) depending on the course duration and level of study.",
@@ -24,12 +24,12 @@ const countryData = {
   },
   uk: {
     name: "United Kingdom",
-    banner: "images/ourProjectIndustListPic2.jpg",
+    banner: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=1600",
     description1: "The UK is famous for prestigious degree programs and accelerated 1-year Master's courses. Students can avail of the Graduate Route to work in the UK for two years after graduation.",
     description2: "UK universities consistently rank among the best in the world, offering high-quality education and excellent networking opportunities with global industry leaders.",
     welcomeTitle: "Why Study in the UK?",
     welcomeDesc: "With an unparalleled heritage of academic excellence, the UK offers shorter course durations that help save on tuition fees and living costs. The UK's Graduate Route provides a two-year post-study work visa for graduates, making it highly attractive for career-driven individuals.",
-    welcomePic: "images/welcomeHomePic1.jpg",
+    welcomePic: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=800",
     intakes: "September/October (Main intake) and January/February (Secondary intake). Some universities also offer May/June intakes.",
     visaDetails: "Processed under the Student Visa route. Requires a valid Confirmation of Acceptance for Studies (CAS) and meeting the points-based criteria.",
     workPermit: "2 years post-study work visa (Graduate Route) for Bachelor's and Master's graduates; 3 years for PhD holders.",
@@ -47,12 +47,12 @@ const countryData = {
   },
   australia: {
     name: "Australia",
-    banner: "images/ourProjectIndustListPic3.jpg",
+    banner: "https://images.unsplash.com/photo-1523482596682-cd93a00d5dbe?q=80&w=1600",
     description1: "With high-ranking universities and a warm, welcoming lifestyle, Australia offers outstanding job opportunities, generous post-study work visa rights, and practical training options.",
     description2: "Australia's education system is highly regulated by the government to maintain high standards of teaching, research, and student support services.",
     welcomeTitle: "Why Study in Australia?",
     welcomeDesc: "Australia offers dynamic study environments, hands-on training, and extensive support for international students. The Temporary Graduate Visa (subclass 485) allows graduates to gain practical work experience in Australia, with regional areas offering extended post-study work options.",
-    welcomePic: "images/welcomeHomePic1.jpg",
+    welcomePic: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=800",
     intakes: "Semester 1 (February/March) and Semester 2 (July/August). Some institutions also have a November intake.",
     visaDetails: "Processed under subclass 500. Requires Confirmation of Enrolment (CoE), Genuine Student (GS) requirement compliance, and OSHC health cover.",
     workPermit: "2 to 4 years Temporary Graduate Visa (subclass 485) depending on the degree level, with an extra 1-2 years for regional locations.",
@@ -70,12 +70,12 @@ const countryData = {
   },
   germany: {
     name: "Germany",
-    banner: "images/ourProjectIndustListPic4.jpg",
+    banner: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=1600",
     description1: "Germany's public universities offer tuition-free education in English and German. It is a hub for engineering and science. Combined with our German training, it offers unmatched career pathways.",
     description2: "Germany combines high-tech engineering facilities with low cost of living and strong economic growth, making it a premier European study hub.",
     welcomeTitle: "Why Study in Germany?",
     welcomeDesc: "By studying at public universities, students pay zero tuition fees and only minor semester fees. Germany's strong economy provides ample part-time jobs and internships. After graduation, students can stay for 18 months under a job-seeker visa to kickstart their career.",
-    welcomePic: "images/welcomeHomePic1.jpg",
+    welcomePic: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=800",
     intakes: "Winter Semester (October - main intake) and Summer Semester (April - secondary intake). Applications close months in advance.",
     visaDetails: "Requires APS certificate verification (for Indian students) and a Blocked Account of approximately €11,900 to cover living expenses.",
     workPermit: "18-month post-study job seeker visa, which can be converted to an EU Blue Card or national residence permit upon securing a job.",
@@ -93,12 +93,12 @@ const countryData = {
   },
   usa: {
     name: "United States",
-    banner: "images/ourProjectIndustListPic5.jpg",
+    banner: "https://images.unsplash.com/photo-1498243691581-b145c3f54a5c?q=80&w=1600",
     description1: "The USA holds the largest concentration of top-ranked research universities in the world. STEM graduates can stay and work for up to three years under the OPT extension.",
     description2: "The US higher education system offers remarkable flexibility in course selection and research opportunities, alongside strong post-graduation global career networks.",
     welcomeTitle: "Why Study in the USA?",
     welcomeDesc: "Studying in the US offers students exposure to cutting-edge research, hands-on learning, and networking with global industry leaders. The OPT (Optional Practical Training) program allows graduates to work in their field of study, with STEM programs offering up to 36 months of work authorization.",
-    welcomePic: "images/welcomeHomePic1.jpg",
+    welcomePic: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=800",
     intakes: "Fall Semester (August/September - main intake) and Spring Semester (January - secondary). Summer intakes are limited.",
     visaDetails: "F-1 Student Visa requires an I-20 form from an SEVP-certified school, SEVIS fee payment, and an in-person visa interview at the consulate.",
     workPermit: "12 months of standard OPT, with an additional 24 months STEM OPT extension available for eligible technical degrees.",
@@ -700,7 +700,7 @@ const successStoryData = {
     desc2: "HumanEdg conducted an exhaustive profile review, identified Griffith's Academic Excellence scholarship program, and helped him craft a compelling SOP highlighting his research in web security.",
     welcomeTitle: "Securing the Visa & Admissions Offer",
     welcomeDesc: "With our guidance, Aarav secured his offer letter within two weeks. We subsequently managed his financial profiling, including blocked accounts and bank loan proofs, and prepared him for subclass 500 visa interview questions. His visa was granted in record time.",
-    welcomePic: "images/welcomeHomePic1.jpg"
+    welcomePic: "https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=800"
   },
   nisha: {
     title: "Nisha Sharma's Admission to University of Windsor, Canada",
@@ -708,7 +708,7 @@ const successStoryData = {
     desc2: "Our consultants helped Nisha bridge her academic credentials, targeted Windsor's entrance awards, and refined her statement of purpose to highlight her practical fieldwork experience.",
     welcomeTitle: "Smooth SDS Visa Approval",
     welcomeDesc: "We guided Nisha in setting up her Guaranteed Investment Certificate (GIC) blocked account of CAD 20,635 and passing her IELTS with a 7.5 band score, leading to a smooth SDS visa stamp.",
-    welcomePic: "images/welcomeHomePic1.jpg"
+    welcomePic: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800"
   },
   sam: {
     title: "Sam Wilson's Global Pathway to ASU, United States",
@@ -716,7 +716,7 @@ const successStoryData = {
     desc2: "We mapped his profile to Arizona State University, helped him secure a New American University scholarship, and conducted multiple mock interview rounds.",
     welcomeTitle: "F-1 Consular Success",
     welcomeDesc: "Through rigorous mock interview preparations, Sam handled all financial and academic questions with confidence, securing his F-1 visa on his first attempt at the US consulate.",
-    welcomePic: "images/welcomeHomePic1.jpg"
+    welcomePic: "https://images.unsplash.com/photo-1498243691581-b145c3f54a5c?q=80&w=800"
   },
   elena: {
     title: "Elena Rostova's Tuition-Free Pathway to Germany",
@@ -724,7 +724,7 @@ const successStoryData = {
     desc2: "We mapped her profile to key public institutions, assisted in APS certification documentation, and enrolled her in our German language coaching modules.",
     welcomeTitle: "APS and Blocked Account Clearances",
     welcomeDesc: "We managed her German blocked account setup of €11,900 and prepared her for the public university interviews, leading to full tuition-free admission.",
-    welcomePic: "images/welcomeHomePic1.jpg"
+    welcomePic: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=800"
   }
 };
 
