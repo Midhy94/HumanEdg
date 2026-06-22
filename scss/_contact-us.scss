@@ -1,16 +1,16 @@
 .contactForm{
-    padding-block: 100px;
+    padding-block: var(--spacing-3xl);
     @include breakpoint(mx1199){
-        padding-block: 90px;
+        padding-block: var(--spacing-2xl);
     }
     @include breakpoint(mx991){
-       padding-block: 80px 80px;
+       padding-block: var(--spacing-xl);
     }
     @include breakpoint(mx800){
-       padding-block: 80px 80px;
+       padding-block: var(--spacing-xl);
     }
     @include breakpoint(mx680){
-       padding-block: 60px 60px;
+       padding-block: var(--spacing-lg);
     }
     .titleHead{
         margin-bottom: 62px;
@@ -83,18 +83,18 @@
     }
 }
 .contactFaq{
-    margin-bottom: 100px;
+    margin-bottom: var(--spacing-3xl);
     @include breakpoint(mx1199){
-        margin-bottom: 90px;
+        margin-bottom: var(--spacing-2xl);
     }
     @include breakpoint(mx991){
-        margin-bottom: 80px;
+        margin-bottom: var(--spacing-xl);
     }
     @include breakpoint(mx800){
-        margin-bottom: 80px;
+        margin-bottom: var(--spacing-xl);
     }
     @include breakpoint(mx680){
-        margin-bottom: 60px;
+        margin-bottom: var(--spacing-lg);
     }
     .titleHead{
         margin-bottom: 62px;
@@ -161,27 +161,27 @@
            gap: 10px;
         }
         .accordion-item {
-            background: var(--white);
-            border-radius: 20px;
-            border: 1px solid #D6D6D6;
+            background: var(--canvas);
+            border-radius: var(--rounded-xl);
+            border: 1px solid var(--ink);
             overflow: hidden;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            padding: 32px 30px;
+            padding: var(--spacing-xl);
             @include breakpoint(mx1366){
-                padding: 28px 22px;
-                border-radius: 18px;
+                padding: var(--spacing-lg);
+                border-radius: var(--rounded-lg);
             }
             @include breakpoint(mx991){
-                padding: 25px 20px;
-                border-radius: 15px;
+                padding: var(--spacing-lg);
+                border-radius: var(--rounded-lg);
             }
             @include breakpoint(mx800){
-                padding: 25px 20px;
-                border-radius: 15px;
+                padding: var(--spacing-lg);
+                border-radius: var(--rounded-lg);
             }
             @include breakpoint(mx680){
-                padding: 20px 15px;
-                border-radius: 8px;
+                padding: var(--spacing-md);
+                border-radius: var(--rounded-md);
             }
         }
 
@@ -196,9 +196,8 @@
             transition: background-color 0.2s ease;
         }
         .accordion-title {
-            font-size: var(--fluidFont-22);
-            line-height: 28px;
-            color: #0D0D0D;
+            @include typography-display-xs;
+            color: var(--ink);
             margin: 0;
         }
         .accordion-icon {
@@ -208,7 +207,7 @@
             align-items: center;
             justify-content: center;
             transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            color: #6c757d;
+            color: var(--ink);
         }
         .accordion-content {
             max-height: 0;
@@ -216,18 +215,16 @@
             transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .accordion-content-inner {
-            padding: 20px 0 0;
-            color: var(--c80);
-            font-size: var(--fluidFont-16);
-            line-height: 24px;
-            font-weight: 400;
+            padding: var(--spacing-md) 0 0;
+            color: var(--body);
+            @include typography-body-sm;
         }
         .accordion-item.active .accordion-content {
             max-height: 500px;
         }
         /* Smooth animation for content */
         .accordion-item.active {
-            background-color: #F9F9FB;
+            background-color: var(--canvas-soft);
         }
         .accordion-item.active {
             .min{

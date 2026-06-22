@@ -54,7 +54,6 @@ document.addEventListener('click', (e) => {
 // Scroll-based header visibility
 const header2 = document.querySelector('.header');
 let lastScrollTop = 0;
-const viewportHeight = window.innerHeight - 400;
 let initialLoad = true;
 
 // Add fixHeaderNormal on load
@@ -69,11 +68,12 @@ window.addEventListener('scroll', () => {
     initialLoad = false;
   }
 
-  if (currentScroll > viewportHeight) {
-    if (currentScroll < lastScrollTop) {
-      header2?.classList.add('fixHeader');
-    } else {
+  // If scrolled past top threshold, hide on scroll-down and show on scroll-up (Option A)
+  if (currentScroll > 50) {
+    if (currentScroll > lastScrollTop) {
       header2?.classList.remove('fixHeader');
+    } else {
+      header2?.classList.add('fixHeader');
     }
   } else {
     header2?.classList.add('fixHeader');
@@ -82,6 +82,7 @@ window.addEventListener('scroll', () => {
   // Keep fixHeaderNormal when header is at top
   if (currentScroll <= 0) {
     header2?.classList.add('fixHeaderNormal');
+    header2?.classList.add('fixHeader');
   } else {
     header2?.classList.remove('fixHeaderNormal');
   }

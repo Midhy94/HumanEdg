@@ -3,3 +3,104 @@
     font-weight: $font-weight;
     line-height: $line-height;
 }
+
+@mixin typography-display-mega {
+  font-family: "Manrope", "Inter", "system-ui", "-apple-system", sans-serif;
+  font-size: 126px;
+  font-weight: 900;
+  line-height: 107.1px;
+}
+
+@mixin typography-display-xxl {
+  font-family: "Manrope", "Inter", "system-ui", "-apple-system", sans-serif;
+  font-size: 96px;
+  font-weight: 900;
+  line-height: 81.6px;
+}
+
+@mixin typography-display-xl {
+  font-family: "Manrope", "Inter", "system-ui", "-apple-system", sans-serif;
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 54.4px;
+}
+
+@mixin typography-display-lg {
+  font-family: "Manrope", "Inter", "system-ui", "-apple-system", sans-serif;
+  font-size: 47px;
+  font-weight: 400;
+  line-height: 70.5px;
+  letter-spacing: -0.108px;
+}
+
+@mixin typography-display-md {
+  font-family: "Manrope", "Inter", "system-ui", "-apple-system", sans-serif;
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 34px;
+}
+
+@mixin typography-display-sm {
+  font-family: "Inter", "system-ui", "-apple-system", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 38.4px;
+  letter-spacing: -0.96px;
+}
+
+@mixin typography-display-xs {
+  font-family: "Inter", "system-ui", "-apple-system", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 31.2px;
+  letter-spacing: -0.48px;
+}
+
+@mixin typography-body-lg {
+  font-family: "Inter", "system-ui", "-apple-system", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+@mixin typography-body-md {
+  font-family: "Inter", "system-ui", "-apple-system", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+@mixin typography-body-md-strong {
+  font-family: "Inter", "system-ui", "-apple-system", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+@mixin typography-body-sm {
+  font-family: "Inter", "system-ui", "-apple-system", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+@mixin typography-body-sm-strong {
+  font-family: "Inter", "system-ui", "-apple-system", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+@mixin typography-caption {
+  font-family: "Inter", "system-ui", "-apple-system", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+@mixin typography-button-md {
+  font-family: "Inter", "system-ui", "-apple-system", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}

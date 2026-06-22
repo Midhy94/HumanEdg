@@ -12,11 +12,14 @@ a{
     text-decoration: none;
 }
 body{
-    font-family: "Roboto", sans-serif;
+    font-family: "Inter", "system-ui", "-apple-system", sans-serif;
+    color: var(--ink);
+    background-color: var(--canvas-soft);
 }
 h1,h2,h3,h4,h5,h6{
     margin: 0;
     padding: 0;
+    color: var(--ink);
 }
 a{
     text-decoration: none;
@@ -67,25 +70,47 @@ button{
     cursor: pointer;
 }
 .cmnBtn{
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 20px;
-    color: var(--white);
-    border-radius: 40px;
+    @include typography-button-md;
+    color: var(--on-primary);
+    border-radius: var(--rounded-xl);
     border: none;
-    min-height: 36px;
-    display: flex;
+    min-height: 48px;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    padding: 5px 12px;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md) var(--spacing-xl);
     background-color: var(--primaryClr);
     text-transform: capitalize;
     width: fit-content;
-    transition: ease-in-out 0.4s;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     white-space: nowrap;
+    cursor: pointer;
+    
     &:hover{
-        background-color: var(--black);
+        background-color: var(--primary-active);
+        color: var(--on-primary);
+        transform: translateY(-1px);
+    }
+    
+    &:active{
+        background-color: var(--primary-neutral);
+        transform: translateY(0);
+    }
+
+    &.cmnBtnBdr {
+        background-color: transparent;
+        color: var(--ink);
+        border: 2px solid var(--ink);
+        
+        &:hover {
+            background-color: var(--canvas-soft);
+            color: var(--ink);
+        }
+        
+        &:active {
+            background-color: var(--primary-pale);
+        }
     }
 }
 .template-containerMaxWth{
@@ -130,13 +155,14 @@ button{
        @include breakpoint(mx680){
            padding-inline: 20px !important;
        }
-       .mainNav{
-           max-width: 1116px;
-           width: 100%;
-           margin: 0 auto;
-           position: relative;
-           padding-block: 16px;
-           z-index: 1;
+        .mainNav{
+            max-width: 1116px;
+            width: 100%;
+            margin: 0 auto;
+            position: relative;
+            padding-block: 16px;
+            z-index: 1;
+            transition: padding-block 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         //    @include breakpoint(mx1680){
         //        padding-block: 24px 10px;
         //    }
@@ -185,9 +211,11 @@ button{
                         height: 100%;
                     }
                     img {
-                        max-height: 50px;
+                        height: 48px;
+                        max-height: 48px;
                         width: auto;
                         object-fit: contain;
+                        transition: height 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), max-height 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
                     }
                 }
                 .navRight{
@@ -488,9 +516,9 @@ button{
                         }
                         li{
                             display: flex;
-                            @include font-family(var(--fluidFont-16), 500, 24px);
+                            @include typography-body-sm-strong;
                             transition: ease-in-out 0.4s;
-                            color: var(--c6a);
+                            color: var(--ink);
                             &:hover{
                                 a{
                                     color: var(--primaryClr);
@@ -502,7 +530,7 @@ button{
                                 }
                             }
                             a{
-                                color: var(--c6a);
+                                color: var(--ink);
                             }
                             &.menuDrop{
                                 cursor: pointer;
@@ -579,6 +607,11 @@ button{
                     .loginBtn{
                         border-right: 1px solid var(--c6a);
                         padding-right: 16px;
+                        .cmnBtn {
+                            min-height: 38px;
+                            padding: var(--spacing-sm) var(--spacing-lg);
+                            font-size: 14px;
+                        }
                     }
                     .hamburger{
                         .mobile-menu-toggle {
@@ -632,18 +665,18 @@ button{
    }
 }
 footer{
-    padding-top: 85px;
-    background: #141414;
+    padding-block: var(--spacing-3xl);
+    background: var(--ink);
     @include breakpoint(mx1199){
-       padding-top: 60px;
+       padding-block: var(--spacing-2xl);
     }
     .footerTopContainer{
         display: flex;
         justify-content: space-between;
         align-items: end;
         gap:30px;
-        padding-block-start: 60px;
-        border-top: 1px solid #ffffff30;
+        padding-block-start: var(--spacing-2xl);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .footerMenu{
@@ -675,9 +708,8 @@ footer{
             }
         }
         p{
-            font-size: 14px;
-            line-height: 20px;
-            color: #DDE3EB;
+            @include typography-body-sm;
+            color: var(--canvas-soft);
         }
     }
     .footerWidget{
@@ -701,13 +733,11 @@ footer{
     }
 
     .menuCol h4 {
-        color: #DDE3EB;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 20px;
-        margin-bottom: 16px;
+        color: var(--canvas-soft);
+        @include typography-body-sm-strong;
+        margin-bottom: var(--spacing-md);
         @include breakpoint(mx767){
-            margin-bottom: 12px;
+            margin-bottom: var(--spacing-sm);
         }
     }
     .menuCol ul {
@@ -716,21 +746,23 @@ footer{
         gap: 3px;
     }
     .menuCol ul li a{
-        color: #CFCFCF;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 20px;
+        color: var(--canvas-soft);
+        @include typography-body-sm;
+        opacity: 0.8;
+        &:hover {
+            opacity: 1;
+            color: var(--primaryClr);
+        }
     }
     .footer-copyright {
-        color: #DDE3EB;
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 18px;
+        color: var(--canvas-soft);
+        @include typography-caption;
+        opacity: 0.6;
         text-align: center;
-        margin-top: 103px;
-        padding-bottom: 65px;
+        margin-top: var(--spacing-3xl);
+        padding-bottom: var(--spacing-xl);
         @include breakpoint(mx1199){
-            margin-top: 70px;
+            margin-top: var(--spacing-2xl);
         }
     }
     .eve{
@@ -764,6 +796,20 @@ footer{
         top: 0; 
         z-index: 1500;
     }
+    &.fixHeader:not(.fixHeaderNormal) {
+        .mainNav {
+            padding-block: var(--spacing-sm);
+        }
+        .navLogoDiv img {
+            height: 48px;
+            max-height: 48px;
+        }
+        .loginBtn .cmnBtn {
+            min-height: 38px;
+            padding: var(--spacing-sm) var(--spacing-lg);
+            font-size: 14px;
+        }
+    }
 }
 .inputRow {
     position: relative;
@@ -778,61 +824,77 @@ footer{
     .inputCtrl {
         width: 100%;
         height: 48px;
-        padding: 5px 12px;
-        @include font-family(14px, 400, 20px);
-        border: 1px solid #D6D6D6;
-        border-radius: 10px;
+        padding: var(--spacing-md) var(--spacing-lg);
+        @include typography-body-md;
+        border: 1px solid var(--ink);
+        border-radius: var(--rounded-md);
+        background-color: var(--canvas);
         outline: none;
-        color: var(--c80); 
+        color: var(--ink); 
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
         @include breakpoint(mx800) {
             height: 45px;
-            border-radius: 8px;
+            border-radius: var(--rounded-md);
         } 
         @include breakpoint(mx680) {
             height: 45px;
-            border-radius: 8px;
+            border-radius: var(--rounded-md);
+        }
+        &:focus {
+            border-color: var(--primaryClr);
+            box-shadow: 0 0 0 2px var(--primary-pale);
         }
         &::placeholder {
-            font-family: "Roboto", sans-serif;
+            font-family: "Inter", sans-serif;
             font-weight: 400;
-            color: var(--c6a);
+            color: var(--mute);
         }
         &::-webkit-input-placeholder {
-            font-family: "Roboto", sans-serif;
+            font-family: "Inter", sans-serif;
             font-weight: 400;
+            color: var(--mute);
         }
         &::-moz-placeholder {
-            font-family: "Roboto", sans-serif;
+            font-family: "Inter", sans-serif;
             font-weight: 400;
+            color: var(--mute);
         }
         &::-moz-placeholder {
-            font-family: "Roboto", sans-serif;
+            font-family: "Inter", sans-serif;
             font-weight: 400;
+            color: var(--mute);
         }
         &::-ms-input-placeholder {
-            font-family: "Roboto", sans-serif;
+            font-family: "Inter", sans-serif;
             font-weight: 400;
+            color: var(--mute);
         }  
     }
     .textCtrl {
         display: block;
         min-height: 120px;
-        border-radius: 10px;
-        padding: 14px 18px;
+        border-radius: var(--rounded-md);
+        padding: var(--spacing-md) var(--spacing-lg);
         width: 100%;
-        @include font-family(14px, 400, 20px);
-        border: 1px solid #D6D6D6;
-        color: var(--c80); 
+        @include typography-body-md;
+        border: 1px solid var(--ink);
+        background-color: var(--canvas);
+        color: var(--ink); 
         outline: none;
         resize: none;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
         @include breakpoint(mx800) {
             min-height: 100px;
-            border-radius: 8px;
+            border-radius: var(--rounded-md);
         } 
         @include breakpoint(mx680) {
-            border-radius: 8px;
+            border-radius: var(--rounded-md);
             min-height: 100px;
         }  
+        &:focus {
+            border-color: var(--primaryClr);
+            box-shadow: 0 0 0 2px var(--primary-pale);
+        }
     }
     .validateText {
         position: absolute;

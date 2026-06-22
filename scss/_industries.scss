@@ -1,54 +1,36 @@
 .insustriesLogoDiv{
-    padding-block: 100px;
+    padding-block: var(--spacing-3xl);
     @include breakpoint(mx1199){
-        padding-block: 90px;
+        padding-block: var(--spacing-2xl);
     }
     @include breakpoint(mx991){
-       padding-block: 80px 80px;
+       padding-block: var(--spacing-xl);
     }
     @include breakpoint(mx800){
-       padding-block: 80px 80px;
+       padding-block: var(--spacing-xl);
     }
     @include breakpoint(mx680){
-       padding-block: 60px 60px;
+       padding-block: var(--spacing-lg);
     }
     .titleHead{
-        margin: 0 auto 50px;
+        margin: 0 auto var(--spacing-3xl);
         @include breakpoint(mx991){
-            margin: 0 auto 40px;
+            margin: 0 auto var(--spacing-2xl);
         }
         @include breakpoint(mx800){
-            margin: 0 auto 40px;
+            margin: 0 auto var(--spacing-2xl);
         }
         @include breakpoint(mx680){
-            margin: 0 auto 20px;
-            gap: 10px;
+            margin: 0 auto var(--spacing-xl);
+            gap: var(--spacing-sm);
         }
     }
     h2{
-        font-size: 45px;
-        line-height: 52px;
-        color: var(--c13);
-        @include breakpoint(mx1199){
-            font-size: 40px;
-            line-height: 45px;
-        }
-        @include breakpoint(mx991){
-            font-size: 35px;
-            line-height: 40px;
-        }
-        @include breakpoint(mx800){
-            font-size: 35px;
-            line-height: 40px;
-        }
-        @include breakpoint(mx767){
-            font-size: 30px;
-            line-height: 40px;
-        }
-        @include breakpoint(mx680){
-            font-size: 25px;
-            line-height: 35px;
-        }
+        font-family: "Manrope", "Inter", "system-ui", "-apple-system", sans-serif;
+        font-size: var(--fluidFont-45);
+        font-weight: 800;
+        line-height: 1.2;
+        color: var(--ink);
     }
 
     .slider-wrapper {
@@ -68,7 +50,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 0 20px;
+        padding: 0 var(--spacing-xl);
         height: 100px;
     }
     .logo-item img {
@@ -104,22 +86,23 @@
     }
     .section-title {
         text-align: center;
-        margin-bottom: 30px;
-        color: #333;
-        font-size: 2.5rem;
-        font-weight: bold;
+        margin-bottom: var(--spacing-2xl);
+        color: var(--ink);
+        font-family: "Manrope", "Inter", "system-ui", "-apple-system", sans-serif;
+        font-size: var(--fluidFont-40);
+        font-weight: 800;
     }
 
     .demo-badge {
         position: fixed;
-        top: 20px;
-        right: 20px;
-        background: #4CAF50;
-        color: white;
-        padding: 10px 20px;
-        border-radius: 25px;
-        font-weight: bold;
+        top: var(--spacing-xl);
+        right: var(--spacing-xl);
+        background-color: var(--primary-pale);
+        color: var(--positive-deep);
+        padding: var(--spacing-xs) var(--spacing-md);
+        border-radius: var(--rounded-pill);
+        @include typography-body-sm-strong;
         z-index: 1000;
-        box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+        box-shadow: 0 4px 12px rgba(46, 173, 75, 0.15);
     }
 }

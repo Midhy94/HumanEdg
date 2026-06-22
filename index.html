@@ -119,7 +119,7 @@
           <div id="epc-slider" class="splide">
             <div class="splide__track">
               <ul class="splide__list">
-                <li class="splide__slide epc-slide" style="background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1600');">
+                <li class="splide__slide epc-slide" style="background-image: url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1600');">
                   <div class="template-containerMaxWth">
                     <div class="slide-content">
                       <div class="left-content">
@@ -221,7 +221,7 @@
                   </div>
                 </div>
               </div>
-              <div class="pic max-w-[284px] w-full h-[442px] flex"><img src="https://images.unsplash.com/photo-1525920980287-67c3b281432f?q=80&w=800" alt="welcomeHomePic2" loading="lazy"/></div>
+              <div class="pic max-w-[284px] w-full h-[442px] flex"><img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=800" alt="welcomeHomePic2" loading="lazy"/></div>
             </div>
           </div>
         </div>
@@ -867,18 +867,12 @@
         arrows: true,
         focus: 'center',
         start: 1,
-        autoplay: false,
-        interval: 3000,
-        drag: false,
+        autoplay: true,
+        interval: 3500,
+        speed: 800,
+        easing: 'cubic-bezier(0.25, 1, 0.5, 1)',
+        drag: true,
         breakpoints: {
-          // 1024: {
-          //   perPage: 2,
-          //   start: 0
-          // },
-          // 680: {
-          //   perPage: 1,
-          //   start: 0
-          // }
           1199: {
            gap: '25px',
           },
