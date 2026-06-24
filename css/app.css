@@ -2324,19 +2324,17 @@ footer .eve {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
   background-color: var(--canvas);
   color: var(--ink);
-  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.6s cubic-bezier(0.25, 1, 0.5, 1);
   max-width: 444px;
   min-height: 418px;
   width: 100% !important;
-  transform: scale(0.92);
-  opacity: 0.65;
+  transform: scale(0.90);
 }
 @media (max-width: 991px) {
   .industriesServSlider .splide__slide {
     min-height: auto;
     max-width: fit-content;
     transform: none;
-    opacity: 1;
   }
 }
 @media (max-width: 767px) {
@@ -2350,9 +2348,8 @@ footer .eve {
   height: 100%;
   background-color: var(--canvas);
   color: var(--ink);
-  transform: scale(1.03);
-  opacity: 1;
-  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.08);
+  transform: scale(1.05);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.14);
 }
 @media (max-width: 991px) {
   .industriesServSlider .splide__slide.is-active {

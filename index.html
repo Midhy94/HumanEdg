@@ -197,7 +197,7 @@
               <h2 class="font-[400]"><span>Empowering Careers</span> and Academic Dreams with <span>Tailored Guidance</span></h2>
             </div>
             <div class="mainText grid gap-[48px]">
-              <div class="pic max-w-[552px] w-full h-[370px] flex"><img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=800" alt="welcomeHomePic1" loading="lazy"/></div>
+              <div class="pic max-w-[552px] w-full h-[370px] flex"><img src="https://images.pexels.com/photos/7972539/pexels-photo-7972539.jpeg" alt="welcomeHomePic1" loading="lazy"/></div>
               <div class="para">
                  <p class="cmnDesc-16">HumanEdg Global Academy & Study Abroad is a premier educational partner located in Kochi, dedicated to helping students and professionals succeed globally. We believe in providing structured, transparent, and student-first advice that aligns with your long-term academic and career ambitions.</p>
                 <p class="cmnDesc-16">Whether you want to study at a top-tier university in Canada, the UK, Australia, Germany, or the USA, or you are looking to upskill with our language prep (IELTS, German) and tech certification programs, our experienced advisors provide dedicated and compliant solutions at every stage.</p>
@@ -363,7 +363,7 @@
               </li>
               <li class="splide__slide">
                 <div class="pic relative max-w-[444px] w-full max-h-[178px] h-full">
-                  <img src="https://images.unsplash.com/photo-1523482596682-cd93a00d5dbe?q=80&w=800" alt="Study in Australia" loading="lazy"/>
+                  <img src="https://images.pexels.com/photos/37930273/pexels-photo-37930273.jpeg" alt="Study in Australia" loading="lazy"/>
                   <span class="badge absolute">Top-Ranked Universities</span>
                 </div>
                 <div class="cardBody">
@@ -385,7 +385,7 @@
               </li>
               <li class="splide__slide">
                 <div class="pic relative max-w-[444px] w-full max-h-[178px] h-full">
-                  <img src="https://images.unsplash.com/photo-1498243691581-b145c3f54a5c?q=80&w=800" alt="Study in the USA" loading="lazy"/>
+                   <img src="https://images.pexels.com/photos/1634277/pexels-photo-1634277.jpeg" alt="Study in the USA" loading="lazy"/>
                   <span class="badge absolute">36-Month STEM OPT Work Rights</span>
                 </div>
                 <div class="cardBody">
@@ -755,6 +755,10 @@
           perPage: 1,
           arrows: false, // remove default top left/right arrows
           pagination: false,
+          autoplay: true,
+          interval: 4000,
+          speed: 800,
+          pauseOnHover: false,
         }).mount();
 
         // Custom arrows
@@ -774,6 +778,15 @@
           bottomItems[0].classList.add('active');
         }
 
+        function setActivePill(newIndex) {
+          bottomItems.forEach(function (el) {
+            el.classList.remove('active');
+          });
+          if (bottomItems[newIndex]) {
+            bottomItems[newIndex].classList.add('active');
+          }
+        }
+
         bottomItems.forEach(function (item, index) {
           item.addEventListener('click', function () {
             // Remove active from all
@@ -789,17 +802,12 @@
           });
         });
 
-        // Update active class on slide change
+        // Update active class on slide change (handles both manual and auto)
         splide.on('moved', function (newIndex) {
-          bottomItems.forEach(function (el) {
-            el.classList.remove('active');
-          });
-          if (bottomItems[newIndex]) {
-            bottomItems[newIndex].classList.add('active');
-          }
+          setActivePill(newIndex);
         });
       });
-    </script>
+</script>
 
     <script>
       function startAnimation() {
