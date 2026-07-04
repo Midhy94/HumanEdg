@@ -664,25 +664,43 @@
         }
     }
 }
+.coreServicesPinWrapper {
+    position: relative;
+    height: 400vh;
+    @include breakpoint(mx991) {
+        height: auto;
+    }
+}
 .coreServicesSection{
     background-color: var(--c13);
-    padding-block: 161px;
-    @include breakpoint(mx1199){
-       padding-block: 120px;
-    }
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding-block: 0;
+    
     @include breakpoint(mx991){
+       position: relative;
+       height: auto;
+       display: block;
+       overflow: visible;
        padding-block: 80px;
     }
     @include breakpoint(mx800){
        padding-block: 80px;
     }
     @include breakpoint(mx680){
-        padding-block: 60px 60px;
+         padding-block: 60px 60px;
     }
     .coreServicesWrapper {
         grid-template-columns: 271px 1fr;
+        align-items: center;
         @include breakpoint(mx991){
              grid-template-columns: 1fr;
+             align-items: stretch;
         }
     }
     .leftTabNav{
@@ -758,11 +776,27 @@
 
     .rightTabContents {
         position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
     }
     .rightTabContent{
-        display: none;
+        grid-column: 1;
+        grid-row: 1;
+        align-self: start;
+        width: 100%;
+        
+        opacity: 0;
+        transform: translateY(15px);
+        pointer-events: none;
+        visibility: hidden;
+        transition: opacity 0.5s cubic-bezier(0.25, 1, 0.5, 1), transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), visibility 0.5s;
+        
         &.active {
-            display: block;
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+            visibility: visible;
         }
         h2{
             font-size: 57px;
@@ -946,12 +980,12 @@
         box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
         background-color: var(--canvas);
         color: var(--ink);
-        transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+        transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.6s cubic-bezier(0.25, 1, 0.5, 1);
         max-width: 444px;
         min-height: 418px;
         width: 100% !important;
         transform: scale(0.92);
-        opacity: 0.65;
+        opacity: 1;
         @include breakpoint(mx991){
             min-height: auto;
             max-width: fit-content;

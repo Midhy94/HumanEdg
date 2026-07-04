@@ -67,6 +67,11 @@ html {
 html, body {
   margin: 0;
   padding: 0;
+  overflow-x: clip;
+}
+
+main {
+  overflow: visible !important;
 }
 
 *, *::before, *::after {
@@ -1972,17 +1977,33 @@ footer .eve {
   }
 }
 
+.coreServicesPinWrapper {
+  position: relative;
+  height: 400vh;
+}
+@media (max-width: 991px) {
+  .coreServicesPinWrapper {
+    height: auto;
+  }
+}
+
 .coreServicesSection {
   background-color: var(--c13);
-  padding-block: 161px;
-}
-@media (max-width: 1199px) {
-  .coreServicesSection {
-    padding-block: 120px;
-  }
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding-block: 0;
 }
 @media (max-width: 991px) {
   .coreServicesSection {
+    position: relative;
+    height: auto;
+    display: block;
+    overflow: visible;
     padding-block: 80px;
   }
 }
@@ -1998,10 +2019,12 @@ footer .eve {
 }
 .coreServicesSection .coreServicesWrapper {
   grid-template-columns: 271px 1fr;
+  align-items: center;
 }
 @media (max-width: 991px) {
   .coreServicesSection .coreServicesWrapper {
     grid-template-columns: 1fr;
+    align-items: stretch;
   }
 }
 .coreServicesSection .leftTabNav {
@@ -2090,12 +2113,26 @@ footer .eve {
 }
 .coreServicesSection .rightTabContents {
   position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
 }
 .coreServicesSection .rightTabContent {
-  display: none;
+  grid-column: 1;
+  grid-row: 1;
+  align-self: start;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(15px);
+  pointer-events: none;
+  visibility: hidden;
+  transition: opacity 0.5s cubic-bezier(0.25, 1, 0.5, 1), transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), visibility 0.5s;
 }
 .coreServicesSection .rightTabContent.active {
-  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  visibility: visible;
 }
 .coreServicesSection .rightTabContent h2 {
   font-size: 57px;
@@ -2328,13 +2365,15 @@ footer .eve {
   max-width: 444px;
   min-height: 418px;
   width: 100% !important;
-  transform: scale(0.90);
+  transform: scale(0.92);
+  opacity: 1;
 }
 @media (max-width: 991px) {
   .industriesServSlider .splide__slide {
     min-height: auto;
     max-width: fit-content;
     transform: none;
+    opacity: 1;
   }
 }
 @media (max-width: 767px) {
@@ -2348,8 +2387,9 @@ footer .eve {
   height: 100%;
   background-color: var(--canvas);
   color: var(--ink);
-  transform: scale(1.05);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.14);
+  transform: scale(1.03);
+  opacity: 1;
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.08);
 }
 @media (max-width: 991px) {
   .industriesServSlider .splide__slide.is-active {

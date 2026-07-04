@@ -8,7 +8,7 @@
   <link rel="icon" href="images/favicon.png">
   <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/app.css?v=0.03">
+  <link rel="stylesheet" href="css/app.css?v=0.08">
 </head>
   <body>
     <header class="mainHeader cmnNav header fixHeaderNormal">
@@ -113,7 +113,7 @@
         </nav>
       </div>
     </header>
-    <main class="ovrflowHdn">
+    <main>
       <section class="headerBannerSlider">
         <div class="headerBannerSliderArea">
           <div id="epc-slider" class="splide">
@@ -227,107 +227,109 @@
         </div>
       </section>
 
-      <section class="coreServicesSection">
-        <div class="template-containerMaxWth">
-          <div class="coreServicesWrapper grid gap-[20px] items-end">
-            <!-- Left Tabs -->
-            <div class="leftTabNav">
-              <ul class="flex flex-col gap-[45px]">
-                <li class="tabItem flex gap-[17px] items-center max-w-[239px] w-full active" data-tab="tab1">
-                  <span class="tabDot min-w-[15px] w-[15px] h-[15px]"></span>
-                  Profile Mapping
-                </li>
-                <li class="tabItem flex gap-[17px] items-center max-w-[239px] w-full" data-tab="tab2">
-                  <span class="tabDot min-w-[15px] w-[15px] h-[15px]"></span>
-                  Campus Selection
-                </li>
-                <li class="tabItem flex gap-[17px] items-center max-w-[239px] w-full" data-tab="tab3">
-                  <span class="tabDot min-w-[15px] w-[15px] h-[15px]"></span>
-                  Language Coaching
-                </li>
-                <li class="tabItem  flex gap-[17px] items-center max-w-[239px] w-full" data-tab="tab4">
-                  <span class="tabDot min-w-[15px] w-[15px] h-[15px]"></span>
-                  Post-Landing Help
-                </li>
-              </ul>
-            </div>
-            <div class="rightTabContents">
-              <div class="rightTabContent active" id="tab1">
-                <h2 class="font-[400]">Counselling & Profile Review</h2>
-                <p class="cmnDesc-16">Every student's academic background and career goals are unique. We start with a one-on-one consultation to review your grades, course interests, financial plans, and preferred countries. This allows us to map a clear educational path that maximizes your opportunities.</p>
-                <div class="tabImage h-[382px]"><img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=800" alt="Counselling & Profile Review" loading="lazy"/></div>
-                <div class="btmCnt grid gap-[22px]">
-                  <div class="tabText">
-                    <h4 class="font-[400]">Identify your perfect academic pathway with professional advice</h4>
-                    <p class="cmnDesc-16 font-[500]">Personalized profile mapping and course recommendations</p>
-                  </div>
-                  <div>
-                    <div class="floatingCard max-w-[405px] w-full flex gap-[15px] flex-col relative z-1">
-                      <h5 class="font-[500]">Get Professional Feedback</h5>
-                      <p class="cmnDesc-16">Talk to our expert counselors in Kochi to evaluate your profile strength and shortlisting options.</p>
-                      <a href="contact.html" class="cmnBtn">Book Counselling <span><svg width="12" height="12" fill="none" viewBox="0 0 12 12"><path fill="#fff" d="m6 .667-.94.94 3.72 3.726H.667v1.334H8.78l-3.72 3.726.94.94L11.333 6 6 .667Z"/></svg></span></a>
+      <div class="coreServicesPinWrapper">
+        <section class="coreServicesSection">
+          <div class="template-containerMaxWth">
+            <div class="coreServicesWrapper grid gap-[20px] items-center">
+              <!-- Left Tabs -->
+              <div class="leftTabNav">
+                <ul class="flex flex-col gap-[45px]">
+                  <li class="tabItem flex gap-[17px] items-center max-w-[239px] w-full active" data-tab="tab1">
+                    <span class="tabDot min-w-[15px] w-[15px] h-[15px]"></span>
+                    Profile Mapping
+                  </li>
+                  <li class="tabItem flex gap-[17px] items-center max-w-[239px] w-full" data-tab="tab2">
+                    <span class="tabDot min-w-[15px] w-[15px] h-[15px]"></span>
+                    Campus Selection
+                  </li>
+                  <li class="tabItem flex gap-[17px] items-center max-w-[239px] w-full" data-tab="tab3">
+                    <span class="tabDot min-w-[15px] w-[15px] h-[15px]"></span>
+                    Language Coaching
+                  </li>
+                  <li class="tabItem  flex gap-[17px] items-center max-w-[239px] w-full" data-tab="tab4">
+                    <span class="tabDot min-w-[15px] w-[15px] h-[15px]"></span>
+                    Post-Landing Help
+                  </li>
+                </ul>
+              </div>
+              <div class="rightTabContents">
+                <div class="rightTabContent active" id="tab1">
+                  <h2 class="font-[400]">Counselling & Profile Review</h2>
+                  <p class="cmnDesc-16">Every student's academic background and career goals are unique. We start with a one-on-one consultation to review your grades, course interests, financial plans, and preferred countries. This allows us to map a clear educational path that maximizes your opportunities.</p>
+                  <div class="tabImage h-[382px]"><img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=800" alt="Counselling & Profile Review" loading="lazy"/></div>
+                  <div class="btmCnt grid gap-[22px]">
+                    <div class="tabText">
+                      <h4 class="font-[400]">Identify your perfect academic pathway with professional advice</h4>
+                      <p class="cmnDesc-16 font-[500]">Personalized profile mapping and course recommendations</p>
+                    </div>
+                    <div>
+                      <div class="floatingCard max-w-[405px] w-full flex gap-[15px] flex-col relative z-1">
+                        <h5 class="font-[500]">Get Professional Feedback</h5>
+                        <p class="cmnDesc-16">Talk to our expert counselors in Kochi to evaluate your profile strength and shortlisting options.</p>
+                        <a href="contact.html" class="cmnBtn">Book Counselling <span><svg width="12" height="12" fill="none" viewBox="0 0 12 12"><path fill="#fff" d="m6 .667-.94.94 3.72 3.726H.667v1.334H8.78l-3.72 3.726.94.94L11.333 6 6 .667Z"/></svg></span></a>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="rightTabContent" id="tab2">
-                <h2 class="font-[400]">Campus Selection Support</h2>
-                <p class="cmnDesc-16">With over 120+ partner universities globally, we help you filter and choose institutions that match your budget and criteria. From major universities in Canada and the UK to top public universities in Germany and Australia, we handle applications efficiently.</p>
-                 <div class="tabImage h-[382px]"><img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=800" alt="Campus Selection Support" loading="lazy"/></div>
-                <div class="btmCnt grid gap-[22px]">
-                  <div class="tabText">
-                    <h4 class="font-[400]">Select the right university that fits your long-term goals</h4>
-                    <p class="cmnDesc-16 font-[500]">Direct offer letters and application fee waivers</p>
-                  </div>
-                  <div>
-                    <div class="floatingCard max-w-[405px] w-full flex gap-[15px] flex-col relative z-1">
-                      <h5 class="font-[500]">Explore Destinations</h5>
-                      <p class="cmnDesc-16">Understand intakes, deadlines, post-study work visa rights, and university rankings.</p>
-                      <a href="countries.html" class="cmnBtn">Explore Countries <span><svg width="12" height="12" fill="none" viewBox="0 0 12 12"><path fill="#fff" d="m6 .667-.94.94 3.72 3.726H.667v1.334H8.78l-3.72 3.726.94.94L11.333 6 6 .667Z"/></svg></span></a>
+                <div class="rightTabContent" id="tab2">
+                  <h2 class="font-[400]">Campus Selection Support</h2>
+                  <p class="cmnDesc-16">With over 120+ partner universities globally, we help you filter and choose institutions that match your budget and criteria. From major universities in Canada and the UK to top public universities in Germany and Australia, we handle applications efficiently.</p>
+                   <div class="tabImage h-[382px]"><img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=800" alt="Campus Selection Support" loading="lazy"/></div>
+                  <div class="btmCnt grid gap-[22px]">
+                    <div class="tabText">
+                      <h4 class="font-[400]">Select the right university that fits your long-term goals</h4>
+                      <p class="cmnDesc-16 font-[500]">Direct offer letters and application fee waivers</p>
+                    </div>
+                    <div>
+                      <div class="floatingCard max-w-[405px] w-full flex gap-[15px] flex-col relative z-1">
+                        <h5 class="font-[500]">Explore Destinations</h5>
+                        <p class="cmnDesc-16">Understand intakes, deadlines, post-study work visa rights, and university rankings.</p>
+                        <a href="countries.html" class="cmnBtn">Explore Countries <span><svg width="12" height="12" fill="none" viewBox="0 0 12 12"><path fill="#fff" d="m6 .667-.94.94 3.72 3.726H.667v1.334H8.78l-3.72 3.726.94.94L11.333 6 6 .667Z"/></svg></span></a>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="rightTabContent" id="tab3">
-                <h2 class="font-[400]">Exam & Study Preparation</h2>
-                <p class="cmnDesc-16">Top-tier international admissions require proof of language proficiency. HumanEdg offers structured, results-oriented training for IELTS, TOEFL, PTE, OET, and Duolingo. We also offer focused German language courses (A1-B2 levels) for students aiming for Germany.</p>
-                 <div class="tabImage h-[382px]"><img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?q=80&w=800" alt="Exam & Study Preparation" loading="lazy"/></div>
-                <div class="btmCnt grid gap-[22px]">
-                  <div class="tabText">
-                    <h4 class="font-[400]">Excel in your exams with expert language trainers</h4>
-                    <p class="cmnDesc-16 font-[500]">Regular mock tests and intensive language preparation</p>
-                  </div>
-                  <div>
-                    <div class="floatingCard max-w-[405px] w-full flex gap-[15px] flex-col relative z-1">
-                      <h5 class="font-[500]">Start Preparation</h5>
-                      <p class="cmnDesc-16">Gain high band scores and structured German levels with our custom-designed courses.</p>
-                      <a href="scholarships.html" class="cmnBtn">View Prep Courses <span><svg width="12" height="12" fill="none" viewBox="0 0 12 12"><path fill="#fff" d="m6 .667-.94.94 3.72 3.726H.667v1.334H8.78l-3.72 3.726.94.94L11.333 6 6 .667Z"/></svg></span></a>
+                <div class="rightTabContent" id="tab3">
+                  <h2 class="font-[400]">Exam & Study Preparation</h2>
+                  <p class="cmnDesc-16">Top-tier international admissions require proof of language proficiency. HumanEdg offers results-oriented training for IELTS, TOEFL, PTE, OET, and Duolingo. We also offer focused German language courses (A1-B2 levels) for students aiming for Germany.</p>
+                   <div class="tabImage h-[382px]"><img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?q=80&w=800" alt="Exam & Study Preparation" loading="lazy"/></div>
+                  <div class="btmCnt grid gap-[22px]">
+                    <div class="tabText">
+                      <h4 class="font-[400]">Excel in your exams with expert language trainers</h4>
+                      <p class="cmnDesc-16 font-[500]">Regular mock tests and intensive language preparation</p>
+                    </div>
+                    <div>
+                      <div class="floatingCard max-w-[405px] w-full flex gap-[15px] flex-col relative z-1">
+                        <h5 class="font-[500]">Start Preparation</h5>
+                        <p class="cmnDesc-16">Gain high band scores and structured German levels with our custom-designed courses.</p>
+                        <a href="scholarships.html" class="cmnBtn">View Prep Courses <span><svg width="12" height="12" fill="none" viewBox="0 0 12 12"><path fill="#fff" d="m6 .667-.94.94 3.72 3.726H.667v1.334H8.78l-3.72 3.726.94.94L11.333 6 6 .667Z"/></svg></span></a>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="rightTabContent" id="tab4">
-                <h2 class="font-[400]">Pre-Departure & Post-Landing Help</h2>
-                <p class="cmnDesc-16">Securing admission and visa is just the beginning. We provide pre-departure briefings covering accommodation checklists, bank accounts, and student compliance. Our Kochi team also coordinates post-landing assistance to help you settle in.</p>
-                 <div class="tabImage h-[382px]"><img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=800" alt="Pre-Departure & Post-Landing Help" loading="lazy"/></div>
-                <div class="btmCnt grid gap-[22px]">
-                  <div class="tabText">
-                    <h4 class="font-[400]">Transition smoothly from Kochi to your international campus</h4>
-                    <p class="cmnDesc-16 font-[500]">Pre-arrival briefings and local network coordination</p>
-                  </div>
-                  <div>
-                    <div class="floatingCard max-w-[405px] w-full flex gap-[15px] flex-col relative z-1">
-                      <h5 class="font-[500]">Connect with Alumni</h5>
-                      <p class="cmnDesc-16">Learn about student work permits, local accommodation, bank setups, and orientation.</p>
-                      <a href="about.html" class="cmnBtn">Read More <span><svg width="12" height="12" fill="none" viewBox="0 0 12 12"><path fill="#fff" d="m6 .667-.94.94 3.72 3.726H.667v1.334H8.78l-3.72 3.726.94.94L11.333 6 6 .667Z"/></svg></span></a>
+                <div class="rightTabContent" id="tab4">
+                  <h2 class="font-[400]">Pre-Departure & Post-Landing Help</h2>
+                  <p class="cmnDesc-16">Securing admission and visa is just the beginning. We provide pre-departure briefings covering accommodation checklists, bank accounts, and student compliance. Our Kochi team also coordinates post-landing assistance to help you settle in.</p>
+                   <div class="tabImage h-[382px]"><img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=800" alt="Pre-Departure & Post-Landing Help" loading="lazy"/></div>
+                  <div class="btmCnt grid gap-[22px]">
+                    <div class="tabText">
+                      <h4 class="font-[400]">Transition smoothly from Kochi to your international campus</h4>
+                      <p class="cmnDesc-16 font-[500]">Pre-arrival briefings and local network coordination</p>
+                    </div>
+                    <div>
+                      <div class="floatingCard max-w-[405px] w-full flex gap-[15px] flex-col relative z-1">
+                        <h5 class="font-[500]">Connect with Alumni</h5>
+                        <p class="cmnDesc-16">Learn about student work permits, local accommodation, bank setups, and orientation.</p>
+                        <a href="about.html" class="cmnBtn">Read More <span><svg width="12" height="12" fill="none" viewBox="0 0 12 12"><path fill="#fff" d="m6 .667-.94.94 3.72 3.726H.667v1.334H8.78l-3.72 3.726.94.94L11.333 6 6 .667Z"/></svg></span></a>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       <section class="industriesServSlider">
         <div class="template-containerMaxWth">
@@ -463,7 +465,7 @@
 
 
           <div class="slider-container freaturedProjectDiv">
-            <div class="cardSlid" data-index="0" style="background-image: url(https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800);">
+            <div class="cardSlid" data-index="0" style="background-image: url(https://images.pexels.com/photos/12016836/pexels-photo-12016836.jpeg);">
               <div class="card-overlay">
                 <h4 class="font-[500]">Canada Admission</h4>
                 <h2>Aarav's Journey to University of Windsor</h2>
@@ -471,7 +473,7 @@
               </div>
             </div>
 
-            <div class="cardSlid" data-index="1" style="background-image: url(https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=800);">
+            <div class="cardSlid" data-index="1" style="background-image: url(https://images.pexels.com/photos/10706671/pexels-photo-10706671.jpeg);">
               <div class="card-overlay">
                 <h4 class="font-[500]">United Kingdom Admission</h4>
                 <h2>Nisha's Placement at University of Leicester</h2>
@@ -847,22 +849,91 @@
     </script>
 
     <script>
-      const tabItems = document.querySelectorAll('.tabItem');
-      const rightTabContents = document.querySelectorAll('.rightTabContent');
-      tabItems.forEach(item => {
-        item.addEventListener('click', () => {
-          const targetId = item.getAttribute('data-tab');
-          // Toggle active tab
-          tabItems.forEach(tab => tab.classList.remove('active'));
-          item.classList.add('active');
-          // Show corresponding right content
-          rightTabContents.forEach(content => {
-            content.classList.remove('active');
-            if (content.id === targetId) {
-              content.classList.add('active');
+      document.addEventListener('DOMContentLoaded', () => {
+        const tabItems = document.querySelectorAll('.tabItem');
+        const rightTabContents = document.querySelectorAll('.rightTabContent');
+        const pinWrapper = document.querySelector('.coreServicesPinWrapper');
+        
+        if (!pinWrapper) return;
+
+        // Click handler for tabs
+        tabItems.forEach((item, index) => {
+          item.addEventListener('click', (e) => {
+            if (window.innerWidth > 991) {
+              // On desktop, clicking a tab scrolls the page to the segment of that tab
+              e.preventDefault();
+              const wrapperRect = pinWrapper.getBoundingClientRect();
+              const wrapperTop = wrapperRect.top + window.scrollY;
+              const wrapperHeight = wrapperRect.height;
+              const viewportHeight = window.innerHeight;
+              const totalScrollable = wrapperHeight - viewportHeight;
+              
+              // Scroll to the start threshold of the clicked tab segment
+              const targetProgress = index / tabItems.length;
+              const targetScrollY = wrapperTop + targetProgress * totalScrollable + 5; 
+              
+              window.scrollTo({
+                top: targetScrollY,
+                behavior: 'smooth'
+              });
+            } else {
+              // On mobile, standard tab click switching
+              const targetId = item.getAttribute('data-tab');
+              tabItems.forEach(tab => tab.classList.remove('active'));
+              item.classList.add('active');
+              rightTabContents.forEach(content => {
+                content.classList.remove('active');
+                if (content.id === targetId) {
+                  content.classList.add('active');
+                }
+              });
             }
           });
         });
+
+        // Scroll handler for desktop pinning active slider
+        function handleScrollPin() {
+          const wWidth = window.innerWidth;
+          if (wWidth > 991) {
+            const wrapperRect = pinWrapper.getBoundingClientRect();
+            const wrapperTop = wrapperRect.top + window.scrollY;
+            const wrapperHeight = wrapperRect.height;
+            const viewportHeight = window.innerHeight;
+            
+            const totalScrollable = wrapperHeight - viewportHeight;
+            const currentScroll = window.scrollY - wrapperTop;
+            
+            let progress = currentScroll / totalScrollable;
+            progress = Math.max(0, Math.min(1, progress));
+            
+            const numTabs = tabItems.length;
+            let activeIndex = Math.floor(progress * numTabs);
+            if (activeIndex >= numTabs) activeIndex = numTabs - 1;
+            
+            // Toggle active classes
+            tabItems.forEach((tab, index) => {
+              if (index === activeIndex) {
+                tab.classList.add('active');
+              } else {
+                tab.classList.remove('active');
+              }
+            });
+            
+            rightTabContents.forEach((content, index) => {
+              if (index === activeIndex) {
+                content.classList.add('active');
+              } else {
+                content.classList.remove('active');
+              }
+            });
+          }
+        }
+
+        window.addEventListener('scroll', handleScrollPin);
+        window.addEventListener('resize', handleScrollPin);
+        
+        // Initial run to establish correct state
+        handleScrollPin();
       });
     </script>
 
@@ -1001,6 +1072,21 @@
         let isUserInteracting = false;
 
         const cards = document.querySelectorAll('.cardSlid');
+
+        let autoSlideInterval;
+
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(() => {
+                if (!isUserInteracting && cards.length > 0) {
+                    const nextIndex = (currentActiveCard + 1) % cards.length;
+                    setActiveCard(nextIndex);
+                }
+            }, 5000);
+        }
+
+        function stopAutoSlide() {
+            clearInterval(autoSlideInterval);
+        }
 
         // Initialize
         function init() {
