@@ -236,7 +236,7 @@
             <!-- Middle Column: Tall Card (Advantage Card) -->
             <div class="welcome-col-middle">
               <div class="welcome-tall-card">
-                <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=800" alt="Students on campus" class="card-bg-img" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=800" alt="Students on campus" class="card-bg-img" loading="lazy">
                 <div class="card-overlay">
                   <span class="card-badge">STUDY | WORK | LANGUAGE</span>
                   <div class="card-bottom-info">
@@ -254,7 +254,7 @@
             <div class="welcome-col-right">
               
               <div class="welcome-image-card img-card-1">
-                <img src="https://images.unsplash.com/photo-1542744094-3a31f103e35f?q=80&w=600" alt="Recruitment" class="card-bg-img" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=600" alt="Recruitment" class="card-bg-img" loading="lazy">
                 <div class="card-overlay">
                   <div class="card-bottom-info">
                     <div class="info-text">
@@ -630,7 +630,7 @@
           <div class="tstml-mosaic-img tstml-img-5"><img src="https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?q=80&w=600" alt="Workspace study" loading="lazy"/></div>
           
           <!-- Col 5 -->
-          <div class="tstml-mosaic-img tstml-img-6"><img src="https://images.unsplash.com/photo-1581292580497-e0d23cbdf1dc?q=80&w=600" alt="Desk focus" loading="lazy"/></div>
+          <div class="tstml-mosaic-img tstml-img-6"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=600" alt="Desk focus" loading="lazy"/></div>
           
           <!-- Col 6 -->
           <div class="tstml-mosaic-img tstml-img-7"><img src="https://images.unsplash.com/photo-1545241047-6083a3684587?q=80&w=600" alt="Plants office window" loading="lazy"/></div>
@@ -715,7 +715,7 @@
                     <div class="tstml-stars">★★★★★</div>
                     <p class="tstml-quote">"Applying to Australian universities and managing the subclass 500 visa requirements was incredibly straightforward with their step-by-step counselor support."</p>
                     <div class="tstml-person">
-                      <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=120" alt="Arjun Nair" loading="lazy"/>
+                      <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=120" alt="Arjun Nair" loading="lazy"/>
                       <div>
                         <strong>Arjun N.</strong>
                         <span>Australia Student · University of Melbourne</span>
@@ -729,7 +729,7 @@
                     <div class="tstml-stars">★★★★★</div>
                     <p class="tstml-quote">"Their entrance exam preparation coaching and detailed block account guidelines made my dream of studying in Europe a reality. Truly professional!"</p>
                     <div class="tstml-person">
-                      <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=120" alt="Kavya Rao" loading="lazy"/>
+                      <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=120" alt="Kavya Rao" loading="lazy"/>
                       <div>
                         <strong>Kavya R.</strong>
                         <span>Ireland Student · Trinity College Dublin</span>
@@ -902,7 +902,9 @@
       });
       window.onload = function () {
         const counterGrp = document.querySelector('.counterGrp');
-        observer.observe(counterGrp);
+        if (counterGrp) {
+          observer.observe(counterGrp);
+        }
       };
     </script>
 
@@ -917,11 +919,12 @@
         function updateTimelineProgress() {
           const triggerPoint = window.innerHeight * 0.55; // 55% from screen top
           let lastActiveStepIndex = -1;
+          const isAtBottom = (window.innerHeight + window.scrollY) >= (document.documentElement.scrollHeight - 60);
 
           steps.forEach((step, index) => {
             const rect = step.getBoundingClientRect();
-            // Step becomes active if its top passes the trigger point
-            if (rect.top < triggerPoint) {
+            // Step becomes active if its top passes the trigger point, or if we are at the bottom of the page
+            if (rect.top < triggerPoint || isAtBottom) {
               step.classList.add('active');
               lastActiveStepIndex = index;
             } else {
