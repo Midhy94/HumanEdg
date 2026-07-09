@@ -355,8 +355,385 @@
         padding-block: 60px 60px;
     }
 
-    &.welcomeHomeIndust {
-        background-color: #F7F9FC;
+}
+
+.welcome-grid-sec {
+    background-color: #ffffff;
+    padding-block: 80px;
+
+    @include breakpoint(mx991) {
+        padding-block: 60px;
+    }
+
+    .welcome-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 40px;
+        margin-bottom: 48px;
+
+        @include breakpoint(mx767) {
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+    }
+
+    .welcome-tagline {
+        color: var(--primaryClr);
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    .welcome-title h2 {
+        font-size: clamp(24px, 3.2vw, 38px);
+        font-weight: 800;
+        line-height: 1.2;
+        color: #0f172a;
+        margin: 0;
+    }
+
+    .welcome-desc {
+        max-width: 480px;
+        width: 100%;
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #475569;
+            margin: 0;
+        }
+    }
+
+    .welcome-cards-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.3fr 1.5fr;
+        gap: 24px;
+        margin-bottom: 40px;
+
+        @include breakpoint(mx991) {
+            grid-template-columns: 1fr 1.2fr;
+        }
+
+        @include breakpoint(mx767) {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+    }
+
+    .welcome-col-left,
+    .welcome-col-right {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .welcome-text-card {
+        border-radius: 20px;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.03);
+        }
+
+        h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #0f172a;
+            margin: 0;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #475569;
+            margin: 0;
+        }
+    }
+
+    .welcome-card-pastel-1 { background-color: #f1f5f9; }
+    .welcome-card-pastel-2 { background-color: #fef8ec; }
+    .welcome-card-pastel-3 { background-color: #fdf2f2; }
+
+    .card-num {
+        width: 28px;
+        height: 28px;
+        background-color: var(--primaryClr);
+        color: #ffffff;
+        font-size: 12px;
+        font-weight: 700;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card-link {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--primaryClr);
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        margin-top: 4px;
+
+        .arrow-up-right {
+            font-size: 12px;
+            transition: transform 0.2s ease;
+        }
+
+        &:hover .arrow-up-right {
+            transform: translate(2px, -2px);
+        }
+    }
+
+    .welcome-tall-card {
+        height: 100%;
+        min-height: 420px;
+        border-radius: 24px;
+        overflow: hidden;
+        position: relative;
+
+        @include breakpoint(mx1199) {
+            // normal
+        }
+
+        @include breakpoint(mx991) {
+            min-height: 300px;
+        }
+    }
+
+    .welcome-col-middle {
+        @include breakpoint(mx991) {
+            grid-column: span 2;
+        }
+
+        @include breakpoint(mx767) {
+            grid-column: span 1;
+        }
+    }
+
+    .welcome-image-card {
+        height: calc(50% - 10px);
+        min-height: 200px;
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+
+        @include breakpoint(mx991) {
+            flex: 1;
+            height: 240px;
+        }
+
+        @include breakpoint(mx767) {
+            height: 200px;
+        }
+    }
+
+    .welcome-col-right {
+        @include breakpoint(mx991) {
+            grid-column: span 2;
+            flex-direction: row;
+        }
+
+        @include breakpoint(mx767) {
+            grid-column: span 1;
+            flex-direction: column;
+        }
+    }
+
+    .card-bg-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .card-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to top, rgba(15, 23, 42, 0.75) 0%, rgba(15, 23, 42, 0) 60%);
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .card-badge {
+        background: rgba(15, 23, 42, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(8px);
+        color: #ffffff;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        padding: 6px 12px;
+        border-radius: 6px;
+        align-self: flex-start;
+    }
+
+    .card-bottom-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        width: 100%;
+    }
+
+    .info-text {
+        h4 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #ffffff;
+            margin: 0 0 4px 0;
+        }
+
+        span {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.75);
+        }
+    }
+
+    .btn-arrow-circle {
+        width: 36px;
+        height: 36px;
+        background-color: #ffffff;
+        color: #0f172a;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .card-overlay:hover .btn-arrow-circle {
+        transform: rotate(45deg);
+        background-color: var(--primaryClr);
+        color: #ffffff;
+    }
+
+    .welcome-bottom-row {
+        display: grid;
+        grid-template-columns: 1.2fr 2fr;
+        gap: 24px;
+        margin-top: 24px;
+
+        @include breakpoint(mx991) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .welcome-video-block {
+        border-radius: 24px;
+        overflow: hidden;
+        position: relative;
+        min-height: 280px;
+
+        .video-bg-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(15, 23, 42, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .play-btn {
+            width: 64px;
+            height: 64px;
+            background-color: #ffffff;
+            color: var(--primaryClr);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .welcome-stats-banner {
+        background-color: #f1f5f9;
+        border-radius: 24px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+
+        @include breakpoint(mx767) {
+            padding: 24px;
+        }
+
+        h3 {
+            font-size: 22px;
+            font-weight: 800;
+            color: #0f172a;
+            margin: 0;
+            line-height: 1.3;
+        }
+    }
+
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+
+        @include breakpoint(mx480) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .stat-box {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        strong {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--primaryClr);
+        }
+
+        span {
+            font-size: 13px;
+            font-weight: 500;
+            color: #475569;
+        }
+    }
+}
+
+.welcomeHome.welcomeHomeIndust {
         padding-block: 108px;
 
         @include breakpoint(mx1199) {
@@ -808,296 +1185,197 @@
             }
         }
     }
-}
 
-.coreServicesPinWrapper {
+.roadmapPinWrapper {
     position: relative;
-    height: 400vh;
-
-    @include breakpoint(mx991) {
-        height: auto;
-    }
+    background-color: var(--c13);
 }
 
-.coreServicesSection {
+.roadmapSection {
     background-color: var(--c13);
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
+    padding-block: 120px;
     box-sizing: border-box;
-    padding-block: 0;
 
     @include breakpoint(mx991) {
-        position: relative;
-        height: auto;
-        display: block;
-        overflow: visible;
-        padding-block: 80px;
-    }
-
-    @include breakpoint(mx800) {
         padding-block: 80px;
     }
 
     @include breakpoint(mx680) {
-        padding-block: 60px 60px;
+        padding-block: 60px;
     }
 
-    .coreServicesWrapper {
-        grid-template-columns: 271px 1fr;
-        align-items: center;
+    .roadmapWrapper {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        gap: 80px;
+        align-items: start;
+
+        @include breakpoint(mx1199) {
+            gap: 50px;
+        }
 
         @include breakpoint(mx991) {
             grid-template-columns: 1fr;
-            align-items: stretch;
+            gap: 60px;
         }
     }
 
-    .leftTabNav {
-        overflow-x: auto;
-
-        &::-webkit-scrollbar {
-            height: 8px;
-            margin-left: 5px;
-            left: 5px;
-        }
-
-        &::-webkit-scrollbar-track {
-            background: #0f0f0f;
-        }
-
-        &::-webkit-scrollbar-thumb {
-            background: #242424;
-        }
-    }
-
-    ul {
-        list-style: none;
-
-        @include breakpoint(mx1199) {
-            gap: 40px;
-        }
-
-        @include breakpoint(mx991) {
-            flex-direction: row;
-            gap: 30px;
-        }
-    }
-
-    .tabItem {
-        font-size: 36px;
-        line-height: 44px;
-        color: var(--c6a);
-        cursor: pointer;
-        position: relative;
-        transition: color 0.3s ease;
-
-        @include breakpoint(mx1199) {
-            font-size: 32px;
-            line-height: 40px;
-        }
-
-        @include breakpoint(mx991) {
-            font-size: 25px;
-            line-height: 35px;
-            white-space: nowrap;
-            padding-bottom: 10px;
-        }
-
-        @include breakpoint(mx800) {
-            font-size: 25px;
-            line-height: 35px;
-            white-space: nowrap;
-            padding-bottom: 10px;
-        }
-    }
-
-    .tabItem.active {
-        color: var(--white);
-
-        @include breakpoint(mx991) {
-            border-bottom: 2px solid var(--primaryClr);
-        }
-    }
-
-    .tabDot {
-        display: none;
-        background-color: var(--primaryClr);
-        border-radius: 50%;
-
-        @include breakpoint(mx991) {
-            display: none;
-        }
-    }
-
-    .tabItem.active .tabDot {
-        display: block;
-
-        @include breakpoint(mx991) {
-            display: none;
-        }
-    }
-
-
-    .rightTabContents {
-        position: relative;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-    }
-
-    .rightTabContent {
-        grid-column: 1;
-        grid-row: 1;
+    .roadmapLeft {
+        position: sticky;
+        top: 120px;
         align-self: start;
-        width: 100%;
 
-        opacity: 0;
-        transform: translateY(15px);
-        pointer-events: none;
-        visibility: hidden;
-        transition: opacity 0.5s cubic-bezier(0.25, 1, 0.5, 1), transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), visibility 0.5s;
+        @include breakpoint(mx991) {
+            position: static;
+        }
+
+        .roadmapEyebrow {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--primaryClr);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .roadmapTitle {
+            font-family: "Manrope", "Inter", "system-ui", "-apple-system", sans-serif;
+            font-size: var(--fluidFont-50);
+            line-height: 1.15;
+            font-weight: 400;
+            color: var(--white);
+            margin-bottom: 25px;
+            
+            @include breakpoint(mx991) {
+                font-size: var(--fluidFont-40);
+            }
+        }
+
+        .roadmapDesc {
+            @include typography-body-lg;
+            color: #C8CBCF;
+            margin-bottom: 35px;
+            max-width: 90%;
+
+            @include breakpoint(mx991) {
+                max-width: 100%;
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    .roadmapRight {
+        width: 100%;
+    }
+
+    .roadmapTimeline {
+        position: relative;
+        padding-left: 60px;
+
+        @include breakpoint(mx680) {
+            padding-left: 45px;
+        }
+    }
+
+    .roadmapLine {
+        position: absolute;
+        left: 20px;
+        top: 10px;
+        bottom: 10px;
+        width: 2px;
+        background-color: rgba(255, 255, 255, 0.1);
+        transform: translateX(-50%);
+
+        @include breakpoint(mx680) {
+            left: 15px;
+        }
+    }
+
+    .roadmapLineActive {
+        position: absolute;
+        left: 20px;
+        top: 10px;
+        width: 2px;
+        height: 0px;
+        background-color: var(--primaryClr);
+        transform: translateX(-50%);
+        transition: height 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+
+        @include breakpoint(mx680) {
+            left: 15px;
+        }
+    }
+
+    .roadmapStep {
+        position: relative;
+        padding-bottom: 60px;
+        opacity: 0.25;
+        transform: translateY(10px);
+        transition: opacity 0.5s cubic-bezier(0.25, 1, 0.5, 1), transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+
+        &:last-child {
+            padding-bottom: 0;
+        }
 
         &.active {
             opacity: 1;
             transform: translateY(0);
-            pointer-events: auto;
-            visibility: visible;
         }
 
-        h2 {
-            font-size: 57px;
-            line-height: 64px;
+        .roadmapDot {
+            position: absolute;
+            left: -40px;
+            top: 6px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background-color: #242424;
+            border: 2px solid var(--c13);
+            transform: translateX(-50%);
+            transition: background-color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+
+            @include breakpoint(mx680) {
+                left: -30px;
+                width: 12px;
+                height: 12px;
+                top: 5px;
+            }
+        }
+
+        &.active .roadmapDot {
+            background-color: var(--primaryClr);
+            box-shadow: 0 0 12px var(--primaryClr);
+            border-color: var(--c13);
+        }
+
+        .roadmapStepNumber {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--mute);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 8px;
+            transition: color 0.4s ease;
+        }
+
+        &.active .roadmapStepNumber {
+            color: var(--primaryClr);
+        }
+
+        .roadmapStepTitle {
+            font-family: "Manrope", "Inter", "system-ui", "-apple-system", sans-serif;
+            font-size: var(--fluidFont-24);
+            line-height: 1.3;
+            font-weight: 400;
             color: var(--white);
-            margin-bottom: 18px;
-
-            @include breakpoint(mx1199) {
-                font-size: 50px;
-                line-height: 60px;
-            }
-
-            @include breakpoint(mx991) {
-                font-size: 45px;
-                line-height: 50px;
-            }
-
-            @include breakpoint(mx800) {
-                font-size: 45px;
-                line-height: 50px;
-            }
-
-            @include breakpoint(mx767) {
-                font-size: 40px;
-                line-height: 45px;
-            }
-
-            @include breakpoint(mx680) {
-                font-size: 30px;
-                line-height: 40px;
-                margin-bottom: 10px;
-            }
+            margin-bottom: 12px;
         }
 
-        p {
-            color: var(--white);
-            margin-bottom: 33px;
-        }
-
-        .btmCnt {
-            grid-template-columns: 1fr 425px;
-
-            @include breakpoint(mx1199) {
-                grid-template-columns: 1fr 335px;
-            }
-
-            @include breakpoint(mx767) {
-                grid-template-columns: 1fr;
-                padding-inline: 20px;
-            }
-
-            @include breakpoint(mx680) {
-                padding-inline: 10px;
-            }
-        }
-
-        .tabImage {
-            background-color: #666;
-            border-radius: 4px;
-            margin-bottom: 33px;
-            position: relative;
-
-            @include breakpoint(mx1199) {
-                height: 280px;
-            }
-
-            &::after {
-                position: absolute;
-                content: "";
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0, 0, 0, 0.20);
-            }
-
-            img {
-                border-radius: 4px;
-            }
-        }
-
-        .tabText {
-            @include breakpoint(mx767) {
-                order: 1;
-            }
-
-            h4 {
-                font-size: var(--fluidFont-22);
-                margin-bottom: 28px;
-                color: var(--white);
-                margin-bottom: 10px;
-                overflow: hidden;
-                display: -webkit-box;
-                -webkit-line-clamp: 2;
-                -webkit-box-orient: vertical;
-            }
-
-            p {
-                color: #C8CBCF;
-            }
-        }
-
-        .floatingCard {
-            background-color: var(--canvas);
-            padding: var(--spacing-xl);
-            border-radius: var(--rounded-xl);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
-            margin-top: -119px;
-
-            @include breakpoint(mx1199) {
-                padding: var(--spacing-lg);
-            }
-
-            @include breakpoint(mx800) {
-                padding: var(--spacing-lg);
-            }
-
-            @include breakpoint(mx680) {
-                padding: var(--spacing-lg) var(--spacing-md);
-            }
-
-            h5 {
-                @include typography-body-sm-strong;
-                color: var(--primaryClr);
-            }
-
-            p {
-                @include typography-body-md;
-                color: var(--ink);
-                margin-bottom: 0;
-            }
+        .roadmapStepDesc {
+            @include typography-body-md;
+            color: #A0A5AC;
         }
     }
 }
